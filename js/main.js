@@ -54,8 +54,10 @@
         price.textContent = formatPrice(item.price);
 
         row.appendChild(name);
-        row.appendChild(leader);
-        row.appendChild(price);
+        if (item.price) {
+          row.appendChild(leader);
+          row.appendChild(price);
+        }
         li.appendChild(row);
 
         var sub = document.createElement("p");

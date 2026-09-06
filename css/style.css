@@ -408,6 +408,98 @@ a:hover { color: var(--navy); }
   color: var(--ink);
 }
 
+
+/* =========================================================
+   Photos: band, story photo, kitchen gallery
+   ========================================================= */
+.band {
+  margin: 0 0 4rem;
+  max-width: var(--wrap);
+  margin-left: auto;
+  margin-right: auto;
+}
+.band img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1306 / 747;
+  object-fit: cover;
+}
+.band figcaption, .story-photo figcaption {
+  font-size: var(--t-1);
+  color: var(--ink-2);
+  padding-top: .6rem;
+}
+.story-photo { margin: 2.4rem 0 0; }
+.story-photo img { display: block; width: 100%; height: auto; }
+
+.kitchen {
+  padding: 0 var(--gutter) 6rem;
+}
+.kitchen-head, .plates {
+  max-width: var(--wrap);
+  margin-left: auto;
+  margin-right: auto;
+}
+.kitchen-head {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+  gap: 1rem var(--gutter);
+  align-items: end;
+  margin-bottom: 2rem;
+}
+.kitchen-head h2 { font-size: var(--t4); }
+.kitchen-head p { color: var(--ink-2); max-width: 44ch; }
+
+.plates {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: 15rem;
+  grid-auto-flow: dense;
+  gap: .75rem;
+}
+.plate { position: relative; margin: 0; overflow: hidden; background: var(--stone-2); }
+.plate-wide { grid-column: span 2; grid-row: span 2; }
+.plate-tall { grid-row: span 2; }
+.plate-long { grid-column: span 2; }
+.plate img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.plate figcaption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1.4rem .9rem .7rem;
+  font-size: var(--t-1);
+  color: var(--stone);
+  background: linear-gradient(to top, rgba(11, 26, 48, .85), rgba(11, 26, 48, 0));
+}
+.plate figcaption a { color: var(--stone); text-decoration: none; font-family: var(--serif); font-size: var(--t1); }
+.plate figcaption a:hover { text-decoration: underline; }
+.plate figcaption span { font-variant-numeric: tabular-nums lining-nums; }
+
+@media (max-width: 980px) {
+  .kitchen-head { grid-template-columns: 1fr; }
+  .plates { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 11rem; }
+  .plate-tall { grid-row: span 1; }
+  .plate-long { grid-column: span 1; }
+}
+@media (max-width: 640px) {
+  .band { margin-bottom: 2.5rem; }
+  .kitchen { padding-bottom: 4rem; }
+  .plates { grid-auto-rows: 10rem; gap: .5rem; }
+  .plate figcaption { padding: 1.2rem .6rem .5rem; flex-wrap: wrap; gap: .2rem .6rem; }
+  .plate figcaption a { font-size: var(--t0); }
+}
+
 /* =========================================================
    Menu
    ========================================================= */

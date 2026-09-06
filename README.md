@@ -19,9 +19,14 @@ python3 -m http.server 8080
 
 The site is plain files, so GitHub Pages works as is: Settings, Pages, deploy from the `main` branch root.
 
+## Photos
+
+`assets/photos/` holds screenshots of photos from the restaurant's Google Maps listing, cropped and saved at roughly 1000 px wide. The terrace photo was posted by the owner. The dish and interior photos were posted by guests, so ask the owner for original photos before going live, both for quality and so the site only uses images the restaurant has rights to.
+
 ## To confirm with the owner before going live
 
-- Every price in `js/menu.js` is a placeholder based on the €15–35 per person range reported by guests.
+- Food prices in `js/menu.js` come from the printed menu photographed on Google Maps. The card still shows kuna next to euro, so it dates from 2023 and prices may have changed. Desserts and drinks are listed without prices.
+- Replace the guest-photographed dish and interior photos with the owner's own.
 - Wednesday hours. Listings disagree between 18:00 to 22:00 and closed.
 - Street number. Google says Porporela 3, TripAdvisor says Porporela 5.
 - Whether to publish an email address for reservations.
