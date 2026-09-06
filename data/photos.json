@@ -32,19 +32,11 @@
     "h": 760
   },
   {
-    "file": "terrace",
+    "file": "interior",
     "span": "long",
-    "caption": "gTerrace",
-    "alt": "bandAlt",
-    "w": 1306,
-    "h": 747
-  },
-  {
-    "file": "tuna-steak",
-    "span": "",
-    "item": "tuna",
-    "alt": "plate5Alt",
-    "w": 1015,
+    "caption": "gInterior",
+    "alt": "interiorAlt",
+    "w": 1014,
     "h": 760
   },
   {
@@ -56,19 +48,19 @@
     "h": 760
   },
   {
-    "file": "interior",
-    "span": "",
-    "caption": "gInterior",
-    "alt": "interiorAlt",
-    "w": 1014,
-    "h": 760
-  },
-  {
     "file": "seafood-spaghetti",
     "span": "",
     "item": "spageti-mora",
     "alt": "plate7Alt",
     "w": 683,
+    "h": 760
+  },
+  {
+    "file": "tuna-steak",
+    "span": "long",
+    "item": "tuna",
+    "alt": "plate5Alt",
+    "w": 1015,
     "h": 760
   },
   {

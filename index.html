@@ -15,7 +15,7 @@
   <meta property="og:description" content="Admiral Max is a fish konoba on the Porporela breakwater in Novigrad, Istria. Novigrad scallops, fish platters, black risotto and Istrian wine on a terrace over the harbour.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://josip-stojanovic.github.io/admiral-max/">
-  <meta property="og:image" content="https://josip-stojanovic.github.io/admiral-max/assets/photos/terrace.jpg">
+  <meta property="og:image" content="https://josip-stojanovic.github.io/admiral-max/assets/photos/fish-platter.jpg">
   <meta property="og:locale" content="en_GB">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +31,7 @@
     "servesCuisine": ["Seafood", "Istrian", "Mediterranean"],
     "priceRange": "€15–35",
     "telephone": "+385 52 433 254",
-    "image": "https://josip-stojanovic.github.io/admiral-max/assets/photos/terrace.jpg",
+    "image": "https://josip-stojanovic.github.io/admiral-max/assets/photos/fish-platter.jpg",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Porporela 3",
@@ -75,8 +75,13 @@
 
 <main id="top">
 
-  <!-- ============ HERO: harbour chart ============ -->
+  <!-- ============ HERO ============ -->
   <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-art" aria-hidden="false">
+      <img src="assets/hero-ship.jpg"
+           srcset="assets/hero-ship-1100.webp 1100w, assets/hero-ship.webp 2000w"
+           sizes="100vw" alt="Woodcut of a Venetian galley under sail, from a fifteenth-century pilgrim&#x27;s travel book" width="2000" height="1193" fetchpriority="high">
+    </div>
     <div class="hero-copy">
       <p class="hero-place">Konoba on the Porporela breakwater, Novigrad, Istria</p>
       <h1 id="hero-title">Admiral<br>Max</h1>
@@ -100,6 +105,7 @@
 
       <div class="hero-actions">
         <a class="btn btn-brass" href="tel:+38552433254">Call to reserve a table</a>
+        <a class="btn btn-ghost" href="#reserve">Reserve online</a>
         <a class="btn btn-ghost" href="#menu">See the menu</a>
       </div>
 
@@ -109,81 +115,10 @@
         <div><dt>Price</dt><dd>€15–35 a person</dd></div>
       </dl>
     </div>
-
-    <figure class="chart" aria-label="Stylised chart of Novigrad harbour with Admiral Max marked at the foot of the Porporela breakwater">
-      <svg viewBox="0 0 900 900" preserveAspectRatio="xMidYMid slice" role="img" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <pattern id="soundings" width="150" height="150" patternUnits="userSpaceOnUse">
-            <text x="14" y="28" class="sound">7</text>
-            <text x="92" y="86" class="sound">9</text>
-            <text x="40" y="132" class="sound">11</text>
-          </pattern>
-        </defs>
-
-        <rect width="900" height="900" class="sea-fill"/>
-        <rect width="900" height="900" fill="url(#soundings)" opacity=".35"/>
-
-        <g class="contours">
-          <path d="M-20 560 C 120 470, 260 480, 380 400 S 560 250, 640 180 S 780 40, 940 30"/>
-          <path d="M-20 640 C 140 560, 300 560, 420 470 S 600 320, 700 240 S 840 110, 940 100"/>
-          <path d="M-20 720 C 160 660, 340 640, 470 540 S 660 390, 760 300 S 880 180, 940 170"/>
-          <path d="M-20 800 C 180 760, 380 720, 520 620 S 720 460, 820 360 S 900 260, 940 240"/>
-        </g>
-
-        <path class="land" d="M 60 900 L 60 690 C 110 640, 170 630, 230 600 C 300 565, 330 520, 390 500 C 440 483, 470 500, 500 540 C 530 580, 560 600, 620 610 C 680 620, 720 650, 760 700 C 800 760, 840 820, 900 840 L 900 900 Z"/>
-        <path class="land-hatch" d="M 60 900 L 60 690 C 110 640, 170 630, 230 600 C 300 565, 330 520, 390 500 C 440 483, 470 500, 500 540 C 530 580, 560 600, 620 610 C 680 620, 720 650, 760 700 C 800 760, 840 820, 900 840 L 900 900 Z"/>
-
-        <path class="basin" d="M 520 560 C 560 545, 600 560, 630 590 C 660 620, 690 640, 720 655 L 700 700 C 650 690, 600 660, 560 630 C 540 615, 520 590, 520 560 Z"/>
-
-        <path class="mole" d="M 500 540 C 530 505, 560 480, 610 462 C 660 445, 700 440, 745 445"/>
-        <circle class="mole-light" cx="745" cy="445" r="6"/>
-        <text class="chart-label" x="612" y="440">Porporela</text>
-        <text class="chart-label" x="590" y="700">Mandrač</text>
-        <text class="chart-label chart-label-town" x="200" y="760">Novigrad</text>
-        <text class="chart-label chart-label-town" x="200" y="790">Cittanova</text>
-
-        <g class="pin" transform="translate(500 540)">
-          <circle r="22" class="pin-halo"/>
-          <circle r="9" class="pin-dot"/>
-          <line x1="0" y1="-9" x2="0" y2="-78"/>
-          <text x="10" y="-82" class="pin-label">Admiral Max</text>
-        </g>
-
-        <g class="rose" transform="translate(150 190)">
-          <circle r="70"/>
-          <circle r="52"/>
-          <path d="M0 -70 L10 0 L0 70 L-10 0 Z"/>
-          <path d="M-70 0 L0 10 L70 0 L0 -10 Z"/>
-          <path d="M0 -70 L10 0 L0 70 L-10 0 Z" transform="rotate(45)" class="rose-minor"/>
-          <path d="M-70 0 L0 10 L70 0 L0 -10 Z" transform="rotate(45)" class="rose-minor"/>
-          <text x="0" y="-84" text-anchor="middle" class="rose-n">N</text>
-        </g>
-
-        <g class="cartouche" transform="translate(600 760)">
-          <text x="0" y="0">Novigrad harbour</text>
-          <text x="0" y="22" class="cartouche-sub">Istria, 45°19′N 13°33′E</text>
-          <text x="0" y="44" class="cartouche-sub">Not for navigation. Meant for dinner.</text>
-        </g>
-
-        <g class="scale" transform="translate(600 60)">
-          <line x1="0" y1="0" x2="200" y2="0"/>
-          <line x1="0" y1="-6" x2="0" y2="6"/>
-          <line x1="100" y1="-6" x2="100" y2="6"/>
-          <line x1="200" y1="-6" x2="200" y2="6"/>
-          <text x="0" y="24">0</text>
-          <text x="86" y="24">100 m</text>
-          <text x="180" y="24">200 m</text>
-        </g>
-      </svg>
-    </figure>
   </section>
 
   <!-- ============ STORY ============ -->
   <section class="story" id="story" aria-labelledby="story-title">
-    <figure class="band">
-      <img src="assets/photos/terrace.jpg" srcset="assets/photos/terrace-640.webp 640w, assets/photos/terrace.webp 1306w" sizes="(max-width: 1180px) 100vw, 1180px" alt="Wooden tables on the terrace at sunset, with the boats of Novigrad harbour behind" width="1306" height="747" loading="lazy">
-      <figcaption>The terrace at the foot of the Porporela, an August evening.</figcaption>
-    </figure>
     <div class="story-grid">
       <div class="story-side">
         <p class="story-kicker">The name over the door</p>
@@ -238,37 +173,31 @@
         </button>
       </li>
       <li class="plate plate-long">
-        <button type="button" class="thumb" data-index="4" data-full="assets/photos/terrace.jpg">
-          <img src="assets/photos/terrace.jpg" srcset="assets/photos/terrace-640.webp 640w, assets/photos/terrace.webp 1306w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 33vw, 600px" alt="Wooden tables on the terrace at sunset, with the boats of Novigrad harbour behind" width="1306" height="747" loading="lazy">
-          <span class="plate-cap"><span class="cap">The terrace at sunset, boats of the Mandrač behind</span></span>
-        </button>
-      </li>
-      <li class="plate">
-        <button type="button" class="thumb" data-index="5" data-full="assets/photos/tuna-steak.jpg">
-          <img src="assets/photos/tuna-steak.jpg" srcset="assets/photos/tuna-steak-640.webp 640w, assets/photos/tuna-steak.webp 1015w" sizes="(max-width: 640px) 50vw, (max-width: 980px) 33vw, 300px" alt="Seared tuna steak with grilled peppers, rocket and lemon" width="1015" height="760" loading="lazy">
-          <span class="plate-cap"><span class="cap">Tuna steak</span><span class="price">€22.50</span></span>
+        <button type="button" class="thumb" data-index="4" data-full="assets/photos/interior.jpg">
+          <img src="assets/photos/interior.jpg" srcset="assets/photos/interior-640.webp 640w, assets/photos/interior.webp 1014w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 33vw, 600px" alt="Inside the konoba: old photographs of Novigrad harbour, a chart, ship lanterns and a wine rack by the door" width="1014" height="760" loading="lazy">
+          <span class="plate-cap"><span class="cap">Inside, with old photographs of Novigrad and ship lanterns</span></span>
         </button>
       </li>
       <li class="plate plate-tall">
-        <button type="button" class="thumb" data-index="6" data-full="assets/photos/fish-platter-top.jpg">
+        <button type="button" class="thumb" data-index="5" data-full="assets/photos/fish-platter-top.jpg">
           <img src="assets/photos/fish-platter-top.jpg" srcset="assets/photos/fish-platter-top-640.webp 640w, assets/photos/fish-platter-top.webp 569w" sizes="(max-width: 640px) 50vw, (max-width: 980px) 33vw, 300px" alt="Fish platter seen from above, with scallops around the edge and a bowl of parsley oil" width="569" height="760" loading="lazy">
           <span class="plate-cap"><span class="cap">The platter, from above</span></span>
         </button>
       </li>
       <li class="plate">
-        <button type="button" class="thumb" data-index="7" data-full="assets/photos/interior.jpg">
-          <img src="assets/photos/interior.jpg" srcset="assets/photos/interior-640.webp 640w, assets/photos/interior.webp 1014w" sizes="(max-width: 640px) 50vw, (max-width: 980px) 33vw, 300px" alt="Inside the konoba: old photographs of Novigrad harbour, a chart, ship lanterns and a wine rack by the door" width="1014" height="760" loading="lazy">
-          <span class="plate-cap"><span class="cap">Inside, with old photographs of Novigrad and ship lanterns</span></span>
-        </button>
-      </li>
-      <li class="plate">
-        <button type="button" class="thumb" data-index="8" data-full="assets/photos/seafood-spaghetti.jpg">
+        <button type="button" class="thumb" data-index="6" data-full="assets/photos/seafood-spaghetti.jpg">
           <img src="assets/photos/seafood-spaghetti.jpg" srcset="assets/photos/seafood-spaghetti-640.webp 640w, assets/photos/seafood-spaghetti.webp 683w" sizes="(max-width: 640px) 50vw, (max-width: 980px) 33vw, 300px" alt="Seafood spaghetti with scallops, mussels and prawns in a stoneware bowl" width="683" height="760" loading="lazy">
           <span class="plate-cap"><span class="cap">Seafood spaghetti</span><span class="price">€16.50</span></span>
         </button>
       </li>
+      <li class="plate plate-long">
+        <button type="button" class="thumb" data-index="7" data-full="assets/photos/tuna-steak.jpg">
+          <img src="assets/photos/tuna-steak.jpg" srcset="assets/photos/tuna-steak-640.webp 640w, assets/photos/tuna-steak.webp 1015w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 33vw, 600px" alt="Seared tuna steak with grilled peppers, rocket and lemon" width="1015" height="760" loading="lazy">
+          <span class="plate-cap"><span class="cap">Tuna steak</span><span class="price">€22.50</span></span>
+        </button>
+      </li>
       <li class="plate">
-        <button type="button" class="thumb" data-index="9" data-full="assets/photos/black-ravioli.jpg">
+        <button type="button" class="thumb" data-index="8" data-full="assets/photos/black-ravioli.jpg">
           <img src="assets/photos/black-ravioli.jpg" srcset="assets/photos/black-ravioli-640.webp 640w, assets/photos/black-ravioli.webp 427w" sizes="(max-width: 640px) 50vw, (max-width: 980px) 33vw, 300px" alt="Black ravioli filled with Adriatic shrimp" width="427" height="760" loading="lazy">
           <span class="plate-cap"><span class="cap">Black ravioli filled with Adriatic shrimp</span><span class="price">€17.50</span></span>
         </button>
@@ -1036,7 +965,7 @@
       <p class="foot-langs"><span>This page in other languages:</span> <a href="hr/" lang="hr" hreflang="hr">Hrvatski</a>, <a href="de/" lang="de" hreflang="de">Deutsch</a>, <a href="it/" lang="it" hreflang="it">Italiano</a></p>
     </div>
   </div>
-  <p class="foot-legal">© <span id="year"></span> Admiral Max, Novigrad. Obrt za ugostiteljstvo UNICO, vl. Josip Jelačić, OIB 53440364047.</p>
+  <p class="foot-legal">© <span id="year"></span> Admiral Max, Novigrad. Obrt za ugostiteljstvo UNICO, vl. Josip Jelačić, OIB 53440364047. Ship: Konrad von Grünenberg&#x27;s pilgrim galley, 1487, Badische Landesbibliothek, public domain.</p>
 </footer>
 
 <!-- Lightbox for the photo gallery -->

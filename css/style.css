@@ -167,23 +167,41 @@ a:hover { color: var(--navy); }
 .lang a[aria-current="page"] { opacity: 1; border-bottom-color: var(--brass); }
 
 /* =========================================================
-   Hero: harbour chart
+   Hero: the galley
    ========================================================= */
 .hero {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
   min-height: 100svh;
   margin-top: -4.4rem; /* pull under the sticky header */
   background: var(--navy);
   color: var(--stone);
   overflow: clip;
+  display: grid;
+  align-items: center;
 }
-
+.hero-art {
+  position: absolute;
+  inset: 0;
+}
+.hero-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 80% 50%;
+  filter: saturate(.75) brightness(.85) contrast(1.04);
+}
+.hero-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, var(--navy) 0%, var(--navy) 20%, rgba(16, 35, 63, .9) 40%, rgba(16, 35, 63, .55) 56%, rgba(16, 35, 63, .18) 74%, rgba(16, 35, 63, .08) 100%),
+    linear-gradient(180deg, rgba(16, 35, 63, .55) 0%, rgba(16, 35, 63, 0) 22%, rgba(16, 35, 63, 0) 70%, var(--navy) 100%);
+}
 .hero-copy {
   position: relative;
   z-index: 2;
-  align-self: center;
   padding: 7rem var(--gutter) 4rem;
   max-width: 40rem;
 }
@@ -223,7 +241,7 @@ a:hover { color: var(--navy); }
 }
 .hero-facts div { display: grid; gap: .1rem; }
 .hero-facts dt { color: var(--sea-pale); }
-.hero-facts dd { margin: 0; color: var(--stone); }
+.hero-facts dd { margin: 0; color: var(--stone); font-variant-numeric: lining-nums tabular-nums; }
 
 /* signal-flag hoist */
 .hoist {
@@ -241,9 +259,6 @@ a:hover { color: var(--navy); }
   flex: none;
   position: relative;
   box-shadow: 0 1px 0 rgba(0,0,0,.35);
-  /* the hoist rope */
-  border-top: 2px solid rgba(244,242,236,.35);
-  border-top-color: transparent;
 }
 .flag-gap { width: 14px; flex: none; }
 
@@ -275,76 +290,10 @@ a:hover { color: var(--navy); }
     #F4F2EC;
 }
 
-/* chart */
-.chart {
-  position: relative;
-  margin: 0;
-  min-height: 60vh;
-}
-.chart svg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.sea-fill { fill: var(--navy-deep); }
-.sound {
-  font: 500 11px var(--sans);
-  fill: var(--sea-pale);
-  opacity: .5;
-}
-.contours path {
-  fill: none;
-  stroke: var(--sea);
-  stroke-width: 1;
-  stroke-dasharray: 2000;
-  stroke-dashoffset: 0;
-}
-.land { fill: var(--navy); }
-.land-hatch {
-  fill: none;
-  stroke: var(--sea-pale);
-  stroke-width: 1.25;
-}
-.basin { fill: var(--navy-deep); stroke: var(--sea-pale); stroke-width: 1; }
-.mole { fill: none; stroke: var(--stone); stroke-width: 5; stroke-linecap: round; }
-.mole-light { fill: var(--brass); }
-.chart-label {
-  font: italic 400 16px var(--serif);
-  fill: var(--sea-pale);
-}
-.chart-label-town { font-size: 22px; fill: var(--stone); font-style: normal; }
-
-.pin line { stroke: var(--brass); stroke-width: 1.25; }
-.pin-dot { fill: var(--brass); }
-.pin-halo { fill: var(--brass); opacity: .2; }
-.pin-label { font: 500 15px var(--sans); fill: var(--stone); }
-
-.rose circle { fill: none; stroke: var(--sea-pale); stroke-width: 1; opacity: .8; }
-.rose path { fill: var(--stone); }
-.rose .rose-minor { fill: var(--sea); }
-.rose-n { font: 600 14px var(--sans); fill: var(--stone); }
-
-.cartouche text { font: 500 14px var(--sans); fill: var(--stone); }
-.cartouche .cartouche-sub { font-weight: 400; fill: var(--sea-pale); }
-
-.scale line { stroke: var(--sea-pale); stroke-width: 1; }
-.scale text { font: 400 11px var(--sans); fill: var(--sea-pale); }
-
-/* one orchestrated load moment: contours draw, pin appears, flags hoist */
+/* one orchestrated load moment: the galley surfaces, the flags hoist */
 @media (prefers-reduced-motion: no-preference) {
-  .contours path { stroke-dashoffset: 2000; }
-  .is-ready .contours path {
-    animation: draw 2.4s var(--ease) forwards;
-  }
-  .is-ready .contours path:nth-child(2) { animation-delay: .15s; }
-  .is-ready .contours path:nth-child(3) { animation-delay: .3s; }
-  .is-ready .contours path:nth-child(4) { animation-delay: .45s; }
-
-  .pin { opacity: 0; }
-  .is-ready .pin { animation: appear .8s var(--ease) 1.4s forwards; }
-
+  .hero-art img { opacity: 0; transform: scale(1.03); }
+  .is-ready .hero-art img { animation: surface 1.6s var(--ease) forwards; }
   .flag { opacity: 0; transform: translateY(10px); }
   .is-ready .flag { animation: hoist .5s var(--ease) forwards; }
   .is-ready .flag:nth-child(1) { animation-delay: .20s; }
@@ -358,8 +307,7 @@ a:hover { color: var(--navy); }
   .is-ready .flag:nth-child(10) { animation-delay: .92s; }
   .is-ready .flag:nth-child(11) { animation-delay: 1.0s; }
 }
-@keyframes draw { to { stroke-dashoffset: 0; } }
-@keyframes appear { to { opacity: 1; } }
+@keyframes surface { to { opacity: 1; transform: none; } }
 @keyframes hoist { to { opacity: 1; transform: none; } }
 
 /* =========================================================
@@ -430,22 +378,6 @@ a:hover { color: var(--navy); }
 /* =========================================================
    Photos in the story: band and side photo
    ========================================================= */
-.band {
-  margin: 0 auto 4rem;
-  max-width: var(--wrap);
-}
-.band img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1306 / 747;
-  object-fit: cover;
-}
-.band figcaption, .story-photo figcaption {
-  font-size: var(--t-1);
-  color: var(--ink-2);
-  padding-top: .6rem;
-}
 .story-photo { margin: 2.4rem 0 0; }
 .story-photo img { display: block; width: 100%; height: auto; }
 
@@ -556,8 +488,9 @@ a:hover { color: var(--navy); }
   min-width: 1.5rem;
 }
 .dish-price {
-  font-family: var(--serif);
-  font-size: var(--t1);
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: var(--t0);
   font-variant-numeric: tabular-nums lining-nums;
   white-space: nowrap;
 }
@@ -645,10 +578,12 @@ a:hover { color: var(--navy); }
   align-items: start;
 }
 .score {
-  font-family: var(--serif);
+  font-family: var(--sans);
+  font-weight: 500;
   font-size: var(--t7);
+  letter-spacing: -.03em;
   line-height: 1;
-  font-variant-numeric: lining-nums;
+  font-variant-numeric: lining-nums tabular-nums;
   margin: 0 0 .3rem;
 }
 .score-sub { color: var(--sea-pale); margin-bottom: 1rem; }
@@ -721,7 +656,7 @@ a:hover { color: var(--navy); }
 }
 .plate-cap .cap { font-family: var(--serif); font-size: var(--t0); line-height: 1.15; }
 .plate-wide .plate-cap .cap, .plate-long .plate-cap .cap { font-size: var(--t1); }
-.plate-cap .price { white-space: nowrap; font-variant-numeric: tabular-nums lining-nums; }
+.plate-cap .price { white-space: nowrap; font-weight: 500; font-variant-numeric: tabular-nums lining-nums; }
 
 .lb {
   position: fixed;
@@ -819,8 +754,10 @@ body.lb-open { overflow: hidden; }
 .reserve-phone {
   display: inline-block;
   margin: 1.4rem 0 1rem;
-  font-family: var(--serif);
-  font-size: clamp(var(--t4), 5vw, var(--t6));
+  font-family: var(--sans);
+  font-weight: 500;
+  letter-spacing: -.02em;
+  font-size: clamp(var(--t4), 5vw, var(--t5));
   line-height: 1;
   color: var(--navy);
   text-decoration: none;
@@ -923,9 +860,13 @@ body.lb-open { overflow: hidden; }
    Responsive
    ========================================================= */
 @media (max-width: 980px) {
-  .hero { grid-template-columns: 1fr; min-height: 0; }
-  .hero-copy { padding-top: 6rem; max-width: none; }
-  .chart { min-height: 70vw; }
+  .hero { min-height: 0; }
+  .hero-copy { padding-top: 7rem; padding-bottom: 3rem; max-width: none; }
+  .hero-art img { object-position: 60% 50%; }
+  .hero-art::after {
+    background:
+      linear-gradient(180deg, rgba(16, 35, 63, .55) 0%, rgba(16, 35, 63, .78) 40%, rgba(16, 35, 63, .9) 100%);
+  }
   .story-grid, .section-head, .menu-layout, .visit-grid, .guests-grid, .reserve-grid { grid-template-columns: 1fr; }
   .menu-nav {
     position: static;
@@ -966,7 +907,6 @@ body.lb-open { overflow: hidden; }
   .menu-head { margin-bottom: 2rem; }
   .menu-head h2 { font-size: var(--t5); }
   .hero-place { margin-bottom: 1rem; }
-  .cartouche, .scale { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -11,7 +11,7 @@
   <meta property="og:description" content="{{t:metaDescription}}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{canonical}}">
-  <meta property="og:image" content="{{site}}assets/photos/terrace.jpg">
+  <meta property="og:image" content="{{site}}assets/photos/fish-platter.jpg">
   <meta property="og:locale" content="{{locale}}">
   <link rel="icon" href="{{base}}assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,7 @@
     "servesCuisine": ["Seafood", "Istrian", "Mediterranean"],
     "priceRange": "€15–35",
     "telephone": "+385 52 433 254",
-    "image": "{{site}}assets/photos/terrace.jpg",
+    "image": "{{site}}assets/photos/fish-platter.jpg",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Porporela 3",
@@ -68,8 +68,13 @@
 
 <main id="top">
 
-  <!-- ============ HERO: harbour chart ============ -->
+  <!-- ============ HERO ============ -->
   <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-art" aria-hidden="false">
+      <img src="{{base}}assets/hero-ship.jpg"
+           srcset="{{base}}assets/hero-ship-1100.webp 1100w, {{base}}assets/hero-ship.webp 2000w"
+           sizes="100vw" alt="{{t:heroImgAlt}}" width="2000" height="1193" fetchpriority="high">
+    </div>
     <div class="hero-copy">
       <p class="hero-place">{{t:heroPlace}}</p>
       <h1 id="hero-title">Admiral<br>Max</h1>
@@ -93,6 +98,7 @@
 
       <div class="hero-actions">
         <a class="btn btn-brass" href="tel:+38552433254">{{t:callReserve}}</a>
+        <a class="btn btn-ghost" href="#reserve">{{t:reserveOnline}}</a>
         <a class="btn btn-ghost" href="#menu">{{t:seeMenu}}</a>
       </div>
 
@@ -102,81 +108,10 @@
         <div><dt>{{t:factPrice}}</dt><dd>{{t:factPriceValue}}</dd></div>
       </dl>
     </div>
-
-    <figure class="chart" aria-label="{{t:chartLabel}}">
-      <svg viewBox="0 0 900 900" preserveAspectRatio="xMidYMid slice" role="img" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <pattern id="soundings" width="150" height="150" patternUnits="userSpaceOnUse">
-            <text x="14" y="28" class="sound">7</text>
-            <text x="92" y="86" class="sound">9</text>
-            <text x="40" y="132" class="sound">11</text>
-          </pattern>
-        </defs>
-
-        <rect width="900" height="900" class="sea-fill"/>
-        <rect width="900" height="900" fill="url(#soundings)" opacity=".35"/>
-
-        <g class="contours">
-          <path d="M-20 560 C 120 470, 260 480, 380 400 S 560 250, 640 180 S 780 40, 940 30"/>
-          <path d="M-20 640 C 140 560, 300 560, 420 470 S 600 320, 700 240 S 840 110, 940 100"/>
-          <path d="M-20 720 C 160 660, 340 640, 470 540 S 660 390, 760 300 S 880 180, 940 170"/>
-          <path d="M-20 800 C 180 760, 380 720, 520 620 S 720 460, 820 360 S 900 260, 940 240"/>
-        </g>
-
-        <path class="land" d="M 60 900 L 60 690 C 110 640, 170 630, 230 600 C 300 565, 330 520, 390 500 C 440 483, 470 500, 500 540 C 530 580, 560 600, 620 610 C 680 620, 720 650, 760 700 C 800 760, 840 820, 900 840 L 900 900 Z"/>
-        <path class="land-hatch" d="M 60 900 L 60 690 C 110 640, 170 630, 230 600 C 300 565, 330 520, 390 500 C 440 483, 470 500, 500 540 C 530 580, 560 600, 620 610 C 680 620, 720 650, 760 700 C 800 760, 840 820, 900 840 L 900 900 Z"/>
-
-        <path class="basin" d="M 520 560 C 560 545, 600 560, 630 590 C 660 620, 690 640, 720 655 L 700 700 C 650 690, 600 660, 560 630 C 540 615, 520 590, 520 560 Z"/>
-
-        <path class="mole" d="M 500 540 C 530 505, 560 480, 610 462 C 660 445, 700 440, 745 445"/>
-        <circle class="mole-light" cx="745" cy="445" r="6"/>
-        <text class="chart-label" x="612" y="440">Porporela</text>
-        <text class="chart-label" x="590" y="700">Mandrač</text>
-        <text class="chart-label chart-label-town" x="200" y="760">Novigrad</text>
-        <text class="chart-label chart-label-town" x="200" y="790">Cittanova</text>
-
-        <g class="pin" transform="translate(500 540)">
-          <circle r="22" class="pin-halo"/>
-          <circle r="9" class="pin-dot"/>
-          <line x1="0" y1="-9" x2="0" y2="-78"/>
-          <text x="10" y="-82" class="pin-label">Admiral Max</text>
-        </g>
-
-        <g class="rose" transform="translate(150 190)">
-          <circle r="70"/>
-          <circle r="52"/>
-          <path d="M0 -70 L10 0 L0 70 L-10 0 Z"/>
-          <path d="M-70 0 L0 10 L70 0 L0 -10 Z"/>
-          <path d="M0 -70 L10 0 L0 70 L-10 0 Z" transform="rotate(45)" class="rose-minor"/>
-          <path d="M-70 0 L0 10 L70 0 L0 -10 Z" transform="rotate(45)" class="rose-minor"/>
-          <text x="0" y="-84" text-anchor="middle" class="rose-n">N</text>
-        </g>
-
-        <g class="cartouche" transform="translate(600 760)">
-          <text x="0" y="0">{{t:chartTitle}}</text>
-          <text x="0" y="22" class="cartouche-sub">{{t:chartSub}}</text>
-          <text x="0" y="44" class="cartouche-sub">{{t:chartNote}}</text>
-        </g>
-
-        <g class="scale" transform="translate(600 60)">
-          <line x1="0" y1="0" x2="200" y2="0"/>
-          <line x1="0" y1="-6" x2="0" y2="6"/>
-          <line x1="100" y1="-6" x2="100" y2="6"/>
-          <line x1="200" y1="-6" x2="200" y2="6"/>
-          <text x="0" y="24">0</text>
-          <text x="86" y="24">100 m</text>
-          <text x="180" y="24">200 m</text>
-        </g>
-      </svg>
-    </figure>
   </section>
 
   <!-- ============ STORY ============ -->
   <section class="story" id="story" aria-labelledby="story-title">
-    <figure class="band">
-      <img src="{{base}}assets/photos/terrace.jpg" srcset="{{base}}assets/photos/terrace-640.webp 640w, {{base}}assets/photos/terrace.webp 1306w" sizes="(max-width: 1180px) 100vw, 1180px" alt="{{t:bandAlt}}" width="1306" height="747" loading="lazy">
-      <figcaption>{{t:bandCaption}}</figcaption>
-    </figure>
     <div class="story-grid">
       <div class="story-side">
         <p class="story-kicker">{{t:storyKicker}}</p>
@@ -390,7 +325,7 @@
       <p class="foot-langs"><span>{{t:altLangs}}:</span> {{footLangs}}</p>
     </div>
   </div>
-  <p class="foot-legal">© <span id="year"></span> Admiral Max, Novigrad. Obrt za ugostiteljstvo UNICO, vl. Josip Jelačić, OIB 53440364047.</p>
+  <p class="foot-legal">© <span id="year"></span> Admiral Max, Novigrad. Obrt za ugostiteljstvo UNICO, vl. Josip Jelačić, OIB 53440364047. {{t:heroCredit}}</p>
 </footer>
 
 <!-- Lightbox for the photo gallery -->
