@@ -1,14 +1,11 @@
 /*
- * Admiral Max menu data.
+ * Admiral Max menu data, four languages.
  *
- * Edit this file to change the menu. Each section has an id (matches the
- * anchors in index.html), a title, a Croatian title, an optional note, and
- * a list of items.
- *
- * Each item: { hr: "Croatian name", en: "English name", desc: "short line", price: "12" }
- *   - price is a string so you can write "38", "per kg 60" or "for two 52".
- *     Every number gets a € sign automatically. Leave it out for no price.
- *   - Leave desc out for a plain line.
+ * Each section: { id, title: {en,hr,de,it}, note: {en,hr,de,it} (optional), items: [...] }
+ * Each item:    { name: {en,hr,de,it}, desc: {en,hr,de,it} (optional), price: "12", unit: "two" (optional) }
+ *   - price is a string; leave it out for no price.
+ *   - unit is one of: "two" (for two), "kg" (per kg), "100g", "three" (3 pieces).
+ *     The label is translated in js/i18n.js under unitTwo, unitKg, unit100g, unitThree.
  *
  * Food prices were read from the printed menu photographed on Google Maps
  * (the card still shows kuna alongside euro, so it dates from 2023).
@@ -18,119 +15,169 @@
 window.ADMIRAL_MENU = [
   {
     id: "m-cold",
-    title: "Cold starters",
-    hr: "Hladna predjela",
+    title: { en: "Cold starters", hr: "Hladna predjela", de: "Kalte Vorspeisen", it: "Antipasti freddi" },
     items: [
-      { hr: "Hladna riblja plata", en: "Cold fish plate for two", desc: "Salted and marinated sardines, octopus salad, fish pâté.", price: "for two 24" },
-      { hr: "Salata od hobotnice", en: "Octopus salad", price: "14" },
-      { hr: "Slani ili marinirani sardoni", en: "Salted or marinated anchovies", price: "8" },
-      { hr: "Riblja pašteta", en: "Fish pâté", price: "8.50" },
-      { hr: "Pršut istarski", en: "Istrian prosciutto", desc: "100 g.", price: "11" },
-      { hr: "Ovčji sir", en: "Sheep's cheese", desc: "100 g.", price: "10" },
-      { hr: "Sir s tartufima", en: "Cheese with truffles", desc: "100 g.", price: "12" },
-      { hr: "Carpaccio od bifteka", en: "Beef carpaccio", desc: "100 g.", price: "16" },
-      { hr: "Carpaccio od hobotnice", en: "Octopus carpaccio", price: "14" },
-      { hr: "Carpaccio od hobotnice sa tartufima", en: "Octopus carpaccio with truffles", price: "18" }
+      { name: { en: "Cold fish plate for two", hr: "Hladna riblja plata", de: "Kalte Fischplatte", it: "Piatto freddo di pesce" },
+        desc: { en: "Salted and marinated sardines, octopus salad, fish pâté.", hr: "Slani i marinirani sardoni, salata od hobotnice, riblja pašteta.", de: "Gesalzene und marinierte Sardellen, Oktopussalat, Fischpastete.", it: "Sardoni salati e marinati, insalata di polpo, paté di pesce." },
+        price: "24", unit: "two" },
+      { name: { en: "Octopus salad", hr: "Salata od hobotnice", de: "Oktopussalat", it: "Insalata di polpo" }, price: "14" },
+      { name: { en: "Salted or marinated anchovies", hr: "Slani ili marinirani sardoni", de: "Gesalzene oder marinierte Sardellen", it: "Sardoni sotto sale o marinati" }, price: "8" },
+      { name: { en: "Fish pâté", hr: "Riblja pašteta", de: "Fischpastete", it: "Paté di pesce" }, price: "8.50" },
+      { name: { en: "Istrian prosciutto", hr: "Pršut istarski", de: "Istrischer Schinken", it: "Prosciutto istriano" }, price: "11", unit: "100g" },
+      { name: { en: "Sheep's cheese", hr: "Ovčji sir", de: "Schafskäse", it: "Formaggio pecorino" }, price: "10", unit: "100g" },
+      { name: { en: "Cheese with truffles", hr: "Sir s tartufima", de: "Käse mit Trüffeln", it: "Formaggio al tartufo" }, price: "12", unit: "100g" },
+      { name: { en: "Beef carpaccio", hr: "Carpaccio od bifteka", de: "Carpaccio vom Rindsteak", it: "Carpaccio di manzo" }, price: "16", unit: "100g" },
+      { name: { en: "Octopus carpaccio", hr: "Carpaccio od hobotnice", de: "Carpaccio vom Oktopus", it: "Carpaccio di polpo" }, price: "14" },
+      { name: { en: "Octopus carpaccio with truffles", hr: "Carpaccio od hobotnice sa tartufima", de: "Oktopus-Carpaccio mit Trüffeln", it: "Carpaccio di polpo al tartufo" }, price: "18" }
     ]
   },
   {
     id: "m-hot",
-    title: "Hot starters and risotto",
-    hr: "Topla predjela i rižoti",
-    note: "Kapešante and kanaštrele are the two scallops of the Novigrad bay, grilled in the shell.",
+    title: { en: "Hot starters and risotto", hr: "Topla predjela i rižoti", de: "Warme Vorspeisen und Risotto", it: "Antipasti caldi e risotti" },
+    note: { en: "Kapešante and kanaštrele are the two scallops of the Novigrad bay, grilled in the shell.", hr: "Kapešante i kanaštrele dvije su školjke novigradskog zaljeva, pečene u ljušturi.", de: "Kapešante und Kanaštrele sind die beiden Kammmuscheln der Bucht von Novigrad, in der Schale gegrillt.", it: "Capesante e canestrelli sono le due conchiglie della baia di Cittanova, grigliate nel guscio." },
     items: [
-      { hr: "Dagnje na buzaru", en: "Mussels in buzara", desc: "White wine, garlic, parsley, breadcrumbs.", price: "12" },
-      { hr: "Kapešante na žaru", en: "Grilled queen scallops", desc: "Three pieces.", price: "13.50" },
-      { hr: "Kanaštrele na žaru", en: "Grilled canestrelli", desc: "The small Novigrad scallops.", price: "13.50" },
-      { hr: "Rižoto škampi", en: "Scampi risotto", price: "18" },
-      { hr: "Crni rižoto s plodovima mora", en: "Black risotto with seafood", desc: "Cuttlefish ink.", price: "16" }
+      { name: { en: "Mussels in buzara", hr: "Dagnje na buzaru", de: "Miesmuscheln in Buzara-Sauce", it: "Cozze alla busara" },
+        desc: { en: "White wine, garlic, parsley, breadcrumbs.", hr: "Bijelo vino, češnjak, peršin, krušne mrvice.", de: "Weißwein, Knoblauch, Petersilie, Semmelbrösel.", it: "Vino bianco, aglio, prezzemolo, pangrattato." },
+        price: "12" },
+      { name: { en: "Grilled queen scallops", hr: "Kapešante na žaru", de: "Jakobsmuscheln vom Grill", it: "Capesante alla griglia" }, price: "13.50", unit: "three" },
+      { name: { en: "Grilled canestrelli", hr: "Kanaštrele na žaru", de: "Kanaštrele vom Grill", it: "Canestrelli alla griglia" },
+        desc: { en: "The small Novigrad scallops.", hr: "Male novigradske školjke.", de: "Die kleinen Kammmuscheln aus Novigrad.", it: "Le piccole conchiglie di Cittanova." },
+        price: "13.50" },
+      { name: { en: "Scampi risotto", hr: "Rižoto škampi", de: "Risotto mit Scampi", it: "Risotto con scampi" }, price: "18" },
+      { name: { en: "Black risotto with seafood", hr: "Crni rižoto s plodovima mora", de: "Schwarzes Risotto mit Meeresfrüchten", it: "Risotto nero ai frutti di mare" },
+        desc: { en: "Cuttlefish ink.", hr: "Na crnilu sipe.", de: "Mit Sepiatinte.", it: "Al nero di seppia." },
+        price: "16" }
     ]
   },
   {
     id: "m-soups",
-    title: "Soups and salads",
-    hr: "Juhe i salate",
+    title: { en: "Soups and salads", hr: "Juhe i salate", de: "Suppen und Salate", it: "Zuppe e insalate" },
     items: [
-      { hr: "Riblja juha", en: "Fish soup", price: "7" },
-      { hr: "Goveđa juha", en: "Beef soup", price: "5" },
-      { hr: "Juha od rajčice", en: "Tomato soup", price: "5" },
-      { hr: "Miješana salata", en: "Mixed salad", price: "4.80" },
-      { hr: "Šopska salata", en: "Šopska salad", desc: "Mixed salad with cheese.", price: "7.80" },
-      { hr: "Salata sa tunjevinom", en: "Tuna salad", price: "8.80" },
-      { hr: "Caprese salata", en: "Caprese", price: "8" },
-      { hr: "Salata sa piletinom i dresingom", en: "Chicken salad with dressing", price: "10" }
+      { name: { en: "Fish soup", hr: "Riblja juha", de: "Fischsuppe", it: "Brodo di pesce" }, price: "7" },
+      { name: { en: "Beef soup", hr: "Goveđa juha", de: "Rindsuppe", it: "Brodo di manzo" }, price: "5" },
+      { name: { en: "Tomato soup", hr: "Juha od rajčice", de: "Tomatensuppe", it: "Zuppa di pomodoro" }, price: "5" },
+      { name: { en: "Mixed salad", hr: "Miješana salata", de: "Gemischter Salat", it: "Insalata mista" }, price: "4.80" },
+      { name: { en: "Šopska salad", hr: "Šopska salata", de: "Schopska-Salat", it: "Insalata šopska" },
+        desc: { en: "Mixed salad with cheese.", hr: "Miješana salata sa sirom.", de: "Gemischter Salat mit Käse.", it: "Insalata mista con formaggio." },
+        price: "7.80" },
+      { name: { en: "Tuna salad", hr: "Salata sa tunjevinom", de: "Salat mit Thunfisch", it: "Insalata con tonno" }, price: "8.80" },
+      { name: { en: "Caprese", hr: "Caprese salata", de: "Caprese", it: "Caprese" }, price: "8" },
+      { name: { en: "Chicken salad with dressing", hr: "Salata sa piletinom i dresingom", de: "Salat mit Hähnchen und Dressing", it: "Insalata con pollo e condimento" }, price: "10" }
     ]
   },
   {
     id: "m-pasta",
-    title: "Pasta",
-    hr: "Tjestenina",
+    title: { en: "Pasta", hr: "Tjestenina", de: "Teigwaren", it: "Pasta" },
     items: [
-      { hr: "Tagliatelle sa škampima", en: "Tagliatelle with scampi", price: "18" },
-      { hr: "Tagliatelle sa tartufima", en: "Tagliatelle with truffles", price: "18" },
-      { hr: "Tagliatelle pesto", en: "Tagliatelle with pesto", desc: "Pesto genovese, dried tomatoes, grana padano.", price: "14" },
-      { hr: "Špageti plodovi mora", en: "Seafood spaghetti", price: "14" },
-      { hr: "Špageti bolognese", en: "Spaghetti bolognese", price: "11" }
+      { name: { en: "Tagliatelle with scampi", hr: "Tagliatelle sa škampima", de: "Tagliatelle mit Scampi", it: "Tagliatelle con scampi" }, price: "18" },
+      { name: { en: "Tagliatelle with truffles", hr: "Tagliatelle sa tartufima", de: "Tagliatelle mit Trüffeln", it: "Tagliatelle al tartufo" }, price: "18" },
+      { name: { en: "Tagliatelle with pesto", hr: "Tagliatelle pesto", de: "Tagliatelle mit Pesto", it: "Tagliatelle al pesto" },
+        desc: { en: "Pesto genovese, dried tomatoes, grana padano.", hr: "Pesto genovese, sušene rajčice, grana padano.", de: "Pesto genovese, getrocknete Tomaten, Grana Padano.", it: "Pesto genovese, pomodori secchi, grana padano." },
+        price: "14" },
+      { name: { en: "Seafood spaghetti", hr: "Špageti plodovi mora", de: "Spaghetti mit Meeresfrüchten", it: "Spaghetti ai frutti di mare" }, price: "14" },
+      { name: { en: "Spaghetti bolognese", hr: "Špageti bolognese", de: "Spaghetti Bolognese", it: "Spaghetti alla bolognese" }, price: "11" }
     ]
   },
   {
     id: "m-sea",
-    title: "From the sea",
-    hr: "Riblja jela",
-    note: "Whole fish is brought to the table before cooking and priced by weight.",
+    title: { en: "From the sea", hr: "Riblja jela", de: "Fischgerichte", it: "Piatti di pesce" },
+    note: { en: "Whole fish is brought to the table before cooking and priced by weight.", hr: "Cijela riba donosi se na stol prije pripreme i naplaćuje po težini.", de: "Ganzer Fisch wird vor der Zubereitung am Tisch gezeigt und nach Gewicht berechnet.", it: "Il pesce intero si mostra al tavolo prima della cottura e si paga a peso." },
     items: [
-      { hr: "Riblja plata za dvoje", en: "Fish platter for two", desc: "Sea bream, sea bass, scampi, shellfish, squid, with chard and potatoes. The house dish.", price: "for two 52" },
-      { hr: "Riba I. klase s prilogom", en: "First-class fish with garnish", desc: "Whole fish of the day, priced by the kilogram.", price: "per kg 60" },
-      { hr: "Brancin ili orada sa žara", en: "Grilled sea bass or sea bream", desc: "300 to 400 g, with chard and potatoes.", price: "19.50" },
-      { hr: "File brancina", en: "Sea bass fillet", desc: "With chard and potatoes.", price: "19.50" },
-      { hr: "Škampi na žaru ili buzara", en: "Scampi, grilled or in buzara", price: "28" },
-      { hr: "Lignje na žaru", en: "Grilled squid", desc: "With chard and potatoes.", price: "14" },
-      { hr: "Lignje pržene", en: "Fried squid", desc: "With fries.", price: "14" },
-      { hr: "Tuna steak", en: "Tuna steak", desc: "With grilled vegetables.", price: "21.50" },
-      { hr: "Srdele na žaru", en: "Grilled sardines", desc: "With chard and potatoes.", price: "11.50" }
+      { name: { en: "Fish platter for two", hr: "Riblja plata za dvoje", de: "Fischplatte für zwei", it: "Grigliata di pesce per due" },
+        desc: { en: "Sea bream, sea bass, scampi, shellfish, squid, with chard and potatoes. The house dish.", hr: "Orada, brancin, škampi, školjke, lignje, blitva i krumpir. Jelo kuće.", de: "Dorade, Wolfsbarsch, Scampi, Muscheln, Tintenfisch, Mangold und Kartoffeln. Das Gericht des Hauses.", it: "Orata, branzino, scampi, conchiglie, calamari, bietole e patate. Il piatto della casa." },
+        price: "52", unit: "two" },
+      { name: { en: "First-class fish with garnish", hr: "Riba I. klase s prilogom", de: "Fisch erster Klasse mit Beilage", it: "Pesce di prima qualità con contorno" },
+        desc: { en: "Whole fish of the day, priced by the kilogram.", hr: "Cijela riba dana, po kilogramu.", de: "Ganzer Fisch des Tages, nach Kilogramm.", it: "Pesce intero del giorno, al chilo." },
+        price: "60", unit: "kg" },
+      { name: { en: "Grilled sea bass or sea bream", hr: "Brancin ili orada sa žara", de: "Wolfsbarsch oder Dorade vom Grill", it: "Branzino o orata alla griglia" },
+        desc: { en: "300 to 400 g, with chard and potatoes.", hr: "300 do 400 g, blitva i krumpir.", de: "300 bis 400 g, mit Mangold und Kartoffeln.", it: "300–400 g, con bietole e patate." },
+        price: "19.50" },
+      { name: { en: "Sea bass fillet", hr: "File brancina", de: "Wolfsbarschfilet", it: "Filetto di branzino" },
+        desc: { en: "With chard and potatoes.", hr: "Blitva i krumpir.", de: "Mit Mangold und Kartoffeln.", it: "Con bietole e patate." },
+        price: "19.50" },
+      { name: { en: "Scampi, grilled or in buzara", hr: "Škampi na žaru ili buzara", de: "Scampi gegrillt oder in Buzara-Sauce", it: "Scampi alla griglia o alla busara" }, price: "28" },
+      { name: { en: "Grilled squid", hr: "Lignje na žaru", de: "Calamari vom Grill", it: "Calamari alla griglia" },
+        desc: { en: "With chard and potatoes.", hr: "Blitva i krumpir.", de: "Mit Mangold und Kartoffeln.", it: "Con bietole e patate." },
+        price: "14" },
+      { name: { en: "Fried squid", hr: "Lignje pržene", de: "Frittierte Calamari", it: "Calamari fritti" },
+        desc: { en: "With fries.", hr: "S pomfritom.", de: "Mit Pommes.", it: "Con patatine." },
+        price: "14" },
+      { name: { en: "Tuna steak", hr: "Tuna steak", de: "Thunfischsteak", it: "Bistecca di tonno" },
+        desc: { en: "With grilled vegetables.", hr: "S povrćem sa žara.", de: "Mit gegrilltem Gemüse.", it: "Con verdure alla griglia." },
+        price: "21.50" },
+      { name: { en: "Grilled sardines", hr: "Srdele na žaru", de: "Sardinen vom Grill", it: "Sardine alla griglia" },
+        desc: { en: "With chard and potatoes.", hr: "Blitva i krumpir.", de: "Mit Mangold und Kartoffeln.", it: "Con bietole e patate." },
+        price: "11.50" }
     ]
   },
   {
     id: "m-grill",
-    title: "From the grill",
-    hr: "Mesna jela",
+    title: { en: "From the grill", hr: "Mesna jela", de: "Fleischgerichte", it: "Piatti di carne" },
     items: [
-      { hr: "Mesna plata za dvoje", en: "Meat platter for two", price: "for two 34" },
-      { hr: "Biftek na žaru", en: "Grilled beef fillet", desc: "With fried potatoes.", price: "26" },
-      { hr: "Biftek u umaku od zelenog papra", en: "Beef fillet in green pepper sauce", desc: "With croquettes.", price: "29" },
-      { hr: "Biftek u umaku od tartufa", en: "Beef fillet in truffle sauce", desc: "With croquettes.", price: "34" },
-      { hr: "Ramstek u umaku od gljiva", en: "Rump steak in mushroom sauce", desc: "With croquettes.", price: "22" },
-      { hr: "Ramstek u umaku od zelenog papra", en: "Rump steak in green pepper sauce", desc: "With croquettes.", price: "22" },
-      { hr: "Svinjski medaljoni na žaru", en: "Grilled pork medallions", desc: "With fried potatoes.", price: "14" },
-      { hr: "Svinjski medaljoni u umaku od tartufa", en: "Pork medallions in truffle sauce", desc: "With croquettes.", price: "17" },
-      { hr: "Miješano meso", en: "Mixed grill", desc: "With fries.", price: "14" },
-      { hr: "Gurmanska pljeskavica", en: "Gourmet pljeskavica", desc: "Beef patty with bacon and cheese, fried potatoes.", price: "14" },
-      { hr: "Pileći batak bez kosti BBQ", en: "Boneless chicken thigh, barbecue", desc: "With fried potatoes.", price: "13.50" },
-      { hr: "Bečki odrezak pileći", en: "Chicken schnitzel", desc: "With fries.", price: "12" },
-      { hr: "Ćevapčići", en: "Ćevapčići", desc: "With fries.", price: "12" },
-      { hr: "Piletina u umaku od naranče i curryja", en: "Chicken in orange and curry sauce", desc: "With croquettes.", price: "16.50" }
+      { name: { en: "Meat platter for two", hr: "Mesna plata za dvoje", de: "Fleischplatte für zwei", it: "Piatto di carne per due" }, price: "34", unit: "two" },
+      { name: { en: "Grilled beef fillet", hr: "Biftek na žaru", de: "Rinderfilet vom Grill", it: "Filetto alla griglia" },
+        desc: { en: "With fried potatoes.", hr: "S prženim krumpirom.", de: "Mit Bratkartoffeln.", it: "Con patate fritte." },
+        price: "26" },
+      { name: { en: "Beef fillet in green pepper sauce", hr: "Biftek u umaku od zelenog papra", de: "Rinderfilet in grüner Pfeffersauce", it: "Filetto in salsa al pepe verde" },
+        desc: { en: "With croquettes.", hr: "S kroketima.", de: "Mit Kroketten.", it: "Con crocchette." },
+        price: "29" },
+      { name: { en: "Beef fillet in truffle sauce", hr: "Biftek u umaku od tartufa", de: "Rinderfilet in Trüffelsauce", it: "Filetto in salsa al tartufo" },
+        desc: { en: "With croquettes.", hr: "S kroketima.", de: "Mit Kroketten.", it: "Con crocchette." },
+        price: "34" },
+      { name: { en: "Rump steak in mushroom sauce", hr: "Ramstek u umaku od gljiva", de: "Rumpsteak in Pilzsauce", it: "Bistecca di groppa in salsa ai funghi" },
+        desc: { en: "With croquettes.", hr: "S kroketima.", de: "Mit Kroketten.", it: "Con crocchette." },
+        price: "22" },
+      { name: { en: "Rump steak in green pepper sauce", hr: "Ramstek u umaku od zelenog papra", de: "Rumpsteak in grüner Pfeffersauce", it: "Bistecca di groppa al pepe verde" },
+        desc: { en: "With croquettes.", hr: "S kroketima.", de: "Mit Kroketten.", it: "Con crocchette." },
+        price: "22" },
+      { name: { en: "Grilled pork medallions", hr: "Svinjski medaljoni na žaru", de: "Schweinemedaillons vom Grill", it: "Medaglioni di maiale alla griglia" },
+        desc: { en: "With fried potatoes.", hr: "S prženim krumpirom.", de: "Mit Bratkartoffeln.", it: "Con patate fritte." },
+        price: "14" },
+      { name: { en: "Pork medallions in truffle sauce", hr: "Svinjski medaljoni u umaku od tartufa", de: "Schweinemedaillons in Trüffelsauce", it: "Medaglioni in salsa al tartufo" },
+        desc: { en: "With croquettes.", hr: "S kroketima.", de: "Mit Kroketten.", it: "Con crocchette." },
+        price: "17" },
+      { name: { en: "Mixed grill", hr: "Miješano meso", de: "Gemischtes Fleisch vom Grill", it: "Carne mista" },
+        desc: { en: "With fries.", hr: "S pomfritom.", de: "Mit Pommes.", it: "Con patatine." },
+        price: "14" },
+      { name: { en: "Gourmet pljeskavica", hr: "Gurmanska pljeskavica", de: "Gourmet-Pljeskavica", it: "Pljeskavica gourmet" },
+        desc: { en: "Beef patty with bacon and cheese, fried potatoes.", hr: "S pancetom i sirom, prženi krumpir.", de: "Mit Speck und Käse, Bratkartoffeln.", it: "Con pancetta e formaggio, patate fritte." },
+        price: "14" },
+      { name: { en: "Boneless chicken thigh, barbecue", hr: "Pileći batak bez kosti BBQ", de: "Hähnchenschenkel ohne Knochen, BBQ", it: "Coscia di pollo disossata BBQ" },
+        desc: { en: "With fried potatoes.", hr: "S prženim krumpirom.", de: "Mit Bratkartoffeln.", it: "Con patate fritte." },
+        price: "13.50" },
+      { name: { en: "Chicken schnitzel", hr: "Bečki odrezak pileći", de: "Wiener Schnitzel vom Hähnchen", it: "Scaloppina viennese di pollo" },
+        desc: { en: "With fries.", hr: "S pomfritom.", de: "Mit Pommes.", it: "Con patatine." },
+        price: "12" },
+      { name: { en: "Ćevapčići", hr: "Ćevapčići", de: "Ćevapčići", it: "Ćevapčići" },
+        desc: { en: "With fries.", hr: "S pomfritom.", de: "Mit Pommes.", it: "Con patatine." },
+        price: "12" },
+      { name: { en: "Chicken in orange and curry sauce", hr: "Piletina u umaku od naranče i curryja", de: "Hähnchen in Orangen-Curry-Sauce", it: "Pollo in salsa di arancia e curry" },
+        desc: { en: "With croquettes.", hr: "S kroketima.", de: "Mit Kroketten.", it: "Con crocchette." },
+        price: "16.50" }
     ]
   },
   {
     id: "m-kids",
-    title: "For children",
-    hr: "Dječji meni",
+    title: { en: "For children", hr: "Dječji meni", de: "Kindermenü", it: "Menù bambini" },
     items: [
-      { hr: "Bečki odrezak pileći, pomfrit", en: "Chicken schnitzel with fries", price: "8" },
-      { hr: "Špageti od rajčice", en: "Spaghetti with tomato sauce", price: "7" }
+      { name: { en: "Chicken schnitzel with fries", hr: "Bečki odrezak pileći, pomfrit", de: "Hähnchenschnitzel mit Pommes", it: "Scaloppina di pollo con patatine" }, price: "8" },
+      { name: { en: "Spaghetti with tomato sauce", hr: "Špageti od rajčice", de: "Spaghetti mit Tomatensauce", it: "Spaghetti al pomodoro" }, price: "7" }
     ]
   },
   {
     id: "m-sweets",
-    title: "Desserts and drinks",
-    hr: "Deserti i pića",
-    note: "Ask for the day's desserts and the Istrian wine list. Malvazija by the glass or the litre goes with the fish, Teran with the grill.",
+    title: { en: "Desserts and drinks", hr: "Deserti i pića", de: "Desserts und Getränke", it: "Dolci e bevande" },
+    note: { en: "Ask for the day's desserts and the Istrian wine list. Malvazija by the glass or the litre goes with the fish, Teran with the grill.", hr: "Pitajte za deserte dana i istarsku vinsku kartu. Malvazija na čašu ili litru ide uz ribu, teran uz roštilj.", de: "Fragen Sie nach den Desserts des Tages und der istrischen Weinkarte. Malvazija im Glas oder Liter passt zum Fisch, Teran zum Grill.", it: "Chiedete i dolci del giorno e la carta dei vini istriani. La Malvasia al bicchiere o al litro accompagna il pesce, il Terrano la griglia." },
     items: [
-      { hr: "Palačinke", en: "Pancakes", desc: "Chocolate, jam or walnuts." },
-      { hr: "Tiramisu", en: "House tiramisu" },
-      { hr: "Malvazija istarska", en: "Istrian Malvazija", desc: "By the glass or the litre." },
-      { hr: "Teran", en: "Teran", desc: "The Istrian red." },
-      { hr: "Rakija", en: "Grappa and herbal rakija", desc: "Biska, medica, travarica." }
+      { name: { en: "Pancakes", hr: "Palačinke", de: "Palatschinken", it: "Crêpes" },
+        desc: { en: "Chocolate, jam or walnuts.", hr: "Čokolada, marmelada ili orasi.", de: "Schokolade, Marmelade oder Walnüsse.", it: "Cioccolato, marmellata o noci." } },
+      { name: { en: "House tiramisu", hr: "Domaći tiramisu", de: "Hausgemachtes Tiramisu", it: "Tiramisù della casa" } },
+      { name: { en: "Istrian Malvazija", hr: "Malvazija istarska", de: "Istrische Malvazija", it: "Malvasia istriana" },
+        desc: { en: "By the glass or the litre.", hr: "Na čašu ili litru.", de: "Im Glas oder Liter.", it: "Al bicchiere o al litro." } },
+      { name: { en: "Teran", hr: "Teran", de: "Teran", it: "Terrano" },
+        desc: { en: "The Istrian red.", hr: "Istarsko crno.", de: "Der istrische Rote.", it: "Il rosso istriano." } },
+      { name: { en: "Grappa and herbal rakija", hr: "Rakije", de: "Grappa und Kräuterschnaps", it: "Grappa e acquaviti alle erbe" },
+        desc: { en: "Biska, medica, travarica.", hr: "Biska, medica, travarica.", de: "Biska, Medica, Travarica.", it: "Biska, medica, travarica." } }
     ]
   }
 ];

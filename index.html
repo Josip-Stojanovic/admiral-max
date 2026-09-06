@@ -8,6 +8,7 @@
   <meta property="og:title" content="Admiral Max, Novigrad">
   <meta property="og:description" content="Fish konoba on the Porporela breakwater in Novigrad, Istria. Open daily from 13:00.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/photos/terrace.jpg">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +22,7 @@
     "servesCuisine": ["Seafood", "Istrian", "Mediterranean"],
     "priceRange": "€15–35",
     "telephone": "+385 52 433 254",
+    "image": "assets/photos/terrace.jpg",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Porporela 3",
@@ -39,17 +41,25 @@
 </head>
 <body>
 
-<a class="skip" href="#menu">Skip to the menu</a>
+<a class="skip" href="#menu" data-i18n="skip">Skip to the menu</a>
 
 <header class="top">
   <a class="top-name" href="#top">Admiral Max</a>
   <nav class="top-nav" aria-label="Sections">
-    <a href="#story">The admiral</a>
-    <a href="#menu">Menu</a>
-    <a href="#visit">Hours &amp; terrace</a>
-    <a href="#guests">Guests</a>
+    <a href="#story" data-i18n="navStory">The admiral</a>
+    <a href="#menu" data-i18n="navMenu">Menu</a>
+    <a href="#visit" data-i18n="navVisit">Hours &amp; terrace</a>
+    <a href="#guests" data-i18n="navGuests">Guests</a>
   </nav>
-  <a class="top-call" href="tel:+38552433254">052 433 254</a>
+  <div class="top-right">
+    <nav class="lang" aria-label="Language" data-i18n-aria="langLabel">
+      <button type="button" lang="en" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" lang="hr" data-lang="hr">HR</button>
+      <button type="button" lang="de" data-lang="de">DE</button>
+      <button type="button" lang="it" data-lang="it">IT</button>
+    </nav>
+    <a class="top-call" href="tel:+38552433254">052 433 254</a>
+  </div>
 </header>
 
 <main id="top">
@@ -57,11 +67,11 @@
   <!-- ============ HERO: harbour chart ============ -->
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-copy">
-      <p class="hero-place">Konoba on the Porporela breakwater, Novigrad, Istria</p>
+      <p class="hero-place" data-i18n="heroPlace">Konoba on the Porporela breakwater, Novigrad, Istria</p>
       <h1 id="hero-title">Admiral<br>Max</h1>
 
       <!-- International maritime signal flags spelling A D M I R A L  M A X -->
-      <ol class="hoist" aria-label="The name spelled in maritime signal flags">
+      <ol class="hoist" aria-label="The name spelled in maritime signal flags" data-i18n-aria="hoistLabel">
         <li class="flag flag-a" title="A"></li>
         <li class="flag flag-d" title="D"></li>
         <li class="flag flag-m" title="M"></li>
@@ -75,21 +85,21 @@
         <li class="flag flag-x" title="X"></li>
       </ol>
 
-      <p class="hero-lede">Fish from the morning boats, Novigrad scallops from the bay, and a terrace where the harbour meets the open sea.</p>
+      <p class="hero-lede" data-i18n="heroLede">Fish from the morning boats, Novigrad scallops from the bay, and a terrace where the harbour meets the open sea.</p>
 
       <div class="hero-actions">
-        <a class="btn btn-brass" href="tel:+38552433254">Call to reserve a table</a>
-        <a class="btn btn-ghost" href="#menu">See the menu</a>
+        <a class="btn btn-brass" href="tel:+38552433254" data-i18n="callReserve">Call to reserve a table</a>
+        <a class="btn btn-ghost" href="#menu" data-i18n="seeMenu">See the menu</a>
       </div>
 
       <dl class="hero-facts">
-        <div><dt>Open</dt><dd>Daily from 13:00, Wednesday from 18:00</dd></div>
-        <div><dt>Rated</dt><dd>4.8 on Google, 559 reviews</dd></div>
-        <div><dt>Price</dt><dd>€15–35 a person</dd></div>
+        <div><dt data-i18n="factOpen">Open</dt><dd data-i18n="factOpenValue">Daily from 13:00, Wednesday from 18:00</dd></div>
+        <div><dt data-i18n="factRated">Rated</dt><dd data-i18n="factRatedValue">4.8 on Google, 559 reviews</dd></div>
+        <div><dt data-i18n="factPrice">Price</dt><dd data-i18n="factPriceValue">€15–35 a person</dd></div>
       </dl>
     </div>
 
-    <figure class="chart" aria-label="Stylised chart of Novigrad harbour with Admiral Max marked at the foot of the Porporela breakwater">
+    <figure class="chart" aria-label="Stylised chart of Novigrad harbour with Admiral Max marked at the foot of the Porporela breakwater" data-i18n-aria="chartLabel">
       <svg viewBox="0 0 900 900" preserveAspectRatio="xMidYMid slice" role="img" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <pattern id="soundings" width="150" height="150" patternUnits="userSpaceOnUse">
@@ -147,9 +157,9 @@
 
         <!-- chart title block -->
         <g class="cartouche" transform="translate(600 760)">
-          <text x="0" y="0">Novigrad harbour</text>
-          <text x="0" y="22" class="cartouche-sub">Istria, 45°19′N 13°33′E</text>
-          <text x="0" y="44" class="cartouche-sub">Not for navigation. Meant for dinner.</text>
+          <text x="0" y="0" data-i18n="chartTitle">Novigrad harbour</text>
+          <text x="0" y="22" class="cartouche-sub" data-i18n="chartSub">Istria, 45°19′N 13°33′E</text>
+          <text x="0" y="44" class="cartouche-sub" data-i18n="chartNote">Not for navigation. Meant for dinner.</text>
         </g>
 
         <!-- scale bar -->
@@ -169,27 +179,27 @@
   <!-- ============ STORY ============ -->
   <section class="story" id="story" aria-labelledby="story-title">
     <figure class="band">
-      <img src="assets/photos/terrace.jpg" alt="Wooden tables on the terrace at sunset, with the boats of Novigrad harbour behind" width="1306" height="747" loading="lazy">
-      <figcaption>The terrace at the foot of the Porporela, an August evening.</figcaption>
+      <img src="assets/photos/terrace.jpg" alt="Wooden tables on the terrace at sunset, with the boats of Novigrad harbour behind" data-i18n-alt="bandAlt" width="1306" height="747" loading="lazy">
+      <figcaption data-i18n="bandCaption">The terrace at the foot of the Porporela, an August evening.</figcaption>
     </figure>
     <div class="story-grid">
       <div class="story-side">
-        <p class="story-kicker">The name over the door</p>
+        <p class="story-kicker" data-i18n="storyKicker">The name over the door</p>
         <div class="admiral-card">
           <p class="admiral-name">Maksimilijan Njegovan</p>
-          <p class="admiral-dates">1858 to 1930</p>
-          <p class="admiral-role">Admiral of the Austro-Hungarian Navy, Croatian by birth, commander of the fleet during the First World War.</p>
+          <p class="admiral-dates" data-i18n="admiralDates">1858 to 1930</p>
+          <p class="admiral-role" data-i18n="admiralRole">Admiral of the Austro-Hungarian Navy, Croatian by birth, commander of the fleet during the First World War.</p>
         </div>
         <figure class="story-photo">
-          <img src="assets/photos/interior.jpg" alt="Inside the konoba: old photographs of Novigrad harbour, a chart, ship lanterns and a wine rack by the door" width="1014" height="760" loading="lazy">
-          <figcaption>Old Novigrad on the walls, lanterns over the door.</figcaption>
+          <img src="assets/photos/interior.jpg" alt="Inside the konoba: old photographs of Novigrad harbour, a chart, ship lanterns and a wine rack by the door" data-i18n-alt="interiorAlt" width="1014" height="760" loading="lazy">
+          <figcaption data-i18n="interiorCaption">Old Novigrad on the walls, lanterns over the door.</figcaption>
         </figure>
       </div>
       <div class="story-body">
-        <h2 id="story-title">A konoba that remembers the sailors of the old fleet</h2>
-        <p>For a century and a half the Istrian coast sent its men to sea under the Habsburg naval ensign. Admiral Max takes its name from the highest-ranking of them, Maksimilijan Njegovan, and is kept in memory of every Austro-Hungarian sailor and the families who waited for them in the harbour towns.</p>
-        <p>The room reflects it. Brass, dark wood, charts and ship models were assembled together with Gallerion, Novigrad's museum of the Austro-Hungarian navy, a few streets away in the old town. Outside, the terrace sits at the foot of the Porporela breakwater, with the boats of the Mandrač on one side and the open Adriatic on the other.</p>
-        <p>The cooking is simpler than the story. Fish and shellfish come from the local boats and are grilled, fried or cooked in buzara the way Novigrad has always done it. Bread is baked in house and arrives with Istrian olive oil. Portions are generous and the bill is honest.</p>
+        <h2 id="story-title" data-i18n="storyTitle">A konoba that remembers the sailors of the old fleet</h2>
+        <p data-i18n="storyP1">For a century and a half the Istrian coast sent its men to sea under the Habsburg naval ensign. Admiral Max takes its name from the highest-ranking of them, Maksimilijan Njegovan, and is kept in memory of every Austro-Hungarian sailor and the families who waited for them in the harbour towns.</p>
+        <p data-i18n="storyP2">The room reflects it. Brass, dark wood, charts and ship models were assembled together with Gallerion, Novigrad's museum of the Austro-Hungarian navy, a few streets away in the old town. Outside, the terrace sits at the foot of the Porporela breakwater, with the boats of the Mandrač on one side and the open Adriatic on the other.</p>
+        <p data-i18n="storyP3">The cooking is simpler than the story. Fish and shellfish come from the local boats and are grilled, fried or cooked in buzara the way Novigrad has always done it. Bread is baked in house and arrives with Istrian olive oil. Portions are generous and the bill is honest.</p>
       </div>
     </div>
   </section>
@@ -197,37 +207,37 @@
   <!-- ============ KITCHEN ============ -->
   <section class="kitchen" id="kitchen" aria-labelledby="kitchen-title">
     <div class="kitchen-head">
-      <h2 id="kitchen-title">From the kitchen</h2>
-      <p>Photographed at the table by guests. What arrives depends on the boats that morning.</p>
+      <h2 id="kitchen-title" data-i18n="kitchenTitle">From the kitchen</h2>
+      <p data-i18n="kitchenLede">Photographed at the table by guests. What arrives depends on the boats that morning.</p>
     </div>
     <ul class="plates">
       <li class="plate plate-wide">
-        <img src="assets/photos/fish-platter.jpg" alt="Fish platter for two: whole grilled sea bream, scampi, mussels, squid and a ring of grilled scallops" width="913" height="760" loading="lazy">
-        <figcaption><a href="#m-sea">Fish platter for two</a><span>€52</span></figcaption>
+        <img src="assets/photos/fish-platter.jpg" alt="Fish platter for two: whole grilled sea bream, scampi, mussels, squid and a ring of grilled scallops" data-i18n-alt="plate1Alt" width="913" height="760" loading="lazy">
+        <figcaption><a href="#m-sea" data-i18n="plate1">Fish platter for two</a><span>€52</span></figcaption>
       </li>
       <li class="plate">
-        <img src="assets/photos/scallops.jpg" alt="Three grilled scallops in the shell with olive oil, rocket and lemon" width="1015" height="760" loading="lazy">
-        <figcaption><a href="#m-hot">Grilled scallops</a><span>€13.50</span></figcaption>
+        <img src="assets/photos/scallops.jpg" alt="Three grilled scallops in the shell with olive oil, rocket and lemon" data-i18n-alt="plate2Alt" width="1015" height="760" loading="lazy">
+        <figcaption><a href="#m-hot" data-i18n="plate2">Grilled scallops</a><span>€13.50</span></figcaption>
       </li>
       <li class="plate plate-tall">
-        <img src="assets/photos/sea-bass.jpg" alt="Whole grilled sea bass with chard and potatoes and grilled peppers and courgette" width="597" height="760" loading="lazy">
-        <figcaption><a href="#m-sea">Grilled sea bass</a><span>€19.50</span></figcaption>
+        <img src="assets/photos/sea-bass.jpg" alt="Whole grilled sea bass with chard and potatoes and grilled peppers and courgette" data-i18n-alt="plate3Alt" width="597" height="760" loading="lazy">
+        <figcaption><a href="#m-sea" data-i18n="plate3">Grilled sea bass</a><span>€19.50</span></figcaption>
       </li>
       <li class="plate">
-        <img src="assets/photos/fritto-misto.jpg" alt="Fried squid with thick-cut fries, tartare sauce and a wedge of lemon" width="1015" height="760" loading="lazy">
-        <figcaption><a href="#m-sea">Fried squid</a><span>€14</span></figcaption>
+        <img src="assets/photos/fritto-misto.jpg" alt="Fried squid with thick-cut fries, tartare sauce and a wedge of lemon" data-i18n-alt="plate4Alt" width="1015" height="760" loading="lazy">
+        <figcaption><a href="#m-sea" data-i18n="plate4">Fried squid</a><span>€14</span></figcaption>
       </li>
       <li class="plate plate-long">
-        <img src="assets/photos/tuna-steak.jpg" alt="Seared tuna steak with grilled peppers, rocket and lemon" width="1015" height="760" loading="lazy">
-        <figcaption><a href="#m-sea">Tuna steak</a><span>€21.50</span></figcaption>
+        <img src="assets/photos/tuna-steak.jpg" alt="Seared tuna steak with grilled peppers, rocket and lemon" data-i18n-alt="plate5Alt" width="1015" height="760" loading="lazy">
+        <figcaption><a href="#m-sea" data-i18n="plate5">Tuna steak</a><span>€21.50</span></figcaption>
       </li>
       <li class="plate">
-        <img src="assets/photos/fish-platter-top.jpg" alt="Fish platter seen from above, with scallops around the edge and a bowl of parsley oil" width="569" height="760" loading="lazy">
-        <figcaption><a href="#m-sea">The platter, from above</a></figcaption>
+        <img src="assets/photos/fish-platter-top.jpg" alt="Fish platter seen from above, with scallops around the edge and a bowl of parsley oil" data-i18n-alt="plate6Alt" width="569" height="760" loading="lazy">
+        <figcaption><a href="#m-sea" data-i18n="plate6">The platter, from above</a></figcaption>
       </li>
       <li class="plate">
-        <img src="assets/photos/seafood-spaghetti.jpg" alt="Seafood spaghetti with scallops, mussels and prawns in a stoneware bowl" width="683" height="760" loading="lazy">
-        <figcaption><a href="#m-pasta">Seafood spaghetti</a><span>€14</span></figcaption>
+        <img src="assets/photos/seafood-spaghetti.jpg" alt="Seafood spaghetti with scallops, mussels and prawns in a stoneware bowl" data-i18n-alt="plate7Alt" width="683" height="760" loading="lazy">
+        <figcaption><a href="#m-pasta" data-i18n="plate7">Seafood spaghetti</a><span>€14</span></figcaption>
       </li>
     </ul>
   </section>
@@ -235,49 +245,42 @@
   <!-- ============ MENU ============ -->
   <section class="menu" id="menu" aria-labelledby="menu-title">
     <div class="menu-head">
-      <h2 id="menu-title">Menu</h2>
-      <p class="menu-note">What the boats bring in changes daily. Fresh fish is sold by weight and shown at the table before cooking. Ask about the day's catch and the scallops, which depend on the season.</p>
+      <h2 id="menu-title" data-i18n="menuTitle">Menu</h2>
+      <p class="menu-note" data-i18n="menuNote">What the boats bring in changes daily. Fresh fish is sold by weight and shown at the table before cooking. Ask about the day's catch and the scallops, which depend on the season.</p>
     </div>
 
     <div class="menu-layout">
-      <nav class="menu-nav" aria-label="Menu sections">
-        <a href="#m-cold">Cold starters</a>
-        <a href="#m-hot">Hot starters and risotto</a>
-        <a href="#m-soups">Soups and salads</a>
-        <a href="#m-pasta">Pasta</a>
-        <a href="#m-sea">From the sea</a>
-        <a href="#m-grill">From the grill</a>
-        <a href="#m-kids">For children</a>
-        <a href="#m-sweets">Desserts and drinks</a>
+      <nav class="menu-nav" id="menu-nav" aria-label="Menu sections" data-i18n-aria="menuNavLabel">
+        <!-- Rendered from js/menu.js -->
       </nav>
 
       <div class="menu-sections" id="menu-sections">
         <!-- Rendered from js/menu.js -->
         <noscript>
-          <p>The menu needs JavaScript to display. Call 052 433 254 and we will happily read it to you.</p>
+          <p data-i18n="menuNoscript">The menu needs JavaScript to display. Call 052 433 254 and we will happily read it to you.</p>
         </noscript>
       </div>
     </div>
 
-    <p class="menu-foot">Prices in euro, VAT included. Whole fish is priced per kilogram. Please tell us about allergies; most dishes can be adjusted.</p>
+    <p class="menu-foot" data-i18n="menuFoot">Prices in euro, VAT included. Whole fish is priced per kilogram. Please tell us about allergies; most dishes can be adjusted.</p>
   </section>
 
   <!-- ============ VISIT: hours, terrace, map ============ -->
   <section class="visit" id="visit" aria-labelledby="visit-title">
     <div class="visit-grid">
       <div class="visit-info">
-        <h2 id="visit-title">Hours and the terrace</h2>
+        <h2 id="visit-title" data-i18n="visitTitle">Hours and the terrace</h2>
 
         <table class="hours">
-          <caption>Opening hours</caption>
+          <caption data-i18n="hoursCaption">Opening hours</caption>
           <tbody>
-            <tr><th scope="row">Monday</th><td>13:00 to 22:00</td></tr>
-            <tr><th scope="row">Tuesday</th><td>13:00 to 22:00</td></tr>
-            <tr><th scope="row">Wednesday</th><td>18:00 to 22:00</td></tr>
-            <tr><th scope="row">Thursday</th><td>13:00 to 22:00</td></tr>
-            <tr><th scope="row">Friday</th><td>13:00 to 22:00</td></tr>
-            <tr><th scope="row">Saturday</th><td>13:00 to 22:00</td></tr>
-            <tr><th scope="row">Sunday</th><td>13:00 to 22:00</td></tr>
+            <tr><th scope="row" data-i18n="dayMon">Monday</th><td data-i18n="hoursFull">13:00 to 22:00</td></tr>
+            <tr><th scope="row" data-i18n="dayTue">Tuesday</th><td data-i18n="hoursFull">13:00 to 22:00</td></tr>
+            <tr><th scope="row" data-i18n="dayWed">Wednesday</th><td data-i18n="hoursWed">18:00 to 22:00</td></tr>
+            <tr><th scope="row" data-i18n="dayThu">Thursday</th><td data-i18n="hoursFull">13:00 to 22:00</td></tr>
+            <tr><th scope="row" data-i18n="dayFri">Friday</th><td data-i18n="hoursFull">13:00 to 22:00</td></tr>
+            <tr><th scope="row" data-i18n="daySat">Saturday</th><td data-i18n="hoursFull">13:00 to 22:00</td></tr>
+            <tr><th scope="row" data-i18n="daySun">Sunday</th><td data-i18n="hoursFull">13:00 to 22:00</td></tr>
           </tbody>
         </table>
         <p class="hours-status" id="hours-status" aria-live="polite"></p>
@@ -285,29 +288,30 @@
         <address class="address">
           <strong>Admiral Max</strong><br>
           Porporela 3<br>
-          52466 Novigrad (Cittanova), Istria<br>
+          <span data-i18n="addressLine2">52466 Novigrad (Cittanova), Istria</span><br>
           <a href="tel:+38552433254">+385 52 433 254</a>
         </address>
 
         <ul class="amenities">
-          <li>Terrace over the harbour, shaded in the afternoon</li>
-          <li>Dine in or take away</li>
-          <li>Step-free access</li>
-          <li>Cards accepted</li>
-          <li>Parking at the harbour car park, two minutes on foot</li>
+          <li data-i18n="amenity1">Terrace over the harbour, shaded in the afternoon</li>
+          <li data-i18n="amenity2">Dine in or take away</li>
+          <li data-i18n="amenity3">Step-free access</li>
+          <li data-i18n="amenity4">Cards accepted</li>
+          <li data-i18n="amenity5">Parking at the harbour car park, two minutes on foot</li>
         </ul>
 
-        <p class="visit-tip">Terrace tables go first in July and August. Call ahead for the same evening.</p>
+        <p class="visit-tip" data-i18n="visitTip">Terrace tables go first in July and August. Call ahead for the same evening.</p>
 
         <div class="visit-actions">
-          <a class="btn btn-navy" href="https://www.google.com/maps/dir/?api=1&destination=Admiral+Max,+Porporela+3,+Novigrad" target="_blank" rel="noopener">Get directions</a>
-          <a class="btn btn-ghost-dark" href="tel:+38552433254">Call 052 433 254</a>
+          <a class="btn btn-navy" href="https://www.google.com/maps/dir/?api=1&destination=Admiral+Max,+Porporela+3,+Novigrad" target="_blank" rel="noopener" data-i18n="directions">Get directions</a>
+          <a class="btn btn-ghost-dark" href="tel:+38552433254" data-i18n="callShort">Call 052 433 254</a>
         </div>
       </div>
 
       <div class="visit-map">
         <iframe
           title="Map showing Admiral Max on the Porporela in Novigrad"
+          data-i18n-title="mapTitle"
           src="https://www.google.com/maps?q=Admiral+Max,+Porporela+3,+Novigrad,+Croatia&z=17&output=embed"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
@@ -321,27 +325,27 @@
     <div class="guests-grid">
       <div class="guests-score">
         <p class="score">4.8</p>
-        <p class="score-sub">from 559 Google reviews</p>
-        <a class="score-link" href="https://www.google.com/maps/place/Admiral+Max/@45.31766,13.5599426,17z/data=!4m6!3m5!1s0x477c9b8c6de1d2fd:0xe847933561a37b0f!8m2!3d45.31766!4d13.5599426!16s%2Fg%2F11c524yf07" target="_blank" rel="noopener">Read them on Google Maps</a>
+        <p class="score-sub" data-i18n="scoreSub">from 559 Google reviews</p>
+        <a class="score-link" href="https://www.google.com/maps/place/Admiral+Max/@45.31766,13.5599426,17z/data=!4m6!3m5!1s0x477c9b8c6de1d2fd:0xe847933561a37b0f!8m2!3d45.31766!4d13.5599426!16s%2Fg%2F11c524yf07" target="_blank" rel="noopener" data-i18n="scoreLink">Read them on Google Maps</a>
       </div>
       <div class="guests-themes">
-        <h2 id="guests-title">What guests come back for</h2>
+        <h2 id="guests-title" data-i18n="guestsTitle">What guests come back for</h2>
         <ul class="themes">
           <li>
-            <h3>The fish platter for two</h3>
-            <p>The most mentioned dish by a distance. Whole grilled fish, scampi, squid and a ring of scallops on one board, with chard and potatoes. Several regulars call it the best on the coast.</p>
+            <h3 data-i18n="theme1">The fish platter for two</h3>
+            <p data-i18n="theme1P">The most mentioned dish by a distance. Whole grilled fish, scampi, squid and a ring of scallops on one board, with chard and potatoes. Several regulars call it the best on the coast.</p>
           </li>
           <li>
-            <h3>Small Novigrad scallops</h3>
-            <p>The bay's specialty, where river water meets the sea. Guests single out the small ones, grilled with olive oil and garlic.</p>
+            <h3 data-i18n="theme2">Small Novigrad scallops</h3>
+            <p data-i18n="theme2P">The bay's specialty, where river water meets the sea. Guests single out the small ones, grilled with olive oil and garlic.</p>
           </li>
           <li>
-            <h3>Portions and the bill</h3>
-            <p>People leave full and surprised by the total. Value for money is the second most common remark after the fish.</p>
+            <h3 data-i18n="theme3">Portions and the bill</h3>
+            <p data-i18n="theme3P">People leave full and surprised by the total. Value for money is the second most common remark after the fish.</p>
           </li>
           <li>
-            <h3>The terrace</h3>
-            <p>Dinner with the boats coming in. Guests recommend reserving a terrace table in season.</p>
+            <h3 data-i18n="theme4">The terrace</h3>
+            <p data-i18n="theme4P">Dinner with the boats coming in. Guests recommend reserving a terrace table in season.</p>
           </li>
         </ul>
       </div>
@@ -350,10 +354,10 @@
 
   <!-- ============ RESERVE ============ -->
   <section class="reserve" id="reserve" aria-labelledby="reserve-title">
-    <h2 id="reserve-title">Reserve a table</h2>
-    <p>We take reservations by phone every day from noon. For groups of eight or more, call a day ahead and we will set the long table by the water.</p>
+    <h2 id="reserve-title" data-i18n="reserveTitle">Reserve a table</h2>
+    <p data-i18n="reserveP">We take reservations by phone every day from noon. For groups of eight or more, call a day ahead and we will set the long table by the water.</p>
     <a class="reserve-phone" href="tel:+38552433254">052 433 254</a>
-    <p class="reserve-langs">From abroad dial +385 52 433 254. We speak Croatian, Italian, German and English.</p>
+    <p class="reserve-langs" data-i18n="reserveLangs">From abroad dial +385 52 433 254. We speak Croatian, Italian, German and English.</p>
   </section>
 
 </main>
@@ -362,19 +366,20 @@
   <div class="foot-grid">
     <div>
       <p class="foot-name">Admiral Max</p>
-      <p>Konoba, Porporela 3, 52466 Novigrad, Croatia</p>
+      <p data-i18n="footAddress">Konoba, Porporela 3, 52466 Novigrad, Croatia</p>
     </div>
     <div>
       <p><a href="tel:+38552433254">+385 52 433 254</a></p>
       <p><a href="https://www.facebook.com/admiralmax/" target="_blank" rel="noopener">Facebook</a></p>
     </div>
     <div>
-      <p>Named for Admiral Maksimilijan Njegovan, in memory of the sailors of the Austro-Hungarian fleet.</p>
+      <p data-i18n="footNamed">Named for Admiral Maksimilijan Njegovan, in memory of the sailors of the Austro-Hungarian fleet.</p>
     </div>
   </div>
   <p class="foot-legal">© <span id="year"></span> Admiral Max, Novigrad. Obrt za ugostiteljstvo UNICO.</p>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/menu.js"></script>
 <script src="js/main.js"></script>
 </body>

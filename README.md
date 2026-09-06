@@ -10,7 +10,8 @@ python3 -m http.server 8080
 
 ## Editing
 
-- **Menu**: `js/menu.js`. One entry per dish with Croatian name, English name, description and price. Prices are strings, so `"per kg 60"` and `"glass 4, litre 18"` work; every number gets a € sign automatically.
+- **Languages**: the site is in English, Croatian, German and Italian. Interface text lives in `js/i18n.js`, one block per language with the same keys. The toggle in the header remembers the choice in the browser, and a first visit picks the browser's language. `?lang=de` in the URL forces a language.
+- **Menu**: `js/menu.js`. One entry per dish with the name and description in all four languages, a price string, and an optional unit (`two`, `kg`, `100g`, `three`) whose label is translated.
 - **Hours**: the table in `index.html` under "Hours and the terrace", and the `HOURS` object in `js/main.js` which drives the "open now" line.
 - **Contact and address**: search `index.html` for `433 254` and `Porporela`.
 - **Colours and type**: the `:root` block at the top of `css/style.css`.
