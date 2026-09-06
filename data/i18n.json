@@ -8,7 +8,7 @@
     "navVisit": "Hours & terrace",
     "navGuests": "Guests",
     "langLabel": "Language",
-    "heroPlace": "Konoba on the Porporela breakwater, Novigrad, Istria",
+    "heroPlace": "Fish restaurant and konoba on the Porporela breakwater, Novigrad, Istria",
     "heroLede": "Fish from the morning boats, Novigrad scallops from the bay, and a terrace where the harbour meets the open sea.",
     "callReserve": "Call to reserve a table",
     "seeMenu": "See the menu",
@@ -123,8 +123,11 @@
     "hoursUnconfirmed": "Wednesday hours are being confirmed. Call ahead on Wednesdays.",
     "altLangs": "This page in other languages",
     "reserveOnline": "Reserve online",
-    "heroImgAlt": "Woodcut of a Venetian galley under sail, from a fifteenth-century pilgrim's travel book",
-    "heroCredit": "Ship: Konrad von Grünenberg's pilgrim galley, 1487, Badische Landesbibliothek, public domain."
+    "heroImgAlt": "Grilled fish platter for two with prawns, scallops and mussels, served on the terrace",
+    "heroCredit": "Ship: Konrad von Grünenberg's pilgrim galley, 1487, Badische Landesbibliothek, public domain.",
+    "storyImgAlt": "Woodcut of a Venetian galley under sail, from a fifteenth-century pilgrim's travel book",
+    "topTag": "Fish restaurant, Novigrad",
+    "storyImgCap": "A Venetian galley under sail, from a pilgrim’s travel book of 1487"
   },
   "hr": {
     "_name": "Hrvatski",
@@ -135,7 +138,7 @@
     "navVisit": "Radno vrijeme i terasa",
     "navGuests": "Gosti",
     "langLabel": "Jezik",
-    "heroPlace": "Konoba na lukobranu Porporela, Novigrad, Istra",
+    "heroPlace": "Riblji restoran i konoba na lukobranu Porporela, Novigrad, Istra",
     "heroLede": "Riba s jutarnjih brodova, novigradske kapešante iz zaljeva i terasa gdje se luka otvara prema pučini.",
     "callReserve": "Nazovite za rezervaciju",
     "seeMenu": "Pogledajte jelovnik",
@@ -250,8 +253,11 @@
     "hoursUnconfirmed": "Radno vrijeme srijedom još potvrđujemo. Srijedom nazovite unaprijed.",
     "altLangs": "Ova stranica na drugim jezicima",
     "reserveOnline": "Rezervirajte online",
-    "heroImgAlt": "Drvorez venecijanske galije pod jedrima, iz hodočasničkog putopisa iz 15. stoljeća",
-    "heroCredit": "Brod: hodočasnička galija Konrada von Grünenberga, 1487., Badische Landesbibliothek, javno dobro."
+    "heroImgAlt": "Riblja plata za dvoje s kozicama, kapešantama i dagnjama, poslužena na terasi",
+    "heroCredit": "Brod: hodočasnička galija Konrada von Grünenberga, 1487., Badische Landesbibliothek, javno dobro.",
+    "storyImgAlt": "Drvorez venecijanske galije pod jedrima, iz hodočasničkog putopisa iz 15. stoljeća",
+    "topTag": "Riblji restoran, Novigrad",
+    "storyImgCap": "Venecijanska galija pod jedrima, iz hodočasničkog putopisa iz 1487."
   },
   "de": {
     "_name": "Deutsch",
@@ -262,7 +268,7 @@
     "navVisit": "Öffnungszeiten & Terrasse",
     "navGuests": "Gäste",
     "langLabel": "Sprache",
-    "heroPlace": "Konoba auf der Mole Porporela, Novigrad, Istrien",
+    "heroPlace": "Fischrestaurant und Konoba auf der Mole Porporela, Novigrad, Istrien",
     "heroLede": "Fisch von den Booten des Morgens, Jakobsmuscheln aus der Bucht von Novigrad und eine Terrasse, wo der Hafen aufs offene Meer trifft.",
     "callReserve": "Tisch telefonisch reservieren",
     "seeMenu": "Zur Speisekarte",
@@ -377,8 +383,11 @@
     "hoursUnconfirmed": "Die Mittwochszeiten werden noch bestätigt. Rufen Sie mittwochs vorher an.",
     "altLangs": "Diese Seite in anderen Sprachen",
     "reserveOnline": "Online reservieren",
-    "heroImgAlt": "Holzschnitt einer venezianischen Galeere unter Segeln, aus einem Pilgerbericht des 15. Jahrhunderts",
-    "heroCredit": "Schiff: Pilgergaleere aus Konrad von Grünenbergs Reisebericht, 1487, Badische Landesbibliothek, gemeinfrei."
+    "heroImgAlt": "Gegrillte Fischplatte für zwei mit Garnelen, Jakobsmuscheln und Miesmuscheln, serviert auf der Terrasse",
+    "heroCredit": "Schiff: Pilgergaleere aus Konrad von Grünenbergs Reisebericht, 1487, Badische Landesbibliothek, gemeinfrei.",
+    "storyImgAlt": "Holzschnitt einer venezianischen Galeere unter Segeln, aus einem Pilgerbericht des 15. Jahrhunderts",
+    "topTag": "Fischrestaurant, Novigrad",
+    "storyImgCap": "Eine venezianische Galeere unter Segeln, aus einem Pilgerbericht von 1487"
   },
   "it": {
     "_name": "Italiano",
@@ -389,7 +398,7 @@
     "navVisit": "Orari e terrazza",
     "navGuests": "Ospiti",
     "langLabel": "Lingua",
-    "heroPlace": "Konoba sul molo Porporela, Cittanova, Istria",
+    "heroPlace": "Ristorante di pesce e konoba sul molo Porporela, Cittanova, Istria",
     "heroLede": "Pesce dalle barche del mattino, capesante della baia di Cittanova e una terrazza dove il porto incontra il mare aperto.",
     "callReserve": "Chiama per prenotare",
     "seeMenu": "Vedi il menù",
@@ -504,7 +513,10 @@
     "hoursUnconfirmed": "Gli orari del mercoledì sono in conferma. Il mercoledì chiamate prima.",
     "altLangs": "Questa pagina in altre lingue",
     "reserveOnline": "Prenota online",
-    "heroImgAlt": "Xilografia di una galea veneziana a vele spiegate, da un libro di viaggio di un pellegrino del Quattrocento",
-    "heroCredit": "Nave: la galea dei pellegrini di Konrad von Grünenberg, 1487, Badische Landesbibliothek, pubblico dominio."
+    "heroImgAlt": "Grigliata di pesce per due con gamberi, capesante e cozze, servita in terrazza",
+    "heroCredit": "Nave: la galea dei pellegrini di Konrad von Grünenberg, 1487, Badische Landesbibliothek, pubblico dominio.",
+    "storyImgAlt": "Xilografia di una galea veneziana a vele spiegate, da un libro di viaggio di un pellegrino del Quattrocento",
+    "topTag": "Ristorante di pesce, Cittanova",
+    "storyImgCap": "Una galea veneziana a vele spiegate, da un libro di viaggio di un pellegrino del 1487"
   }
 }

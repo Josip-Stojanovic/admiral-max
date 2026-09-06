@@ -16,7 +16,7 @@
   <link rel="icon" href="{{base}}assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@87.5,400;87.5,500;100,400;100,500;100,600&family=Bodoni+Moda:opsz,ital,wght@6..96,0,400;6..96,0,500;6..96,0,600;6..96,1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@87.5,400;87.5,500;100,400;100,500;100,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{base}}css/style.css">
   <script type="application/ld+json">
   {
@@ -50,7 +50,7 @@
 <a class="skip" href="#menu">{{t:skip}}</a>
 
 <header class="top">
-  <a class="top-name" href="#top">Admiral Max</a>
+  <a class="top-name" href="#top">Admiral Max<span class="top-tag">{{t:topTag}}</span></a>
   <nav class="top-nav" aria-label="Sections">
     <a href="#story">{{t:navStory}}</a>
     <a href="#photos">{{t:navPhotos}}</a>
@@ -71,9 +71,9 @@
   <!-- ============ HERO ============ -->
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-art" aria-hidden="false">
-      <img src="{{base}}assets/hero-ship.jpg"
-           srcset="{{base}}assets/hero-ship-1100.webp 1100w, {{base}}assets/hero-ship.webp 2000w"
-           sizes="100vw" alt="{{t:heroImgAlt}}" width="2000" height="1193" fetchpriority="high">
+      <img src="{{base}}assets/photos/fish-platter.jpg"
+           srcset="{{base}}assets/photos/fish-platter-640.webp 640w, {{base}}assets/photos/fish-platter.webp 913w"
+           sizes="(max-width: 980px) 100vw, 54vw" alt="{{t:heroImgAlt}}" width="913" height="760" fetchpriority="high">
     </div>
     <div class="hero-copy">
       <p class="hero-place">{{t:heroPlace}}</p>
@@ -105,6 +105,12 @@
           <p class="admiral-dates">{{t:admiralDates}}</p>
           <p class="admiral-role">{{t:admiralRole}}</p>
         </div>
+        <figure class="story-art">
+          <img src="{{base}}assets/hero-ship-1100.jpg"
+               srcset="{{base}}assets/hero-ship-1100.webp 1100w, {{base}}assets/hero-ship.webp 2000w"
+               sizes="(max-width: 980px) 100vw, 400px" alt="{{t:storyImgAlt}}" width="1100" height="656" loading="lazy">
+          <figcaption>{{t:storyImgCap}}</figcaption>
+        </figure>
       </div>
       <div class="story-body">
         <h2 id="story-title">{{t:storyTitle}}</h2>
