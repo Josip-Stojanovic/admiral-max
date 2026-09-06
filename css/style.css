@@ -157,7 +157,7 @@ a:hover { color: var(--navy); }
   text-decoration: none;
   opacity: .85;
 }
-.top-nav a:hover, .top-call:hover { opacity: 1; text-decoration: underline; }
+.top-nav a:hover, .top-call:hover { color: inherit; opacity: 1; text-decoration: underline; }
 .top-call { font-variant-numeric: tabular-nums; white-space: nowrap; display: inline-flex; align-items: center; }
 .top-call svg { display: none; }
 .top-right { justify-self: end; display: flex; align-items: center; gap: 1.4rem; }
