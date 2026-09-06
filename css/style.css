@@ -126,13 +126,8 @@ a:hover { color: var(--navy); }
   background: rgba(255, 255, 255, .96);
   box-shadow: 0 1px 0 var(--stone-2);
   backdrop-filter: blur(8px);
-  transition: padding .3s var(--ease);
 }
-.top.is-scrolled {
-  padding: .6rem var(--gutter);
-}
-.top-name img { display: block; height: 34px; width: auto; }
-.top.is-scrolled .top-name img { height: 28px; }
+.top-name img { display: block; height: 32px; width: auto; }
 .top-name {
   font-family: var(--serif);
   font-weight: 600;
@@ -932,5 +927,5 @@ body.lb-open { overflow: hidden; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .btn, .top, .menu-nav a, .lang a, .menu-section-head::after { transition: none; }
+  .btn, .menu-nav a, .lang a, .menu-section-head::after { transition: none; }
 }

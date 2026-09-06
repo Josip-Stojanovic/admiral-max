@@ -302,17 +302,6 @@
     });
   }
 
-  /* ---------- Header: shrink once past the hero ---------- */
-  function header() {
-    var top = document.querySelector(".top");
-    var hero = document.querySelector(".hero");
-    if (!top || !hero || !("IntersectionObserver" in window)) return;
-    var io = new IntersectionObserver(function (entries) {
-      top.classList.toggle("is-scrolled", !entries[0].isIntersecting);
-    }, { rootMargin: "-80px 0px 0px 0px", threshold: 0 });
-    io.observe(hero);
-  }
-
   document.addEventListener("DOMContentLoaded", function () {
     var y = document.getElementById("year");
     if (y) y.textContent = new Date().getFullYear();
@@ -322,6 +311,5 @@
     reservationForm();
     gallery();
     mapGate();
-    header();
   });
 })();
