@@ -32,16 +32,16 @@
     "h": 760
   },
   {
-    "file": "interior",
-    "span": "long",
-    "caption": "gInterior",
-    "alt": "interiorAlt",
-    "w": 1014,
+    "file": "tuna-steak",
+    "span": "",
+    "item": "tuna",
+    "alt": "plate5Alt",
+    "w": 1015,
     "h": 760
   },
   {
     "file": "fish-platter-top",
-    "span": "tall",
+    "span": "",
     "caption": "plate6",
     "alt": "plate6Alt",
     "w": 569,
@@ -53,14 +53,6 @@
     "item": "spageti-mora",
     "alt": "plate7Alt",
     "w": 683,
-    "h": 760
-  },
-  {
-    "file": "tuna-steak",
-    "span": "long",
-    "item": "tuna",
-    "alt": "plate5Alt",
-    "w": 1015,
     "h": 760
   },
   {

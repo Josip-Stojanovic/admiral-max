@@ -69,13 +69,14 @@ def render_menu(menu, lang, t):
     for sec in menu:
         title = pick(sec["title"], lang)
         nav.append(f'        <a href="#{sec["id"]}">{esc(title)}</a>')
-        out = [f'        <section class="menu-section" id="{sec["id"]}">',
-               '          <header class="menu-section-head">',
+        out = [f'        <details class="menu-section" id="{sec["id"]}" name="menu">',
+               '          <summary class="menu-section-head">',
                f'            <h3>{esc(title)}</h3>']
         sub = sub_name(sec["title"], lang)
         if sub:
             out.append(f'            <p class="menu-section-hr" lang="{"en" if lang == "hr" else "hr"}">{esc(sub)}</p>')
-        out.append('          </header>')
+        out.append(f'            <span class="menu-section-count">{len(sec["items"])}</span>')
+        out.append('          </summary>')
         if sec.get("note"):
             out.append(f'          <p class="menu-section-note">{esc(pick(sec["note"], lang))}</p>')
         out.append('          <ul class="dishes">')
@@ -97,7 +98,7 @@ def render_menu(menu, lang, t):
                 out.append(f'              <p class="dish-desc">{esc(d)}</p>')
             out.append('            </li>')
         out.append('          </ul>')
-        out.append('        </section>')
+        out.append('        </details>')
         sections.append("\n".join(out))
     return "\n".join(nav), "\n\n".join(sections)
 

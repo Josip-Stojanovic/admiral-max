@@ -86,21 +86,6 @@
       <p class="hero-place">Konoba sul molo Porporela, Cittanova, Istria</p>
       <h1 id="hero-title">Admiral<br>Max</h1>
 
-      <!-- International maritime signal flags spelling A D M I R A L  M A X -->
-      <ol class="hoist" aria-label="Il nome scritto con le bandiere nautiche">
-        <li class="flag flag-a" title="A"></li>
-        <li class="flag flag-d" title="D"></li>
-        <li class="flag flag-m" title="M"></li>
-        <li class="flag flag-i" title="I"></li>
-        <li class="flag flag-r" title="R"></li>
-        <li class="flag flag-a" title="A"></li>
-        <li class="flag flag-l" title="L"></li>
-        <li class="flag-gap" aria-hidden="true"></li>
-        <li class="flag flag-m" title="M"></li>
-        <li class="flag flag-a" title="A"></li>
-        <li class="flag flag-x" title="X"></li>
-      </ol>
-
       <p class="hero-lede">Pesce dalle barche del mattino, capesante della baia di Cittanova e una terrazza dove il porto incontra il mare aperto.</p>
 
       <div class="hero-actions">
@@ -127,10 +112,6 @@
           <p class="admiral-dates">1858–1930</p>
           <p class="admiral-role">Ammiraglio della Marina austro-ungarica, croato di nascita, comandante della flotta nella Prima guerra mondiale.</p>
         </div>
-        <figure class="story-photo">
-          <img src="../assets/photos/interior.jpg" srcset="../assets/photos/interior-640.webp 640w, ../assets/photos/interior.webp 1014w" sizes="(max-width: 980px) 100vw, 400px" alt="Dentro la konoba: vecchie fotografie del porto di Cittanova, una carta nautica, lanterne di bordo e una cantinetta accanto alla porta" width="1014" height="760" loading="lazy">
-          <figcaption>La vecchia Cittanova alle pareti, lanterne sopra la porta.</figcaption>
-        </figure>
       </div>
       <div class="story-body">
         <h2 id="story-title">Una konoba che ricorda i marinai della vecchia flotta</h2>
@@ -172,13 +153,13 @@
           <span class="plate-cap"><span class="cap">Calamari fritti</span><span class="price">€16.80</span></span>
         </button>
       </li>
-      <li class="plate plate-long">
-        <button type="button" class="thumb" data-index="4" data-full="../assets/photos/interior.jpg">
-          <img src="../assets/photos/interior.jpg" srcset="../assets/photos/interior-640.webp 640w, ../assets/photos/interior.webp 1014w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 33vw, 600px" alt="Dentro la konoba: vecchie fotografie del porto di Cittanova, una carta nautica, lanterne di bordo e una cantinetta accanto alla porta" width="1014" height="760" loading="lazy">
-          <span class="plate-cap"><span class="cap">L&#x27;interno, con vecchie fotografie di Cittanova e lanterne di bordo</span></span>
+      <li class="plate">
+        <button type="button" class="thumb" data-index="4" data-full="../assets/photos/tuna-steak.jpg">
+          <img src="../assets/photos/tuna-steak.jpg" srcset="../assets/photos/tuna-steak-640.webp 640w, ../assets/photos/tuna-steak.webp 1015w" sizes="(max-width: 640px) 50vw, (max-width: 980px) 33vw, 300px" alt="Tagliata di tonno scottata con peperoni grigliati, rucola e limone" width="1015" height="760" loading="lazy">
+          <span class="plate-cap"><span class="cap">Bistecca di tonno</span><span class="price">€22.50</span></span>
         </button>
       </li>
-      <li class="plate plate-tall">
+      <li class="plate">
         <button type="button" class="thumb" data-index="5" data-full="../assets/photos/fish-platter-top.jpg">
           <img src="../assets/photos/fish-platter-top.jpg" srcset="../assets/photos/fish-platter-top-640.webp 640w, ../assets/photos/fish-platter-top.webp 569w" sizes="(max-width: 640px) 50vw, (max-width: 980px) 33vw, 300px" alt="Grigliata di pesce vista dall&#x27;alto, con capesante lungo il bordo e una ciotola di olio al prezzemolo" width="569" height="760" loading="lazy">
           <span class="plate-cap"><span class="cap">La grigliata dall&#x27;alto</span></span>
@@ -190,14 +171,8 @@
           <span class="plate-cap"><span class="cap">Spaghetti ai frutti di mare</span><span class="price">€16.50</span></span>
         </button>
       </li>
-      <li class="plate plate-long">
-        <button type="button" class="thumb" data-index="7" data-full="../assets/photos/tuna-steak.jpg">
-          <img src="../assets/photos/tuna-steak.jpg" srcset="../assets/photos/tuna-steak-640.webp 640w, ../assets/photos/tuna-steak.webp 1015w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 33vw, 600px" alt="Tagliata di tonno scottata con peperoni grigliati, rucola e limone" width="1015" height="760" loading="lazy">
-          <span class="plate-cap"><span class="cap">Bistecca di tonno</span><span class="price">€22.50</span></span>
-        </button>
-      </li>
       <li class="plate">
-        <button type="button" class="thumb" data-index="8" data-full="../assets/photos/black-ravioli.jpg">
+        <button type="button" class="thumb" data-index="7" data-full="../assets/photos/black-ravioli.jpg">
           <img src="../assets/photos/black-ravioli.jpg" srcset="../assets/photos/black-ravioli-640.webp 640w, ../assets/photos/black-ravioli.webp 427w" sizes="(max-width: 640px) 50vw, (max-width: 980px) 33vw, 300px" alt="Ravioli neri ripieni di gamberi dell&#x27;Adriatico" width="427" height="760" loading="lazy">
           <span class="plate-cap"><span class="cap">Ravioli neri ripieni di gamberi dell&#x27;Adriatico</span><span class="price">€17.50</span></span>
         </button>
@@ -225,11 +200,12 @@
       </nav>
 
       <div class="menu-sections" id="menu-sections">
-        <section class="menu-section" id="m-cold">
-          <header class="menu-section-head">
+        <details class="menu-section" id="m-cold" name="menu">
+          <summary class="menu-section-head">
             <h3>Antipasti freddi</h3>
             <p class="menu-section-hr" lang="hr">Hladna predjela</p>
-          </header>
+            <span class="menu-section-count">10</span>
+          </summary>
           <ul class="dishes">
             <li class="dish">
               <div class="dish-row">
@@ -313,13 +289,14 @@
               <p class="dish-hr" lang="hr">Carpaccio od hobotnice sa tartufima</p>
             </li>
           </ul>
-        </section>
+        </details>
 
-        <section class="menu-section" id="m-hot">
-          <header class="menu-section-head">
+        <details class="menu-section" id="m-hot" name="menu">
+          <summary class="menu-section-head">
             <h3>Antipasti caldi e risotti</h3>
             <p class="menu-section-hr" lang="hr">Topla predjela i rižoti</p>
-          </header>
+            <span class="menu-section-count">5</span>
+          </summary>
           <p class="menu-section-note">Capesante e canestrelli sono le due conchiglie della baia di Cittanova, grigliate nel guscio.</p>
           <ul class="dishes">
             <li class="dish">
@@ -366,13 +343,14 @@
               <p class="dish-desc">Al nero di seppia.</p>
             </li>
           </ul>
-        </section>
+        </details>
 
-        <section class="menu-section" id="m-soups">
-          <header class="menu-section-head">
+        <details class="menu-section" id="m-soups" name="menu">
+          <summary class="menu-section-head">
             <h3>Zuppe e insalate</h3>
             <p class="menu-section-hr" lang="hr">Juhe i salate</p>
-          </header>
+            <span class="menu-section-count">8</span>
+          </summary>
           <ul class="dishes">
             <li class="dish">
               <div class="dish-row">
@@ -440,13 +418,14 @@
               <p class="dish-hr" lang="hr">Salata sa piletinom i dresingom</p>
             </li>
           </ul>
-        </section>
+        </details>
 
-        <section class="menu-section" id="m-pasta">
-          <header class="menu-section-head">
+        <details class="menu-section" id="m-pasta" name="menu">
+          <summary class="menu-section-head">
             <h3>Pasta</h3>
             <p class="menu-section-hr" lang="hr">Tjestenina</p>
-          </header>
+            <span class="menu-section-count">5</span>
+          </summary>
           <ul class="dishes">
             <li class="dish">
               <div class="dish-row">
@@ -489,13 +468,14 @@
               <p class="dish-hr" lang="hr">Špageti bolognese</p>
             </li>
           </ul>
-        </section>
+        </details>
 
-        <section class="menu-section" id="m-sea">
-          <header class="menu-section-head">
+        <details class="menu-section" id="m-sea" name="menu">
+          <summary class="menu-section-head">
             <h3>Piatti di pesce</h3>
             <p class="menu-section-hr" lang="hr">Riblja jela</p>
-          </header>
+            <span class="menu-section-count">9</span>
+          </summary>
           <p class="menu-section-note">Il pesce intero si mostra al tavolo prima della cottura e si paga a peso.</p>
           <ul class="dishes">
             <li class="dish">
@@ -579,13 +559,14 @@
               <p class="dish-desc">Con verdure alla griglia.</p>
             </li>
           </ul>
-        </section>
+        </details>
 
-        <section class="menu-section" id="m-grill">
-          <header class="menu-section-head">
+        <details class="menu-section" id="m-grill" name="menu">
+          <summary class="menu-section-head">
             <h3>Piatti di carne</h3>
             <p class="menu-section-hr" lang="hr">Mesna jela</p>
-          </header>
+            <span class="menu-section-count">15</span>
+          </summary>
           <ul class="dishes">
             <li class="dish">
               <div class="dish-row">
@@ -723,13 +704,14 @@
               <p class="dish-desc">Con crocchette.</p>
             </li>
           </ul>
-        </section>
+        </details>
 
-        <section class="menu-section" id="m-kids">
-          <header class="menu-section-head">
+        <details class="menu-section" id="m-kids" name="menu">
+          <summary class="menu-section-head">
             <h3>Menù bambini</h3>
             <p class="menu-section-hr" lang="hr">Dječji meni</p>
-          </header>
+            <span class="menu-section-count">2</span>
+          </summary>
           <ul class="dishes">
             <li class="dish">
               <div class="dish-row">
@@ -748,13 +730,14 @@
               <p class="dish-hr" lang="hr">Špageti od rajčice</p>
             </li>
           </ul>
-        </section>
+        </details>
 
-        <section class="menu-section" id="m-sweets">
-          <header class="menu-section-head">
+        <details class="menu-section" id="m-sweets" name="menu">
+          <summary class="menu-section-head">
             <h3>Dolci e bevande</h3>
             <p class="menu-section-hr" lang="hr">Deserti i pića</p>
-          </header>
+            <span class="menu-section-count">6</span>
+          </summary>
           <p class="menu-section-note">Chiedete i dolci del giorno e la carta dei vini istriani. La Malvasia al bicchiere o al litro accompagna il pesce, il Terrano la griglia.</p>
           <ul class="dishes">
             <li class="dish">
@@ -798,7 +781,7 @@
               <p class="dish-desc">Biska, medica, travarica.</p>
             </li>
           </ul>
-        </section>
+        </details>
       </div>
     </div>
 

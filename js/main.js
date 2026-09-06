@@ -25,6 +25,23 @@
   function t(key) { return S[key] || ""; }
   function pad(n) { return (n < 10 ? "0" : "") + n; }
 
+  /* ---------- Menu sections open on demand ---------- */
+  function openSection(id) {
+    var d = document.getElementById(id);
+    if (d && d.tagName === "DETAILS") d.open = true;
+  }
+
+  function menuAccordion() {
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest('a[href^="#m-"]');
+      if (a) openSection(a.getAttribute("href").slice(1));
+    });
+    if (location.hash && location.hash.indexOf("#m-") === 0) openSection(location.hash.slice(1));
+    window.addEventListener("hashchange", function () {
+      if (location.hash.indexOf("#m-") === 0) openSection(location.hash.slice(1));
+    });
+  }
+
   /* ---------- Menu nav: highlight the section in view ---------- */
   function menuNav() {
     var links = Array.prototype.slice.call(document.querySelectorAll(".menu-nav a"));
@@ -283,6 +300,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     var y = document.getElementById("year");
     if (y) y.textContent = new Date().getFullYear();
+    menuAccordion();
     menuNav();
     hoursStatus();
     reservationForm();

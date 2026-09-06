@@ -86,21 +86,6 @@
       <p class="hero-place">Konoba on the Porporela breakwater, Novigrad, Istria</p>
       <h1 id="hero-title">Admiral<br>Max</h1>
 
-      <!-- International maritime signal flags spelling A D M I R A L  M A X -->
-      <ol class="hoist" aria-label="The name spelled in maritime signal flags">
-        <li class="flag flag-a" title="A"></li>
-        <li class="flag flag-d" title="D"></li>
-        <li class="flag flag-m" title="M"></li>
-        <li class="flag flag-i" title="I"></li>
-        <li class="flag flag-r" title="R"></li>
-        <li class="flag flag-a" title="A"></li>
-        <li class="flag flag-l" title="L"></li>
-        <li class="flag-gap" aria-hidden="true"></li>
-        <li class="flag flag-m" title="M"></li>
-        <li class="flag flag-a" title="A"></li>
-        <li class="flag flag-x" title="X"></li>
-      </ol>
-
       <p class="hero-lede">Fish from the morning boats, Novigrad scallops from the bay, and a terrace where the harbour meets the open sea.</p>
 
       <div class="hero-actions">
@@ -127,10 +112,6 @@
           <p class="admiral-dates">1858 to 1930</p>
           <p class="admiral-role">Admiral of the Austro-Hungarian Navy, Croatian by birth, commander of the fleet during the First World War.</p>
         </div>
-        <figure class="story-photo">
-          <img src="assets/photos/interior.jpg" srcset="assets/photos/interior-640.webp 640w, assets/photos/interior.webp 1014w" sizes="(max-width: 980px) 100vw, 400px" alt="Inside the konoba: old photographs of Novigrad harbour, a chart, ship lanterns and a wine rack by the door" width="1014" height="760" loading="lazy">
-          <figcaption>Old Novigrad on the walls, lanterns over the door.</figcaption>
-        </figure>
       </div>
       <div class="story-body">
         <h2 id="story-title">A konoba that remembers the sailors of the old fleet</h2>
@@ -172,13 +153,13 @@
           <span class="plate-cap"><span class="cap">Fried squid</span><span class="price">€16.80</span></span>
         </button>
       </li>
-      <li class="plate plate-long">
-        <button type="button" class="thumb" data-index="4" data-full="assets/photos/interior.jpg">
-          <img src="assets/photos/interior.jpg" srcset="assets/photos/interior-640.webp 640w, assets/photos/interior.webp 1014w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 33vw, 600px" alt="Inside the konoba: old photographs of Novigrad harbour, a chart, ship lanterns and a wine rack by the door" width="1014" height="760" loading="lazy">
-          <span class="plate-cap"><span class="cap">Inside, with old photographs of Novigrad and ship lanterns</span></span>
+      <li class="plate">
+        <button type="button" class="thumb" data-index="4" data-full="assets/photos/tuna-steak.jpg">
+          <img src="assets/photos/tuna-steak.jpg" srcset="assets/photos/tuna-steak-640.webp 640w, assets/photos/tuna-steak.webp 1015w" sizes="(max-width: 640px) 50vw, (max-width: 980px) 33vw, 300px" alt="Seared tuna steak with grilled peppers, rocket and lemon" width="1015" height="760" loading="lazy">
+          <span class="plate-cap"><span class="cap">Tuna steak</span><span class="price">€22.50</span></span>
         </button>
       </li>
-      <li class="plate plate-tall">
+      <li class="plate">
         <button type="button" class="thumb" data-index="5" data-full="assets/photos/fish-platter-top.jpg">
           <img src="assets/photos/fish-platter-top.jpg" srcset="assets/photos/fish-platter-top-640.webp 640w, assets/photos/fish-platter-top.webp 569w" sizes="(max-width: 640px) 50vw, (max-width: 980px) 33vw, 300px" alt="Fish platter seen from above, with scallops around the edge and a bowl of parsley oil" width="569" height="760" loading="lazy">
           <span class="plate-cap"><span class="cap">The platter, from above</span></span>
@@ -190,14 +171,8 @@
           <span class="plate-cap"><span class="cap">Seafood spaghetti</span><span class="price">€16.50</span></span>
         </button>
       </li>
-      <li class="plate plate-long">
-        <button type="button" class="thumb" data-index="7" data-full="assets/photos/tuna-steak.jpg">
-          <img src="assets/photos/tuna-steak.jpg" srcset="assets/photos/tuna-steak-640.webp 640w, assets/photos/tuna-steak.webp 1015w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 33vw, 600px" alt="Seared tuna steak with grilled peppers, rocket and lemon" width="1015" height="760" loading="lazy">
-          <span class="plate-cap"><span class="cap">Tuna steak</span><span class="price">€22.50</span></span>
-        </button>
-      </li>
       <li class="plate">
-        <button type="button" class="thumb" data-index="8" data-full="assets/photos/black-ravioli.jpg">
+        <button type="button" class="thumb" data-index="7" data-full="assets/photos/black-ravioli.jpg">
           <img src="assets/photos/black-ravioli.jpg" srcset="assets/photos/black-ravioli-640.webp 640w, assets/photos/black-ravioli.webp 427w" sizes="(max-width: 640px) 50vw, (max-width: 980px) 33vw, 300px" alt="Black ravioli filled with Adriatic shrimp" width="427" height="760" loading="lazy">
           <span class="plate-cap"><span class="cap">Black ravioli filled with Adriatic shrimp</span><span class="price">€17.50</span></span>
         </button>
@@ -225,11 +200,12 @@
       </nav>
 
       <div class="menu-sections" id="menu-sections">
-        <section class="menu-section" id="m-cold">
-          <header class="menu-section-head">
+        <details class="menu-section" id="m-cold" name="menu">
+          <summary class="menu-section-head">
             <h3>Cold starters</h3>
             <p class="menu-section-hr" lang="hr">Hladna predjela</p>
-          </header>
+            <span class="menu-section-count">10</span>
+          </summary>
           <ul class="dishes">
             <li class="dish">
               <div class="dish-row">
@@ -313,13 +289,14 @@
               <p class="dish-hr" lang="hr">Carpaccio od hobotnice sa tartufima</p>
             </li>
           </ul>
-        </section>
+        </details>
 
-        <section class="menu-section" id="m-hot">
-          <header class="menu-section-head">
+        <details class="menu-section" id="m-hot" name="menu">
+          <summary class="menu-section-head">
             <h3>Hot starters and risotto</h3>
             <p class="menu-section-hr" lang="hr">Topla predjela i rižoti</p>
-          </header>
+            <span class="menu-section-count">5</span>
+          </summary>
           <p class="menu-section-note">Kapešante and kanaštrele are the two scallops of the Novigrad bay, grilled in the shell.</p>
           <ul class="dishes">
             <li class="dish">
@@ -366,13 +343,14 @@
               <p class="dish-desc">Cuttlefish ink.</p>
             </li>
           </ul>
-        </section>
+        </details>
 
-        <section class="menu-section" id="m-soups">
-          <header class="menu-section-head">
+        <details class="menu-section" id="m-soups" name="menu">
+          <summary class="menu-section-head">
             <h3>Soups and salads</h3>
             <p class="menu-section-hr" lang="hr">Juhe i salate</p>
-          </header>
+            <span class="menu-section-count">8</span>
+          </summary>
           <ul class="dishes">
             <li class="dish">
               <div class="dish-row">
@@ -440,13 +418,14 @@
               <p class="dish-hr" lang="hr">Salata sa piletinom i dresingom</p>
             </li>
           </ul>
-        </section>
+        </details>
 
-        <section class="menu-section" id="m-pasta">
-          <header class="menu-section-head">
+        <details class="menu-section" id="m-pasta" name="menu">
+          <summary class="menu-section-head">
             <h3>Pasta</h3>
             <p class="menu-section-hr" lang="hr">Tjestenina</p>
-          </header>
+            <span class="menu-section-count">5</span>
+          </summary>
           <ul class="dishes">
             <li class="dish">
               <div class="dish-row">
@@ -489,13 +468,14 @@
               <p class="dish-hr" lang="hr">Špageti bolognese</p>
             </li>
           </ul>
-        </section>
+        </details>
 
-        <section class="menu-section" id="m-sea">
-          <header class="menu-section-head">
+        <details class="menu-section" id="m-sea" name="menu">
+          <summary class="menu-section-head">
             <h3>From the sea</h3>
             <p class="menu-section-hr" lang="hr">Riblja jela</p>
-          </header>
+            <span class="menu-section-count">9</span>
+          </summary>
           <p class="menu-section-note">Whole fish is brought to the table before cooking and priced by weight.</p>
           <ul class="dishes">
             <li class="dish">
@@ -579,13 +559,14 @@
               <p class="dish-desc">With grilled vegetables.</p>
             </li>
           </ul>
-        </section>
+        </details>
 
-        <section class="menu-section" id="m-grill">
-          <header class="menu-section-head">
+        <details class="menu-section" id="m-grill" name="menu">
+          <summary class="menu-section-head">
             <h3>From the grill</h3>
             <p class="menu-section-hr" lang="hr">Mesna jela</p>
-          </header>
+            <span class="menu-section-count">15</span>
+          </summary>
           <ul class="dishes">
             <li class="dish">
               <div class="dish-row">
@@ -723,13 +704,14 @@
               <p class="dish-desc">With croquettes.</p>
             </li>
           </ul>
-        </section>
+        </details>
 
-        <section class="menu-section" id="m-kids">
-          <header class="menu-section-head">
+        <details class="menu-section" id="m-kids" name="menu">
+          <summary class="menu-section-head">
             <h3>For children</h3>
             <p class="menu-section-hr" lang="hr">Dječji meni</p>
-          </header>
+            <span class="menu-section-count">2</span>
+          </summary>
           <ul class="dishes">
             <li class="dish">
               <div class="dish-row">
@@ -748,13 +730,14 @@
               <p class="dish-hr" lang="hr">Špageti od rajčice</p>
             </li>
           </ul>
-        </section>
+        </details>
 
-        <section class="menu-section" id="m-sweets">
-          <header class="menu-section-head">
+        <details class="menu-section" id="m-sweets" name="menu">
+          <summary class="menu-section-head">
             <h3>Desserts and drinks</h3>
             <p class="menu-section-hr" lang="hr">Deserti i pića</p>
-          </header>
+            <span class="menu-section-count">6</span>
+          </summary>
           <p class="menu-section-note">Ask for the day&#x27;s desserts and the Istrian wine list. Malvazija by the glass or the litre goes with the fish, Teran with the grill.</p>
           <ul class="dishes">
             <li class="dish">
@@ -798,7 +781,7 @@
               <p class="dish-desc">Biska, medica, travarica.</p>
             </li>
           </ul>
-        </section>
+        </details>
       </div>
     </div>
 
