@@ -4,6 +4,17 @@
   var LANGS = ["en", "hr", "de", "it"];
   var lang = "en";
 
+  /*
+   * Reservation requests are relayed by FormSubmit (formsubmit.co), which
+   * emails each request to the address below. No account is needed, but the
+   * FIRST request triggers an activation email to that inbox; the owner must
+   * click the link in it once, or nothing is delivered.
+   *
+   * The address comes from the istrabiz.hr listing for Obrt UNICO.
+   * Confirm it with the owner, then change it here if needed.
+   */
+  var RESERVATION_EMAIL = "u.o.unico@gmail.com";
+
   function t(key) {
     var d = window.ADMIRAL_I18N || {};
     return (d[lang] && d[lang][key]) || (d.en && d.en[key]) || "";
@@ -37,6 +48,7 @@
     applyStrings();
     renderMenu();
     hoursStatus();
+    fillFormSelects();
 
     var buttons = document.querySelectorAll(".lang button");
     for (var i = 0; i < buttons.length; i++) {
@@ -268,6 +280,128 @@
 
   function pad(n) { return (n < 10 ? "0" : "") + n; }
 
+
+  /* ---------- Reservation form ---------- */
+  function fillFormSelects() {
+    var time = document.getElementById("f-time");
+    var guests = document.getElementById("f-guests");
+    if (!time || !guests) return;
+
+    var keepT = time.value, keepG = guests.value;
+    time.innerHTML = "";
+    var opt = document.createElement("option");
+    opt.value = ""; opt.textContent = "";
+    time.appendChild(opt);
+    for (var h = 13; h <= 21; h++) {
+      for (var m = 0; m < 60; m += 30) {
+        if (h === 21 && m === 30) break;
+        var v = pad(h) + ":" + pad(m);
+        var o = document.createElement("option");
+        o.value = v; o.textContent = v;
+        time.appendChild(o);
+      }
+    }
+    if (keepT) time.value = keepT;
+
+    guests.innerHTML = "";
+    var g0 = document.createElement("option");
+    g0.value = ""; g0.textContent = "";
+    guests.appendChild(g0);
+    for (var n = 1; n <= 12; n++) {
+      var og = document.createElement("option");
+      og.value = String(n); og.textContent = String(n);
+      guests.appendChild(og);
+    }
+    var more = document.createElement("option");
+    more.value = "13+"; more.textContent = t("fGuestsMore");
+    guests.appendChild(more);
+    if (keepG) guests.value = keepG;
+
+    var date = document.querySelector('#rform input[name="date"]');
+    if (date && !date.min) date.min = todayISO();
+  }
+
+  function todayISO() {
+    try {
+      var p = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Zagreb", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+      return p; // en-CA gives YYYY-MM-DD
+    } catch (e) {
+      return new Date().toISOString().slice(0, 10);
+    }
+  }
+
+  function reservationForm() {
+    var form = document.getElementById("rform");
+    if (!form) return;
+    var err = document.getElementById("rform-error");
+    var ok = document.getElementById("rform-success");
+    var send = document.getElementById("rform-send");
+
+    function fail(msg) {
+      err.textContent = msg;
+      err.hidden = false;
+      err.focus && err.focus();
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      err.hidden = true;
+
+      var f = form.elements;
+      var name = f.name.value.trim(), phone = f.phone.value.trim(), email = f.email.value.trim();
+      var date = f.date.value, time = f.time.value, guests = f.guests.value;
+
+      if (!name || !phone || !date || !time || !guests) return fail(t("errRequired"));
+      if (date < todayISO()) return fail(t("errPast"));
+      var day = new Date(date + "T12:00:00").getDay();
+      if (day === 3 && time < "18:00") return fail(t("errWed"));
+      if (f._honey.value) { ok.hidden = false; form.hidden = true; return; } // bot: pretend success
+
+      var seatingLabel = f.seating.options[f.seating.selectedIndex].textContent;
+      var payload = {
+        _subject: "Reservation request: " + name + ", " + date + " " + time + ", " + guests + (guests === "13+" ? "" : " guests"),
+        _template: "table",
+        _captcha: "false",
+        Name: name,
+        Phone: phone,
+        Email: email || "",
+        Date: date,
+        Time: time,
+        Guests: guests,
+        Seating: seatingLabel,
+        Message: f.message.value.trim(),
+        Language: lang.toUpperCase()
+      };
+      if (email) payload._replyto = email;
+
+      send.disabled = true;
+      var label = send.textContent;
+      send.textContent = t("fSending");
+
+      fetch("https://formsubmit.co/ajax/" + RESERVATION_EMAIL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(payload)
+      }).then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+      }).then(function (data) {
+        if (data && (data.success === "true" || data.success === true)) {
+          form.hidden = true;
+          ok.hidden = false;
+          ok.scrollIntoView({ block: "nearest" });
+        } else {
+          throw new Error("relay refused");
+        }
+      }).catch(function () {
+        fail(t("fError"));
+      }).then(function () {
+        send.disabled = false;
+        send.textContent = label;
+      });
+    });
+  }
+
   /* ---------- Header: shrink once past the hero ---------- */
   function header() {
     var top = document.querySelector(".top");
@@ -287,6 +421,7 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     langButtons();
+    reservationForm();
     setLanguage(pickLanguage());
     header();
     year();

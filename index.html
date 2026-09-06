@@ -354,10 +354,72 @@
 
   <!-- ============ RESERVE ============ -->
   <section class="reserve" id="reserve" aria-labelledby="reserve-title">
-    <h2 id="reserve-title" data-i18n="reserveTitle">Reserve a table</h2>
-    <p data-i18n="reserveP">We take reservations by phone every day from noon. For groups of eight or more, call a day ahead and we will set the long table by the water.</p>
-    <a class="reserve-phone" href="tel:+38552433254">052 433 254</a>
-    <p class="reserve-langs" data-i18n="reserveLangs">From abroad dial +385 52 433 254. We speak Croatian, Italian, German and English.</p>
+    <div class="reserve-grid">
+      <div class="reserve-phone-col">
+        <h2 id="reserve-title" data-i18n="reserveTitle">Reserve a table</h2>
+        <p data-i18n="reserveP">We take reservations by phone every day from noon. For groups of eight or more, call a day ahead and we will set the long table by the water.</p>
+        <a class="reserve-phone" href="tel:+38552433254">052 433 254</a>
+        <p class="reserve-langs" data-i18n="reserveLangs">From abroad dial +385 52 433 254. We speak Croatian, Italian, German and English.</p>
+      </div>
+
+      <div class="reserve-form-col">
+        <h3 id="form-title" data-i18n="formTitle">Or send a request</h3>
+        <p class="form-lede" data-i18n="formLede">Tell us when and how many. We confirm by phone or email, usually within a few hours during opening times. The table is only booked once we have confirmed.</p>
+
+        <form class="rform" id="rform" novalidate aria-labelledby="form-title">
+          <div class="rform-grid">
+            <label class="f f-wide">
+              <span data-i18n="fName">Name</span>
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+            <label class="f">
+              <span data-i18n="fPhone">Phone</span>
+              <input type="tel" name="phone" autocomplete="tel" inputmode="tel" required>
+            </label>
+            <label class="f">
+              <span><span data-i18n="fEmail">Email</span> <em data-i18n="fOptional">optional</em></span>
+              <input type="email" name="email" autocomplete="email" inputmode="email">
+            </label>
+            <label class="f">
+              <span data-i18n="fDate">Date</span>
+              <input type="date" name="date" required>
+            </label>
+            <label class="f">
+              <span data-i18n="fTime">Time</span>
+              <select name="time" required id="f-time"></select>
+            </label>
+            <label class="f">
+              <span data-i18n="fGuests">Guests</span>
+              <select name="guests" required id="f-guests"></select>
+            </label>
+            <label class="f">
+              <span data-i18n="fSeating">Where</span>
+              <select name="seating" id="f-seating">
+                <option value="any" data-i18n="seatAny">No preference</option>
+                <option value="terrace" data-i18n="seatTerrace">Terrace</option>
+                <option value="inside" data-i18n="seatInside">Inside</option>
+              </select>
+            </label>
+            <label class="f f-wide">
+              <span><span data-i18n="fMessage">Anything else</span> <em data-i18n="fMessageHint">Allergies, a birthday, a pram, a dog.</em></span>
+              <textarea name="message" rows="3"></textarea>
+            </label>
+          </div>
+
+          <!-- spam trap, hidden from people -->
+          <label class="f-honey" aria-hidden="true">Leave this empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
+
+          <p class="rform-error" id="rform-error" role="alert" hidden></p>
+
+          <div class="rform-foot">
+            <button type="submit" class="btn btn-brass" id="rform-send" data-i18n="fSend">Send request</button>
+            <p class="rform-privacy" data-i18n="fPrivacy">We use these details only to handle your reservation.</p>
+          </div>
+        </form>
+
+        <p class="rform-success" id="rform-success" role="status" hidden data-i18n="fSuccess">Request sent. We will confirm by phone or email. If you have not heard from us by tomorrow, call 052 433 254.</p>
+      </div>
+    </div>
   </section>
 
 </main>

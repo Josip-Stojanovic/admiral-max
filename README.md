@@ -16,6 +16,12 @@ python3 -m http.server 8080
 - **Contact and address**: search `index.html` for `433 254` and `Porporela`.
 - **Colours and type**: the `:root` block at the top of `css/style.css`.
 
+## Reservation form
+
+The form in the "Reserve a table" section posts to [FormSubmit](https://formsubmit.co), a free relay that emails each request to the address in `RESERVATION_EMAIL` at the top of `js/main.js`. No account is needed, but **the first request triggers an activation email to that inbox and the owner must click the link once**; until then nothing is delivered. The address currently set is the one listed for Obrt UNICO on istrabiz.hr and must be confirmed with the owner.
+
+The form validates name, phone, date, time and guests, refuses past dates and Wednesday times before 18:00, and carries a hidden honeypot field against bots. It is a request, not a booking: the success message tells guests the table is confirmed only when the restaurant replies.
+
 ## Deploying
 
 The site is plain files, so GitHub Pages works as is: Settings, Pages, deploy from the `main` branch root.
@@ -30,4 +36,4 @@ The site is plain files, so GitHub Pages works as is: Settings, Pages, deploy fr
 - Replace the guest-photographed dish and interior photos with the owner's own.
 - Wednesday hours. Listings disagree between 18:00 to 22:00 and closed.
 - Street number. Google says Porporela 3, TripAdvisor says Porporela 5.
-- Whether to publish an email address for reservations.
+- The reservation inbox in `js/main.js`, and clicking FormSubmit's one-time activation link when the first request arrives.
