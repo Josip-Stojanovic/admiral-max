@@ -100,8 +100,10 @@
   }
 
   function unitLabel(unit) {
-    var map = { two: "unitTwo", kg: "unitKg", "100g": "unit100g", three: "unitThree" };
-    return unit && map[unit] ? t(map[unit]) : "";
+    if (!unit) return "";
+    if (/^\d+g$/.test(unit)) return unit.replace("g", " g");
+    var map = { two: "unitTwo", kg: "unitKg", three: "unitThree" };
+    return map[unit] ? t(map[unit]) : "";
   }
 
   function renderMenu() {

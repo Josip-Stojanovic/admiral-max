@@ -36,8 +36,7 @@ The site is plain files, so GitHub Pages works as is: Settings, Pages, deploy fr
 
 ## To confirm with the owner before going live
 
-- Food prices in `js/menu.js` come from the printed menu photographed on Google Maps. The card still shows kuna next to euro, so it dates from 2023 and prices may have changed. Desserts and drinks are listed without prices.
+- Food prices in `js/menu.js` were transcribed on 6 September 2026 from four photos of the menu board outside the restaurant. Desserts and drinks are listed without prices because the board shows desserts only as pictures.
 - Replace the guest-photographed dish and interior photos with the owner's own.
 - Wednesday hours. Listings disagree between 18:00 to 22:00 and closed.
-- Street number. Google says Porporela 3, TripAdvisor says Porporela 5.
 - The reservation inbox in `js/main.js`, and clicking FormSubmit's one-time activation link when the first request arrives.
