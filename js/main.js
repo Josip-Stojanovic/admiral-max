@@ -284,10 +284,9 @@
   /* ---------- Reservation form ---------- */
   function fillFormSelects() {
     var time = document.getElementById("f-time");
-    var guests = document.getElementById("f-guests");
-    if (!time || !guests) return;
+    if (!time) return;
 
-    var keepT = time.value, keepG = guests.value;
+    var keepT = time.value;
     time.innerHTML = "";
     var opt = document.createElement("option");
     opt.value = ""; opt.textContent = "";
@@ -302,20 +301,6 @@
       }
     }
     if (keepT) time.value = keepT;
-
-    guests.innerHTML = "";
-    var g0 = document.createElement("option");
-    g0.value = ""; g0.textContent = "";
-    guests.appendChild(g0);
-    for (var n = 1; n <= 12; n++) {
-      var og = document.createElement("option");
-      og.value = String(n); og.textContent = String(n);
-      guests.appendChild(og);
-    }
-    var more = document.createElement("option");
-    more.value = "13+"; more.textContent = t("fGuestsMore");
-    guests.appendChild(more);
-    if (keepG) guests.value = keepG;
 
     var date = document.querySelector('#rform input[name="date"]');
     if (date && !date.min) date.min = todayISO();
@@ -349,9 +334,10 @@
 
       var f = form.elements;
       var name = f.name.value.trim(), phone = f.phone.value.trim(), email = f.email.value.trim();
-      var date = f.date.value, time = f.time.value, guests = f.guests.value;
+      var date = f.date.value, time = f.time.value;
+      var guests = parseInt(f.guests.value, 10);
 
-      if (!name || !phone || !date || !time || !guests) return fail(t("errRequired"));
+      if (!name || !phone || !date || !time || !(guests >= 1)) return fail(t("errRequired"));
       if (date < todayISO()) return fail(t("errPast"));
       var day = new Date(date + "T12:00:00").getDay();
       if (day === 3 && time < "18:00") return fail(t("errWed"));
@@ -359,7 +345,7 @@
 
       var seatingLabel = f.seating.options[f.seating.selectedIndex].textContent;
       var payload = {
-        _subject: "Reservation request: " + name + ", " + date + " " + time + ", " + guests + (guests === "13+" ? "" : " guests"),
+        _subject: "Reservation request: " + name + ", " + date + " " + time + ", " + guests + " guests",
         _template: "table",
         _captcha: "false",
         Name: name,

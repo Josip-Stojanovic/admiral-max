@@ -20,7 +20,7 @@ python3 -m http.server 8080
 
 The form in the "Reserve a table" section posts to [FormSubmit](https://formsubmit.co), a free relay that emails each request to the address in `RESERVATION_EMAIL` at the top of `js/main.js`. No account is needed, but **the first request triggers an activation email to that inbox and the owner must click the link once**; until then nothing is delivered. The address currently set is the one listed for Obrt UNICO on istrabiz.hr and must be confirmed with the owner.
 
-The form validates name, phone, date, time and guests, refuses past dates and Wednesday times before 18:00, and carries a hidden honeypot field against bots. It is a request, not a booking: the success message tells guests the table is confirmed only when the restaurant replies.
+The form validates name, phone, date, time and guests (a whole number of at least 1), refuses past dates and Wednesday times before 18:00, and carries a hidden honeypot field against bots. It is a request, not a booking: the success message tells guests the table is confirmed only when the restaurant replies.
 
 ## Deploying
 
