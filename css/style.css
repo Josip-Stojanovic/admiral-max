@@ -122,10 +122,8 @@ a:hover { color: var(--navy); }
   align-items: center;
   gap: 1rem;
   padding: 1rem var(--gutter);
-  color: var(--navy);
-  background: rgba(255, 255, 255, .96);
-  box-shadow: 0 1px 0 var(--stone-2);
-  backdrop-filter: blur(8px);
+  color: #fff;
+  background: var(--navy);
 }
 .top-name img { display: block; height: 32px; width: auto; }
 .top-name {
@@ -181,8 +179,8 @@ a:hover { color: var(--navy); }
 .hero {
   position: relative;
   min-height: calc(100svh - 4.4rem);
-  background: var(--stone);
-  color: var(--navy);
+  background: var(--navy);
+  color: #fff;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: center;
@@ -208,7 +206,7 @@ a:hover { color: var(--navy); }
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, .45) 8%, rgba(255, 255, 255, 0) 20%);
+  background: linear-gradient(90deg, var(--navy) 0%, rgba(0, 40, 79, .45) 8%, rgba(0, 40, 79, 0) 20%);
 }
 .hero-art figcaption {
   position: absolute;
@@ -231,7 +229,7 @@ a:hover { color: var(--navy); }
 
 .hero-place {
   font-size: var(--t-1);
-  color: var(--ink-2);
+  color: var(--sea-pale);
   margin-bottom: 1.6rem;
 }
 
@@ -242,7 +240,7 @@ a:hover { color: var(--navy); }
   font-size: var(--t1);
   line-height: 1.45;
   max-width: 30ch;
-  color: var(--ink);
+  color: #E6EEF5;
   margin: 1.8rem 0 1.8rem;
 }
 
@@ -254,12 +252,12 @@ a:hover { color: var(--navy); }
   gap: 1.5rem 2.4rem;
   margin: 0;
   padding-top: 1.4rem;
-  border-top: 1px solid var(--stone-2);
+  border-top: 1px solid rgba(255, 255, 255, .2);
   font-size: var(--t-1);
 }
 .hero-facts div { display: grid; gap: .1rem; }
-.hero-facts dt { color: var(--ink-2); }
-.hero-facts dd { margin: 0; color: var(--navy); font-variant-numeric: lining-nums tabular-nums; }
+.hero-facts dt { color: var(--sea-pale); }
+.hero-facts dd { margin: 0; color: #fff; font-variant-numeric: lining-nums tabular-nums; }
 
 
 /* =========================================================
@@ -873,7 +871,7 @@ body.lb-open { overflow: hidden; }
   .hero-art { margin: 0; min-height: 0; }
   .hero-art img { position: static; width: 100%; height: auto; aspect-ratio: 16 / 10; object-position: 42% 50%; }
   .hero-art::after { display: none; }
-  .hero-art figcaption { position: static; padding: .6rem var(--gutter) 0; color: var(--ink-2); text-shadow: none; }
+  .hero-art figcaption { position: static; padding: .6rem var(--gutter) 0; color: var(--sea-pale); text-shadow: none; }
   .hero-copy { padding-top: 1.6rem; padding-bottom: 3rem; margin-top: 0; max-width: none; }
   .story-art { max-width: 520px; }
   .story-grid, .section-head, .menu-layout, .visit-grid, .guests-grid, .reserve-grid { grid-template-columns: 1fr; }
