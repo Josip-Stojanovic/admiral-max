@@ -323,6 +323,5 @@
     gallery();
     mapGate();
     header();
-    document.documentElement.classList.add("is-ready");
   });
 })();

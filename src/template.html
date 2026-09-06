@@ -70,11 +70,12 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero" aria-labelledby="hero-title">
-    <div class="hero-art" aria-hidden="false">
+    <figure class="hero-art">
       <img src="{{base}}assets/photos/fish-platter.jpg"
            srcset="{{base}}assets/photos/fish-platter-640.webp 640w, {{base}}assets/photos/fish-platter.webp 913w"
-           sizes="(max-width: 980px) 100vw, 54vw" alt="{{t:heroImgAlt}}" width="913" height="760" fetchpriority="high">
-    </div>
+           sizes="(max-width: 980px) 100vw, 520px" alt="{{t:heroImgAlt}}" width="913" height="760" fetchpriority="high">
+      <figcaption>{{heroCap}}</figcaption>
+    </figure>
     <div class="hero-copy">
       <p class="hero-place">{{t:heroPlace}}</p>
       <h1 id="hero-title">Admiral<br>Max</h1>
