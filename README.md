@@ -51,6 +51,7 @@ GitHub Pages serves the `main` branch root. Every push deploys within about a mi
 - Menu and prices: four photos of the outdoor menu board, sent on 6 September 2026. Desserts are pictured on the board without prices, so they are listed unpriced.
 - Photos: screenshots of the restaurant's Google Maps listing, about 1000 px wide. The terrace photo was posted by the owner; the others by guests. Originals from the restaurant would sharpen the site and settle the image rights.
 - Facts and story: the Google Maps listing, TripAdvisor, Restaurant Guru and the Gallerion museum page. The admiral is Maksimilijan Njegovan.
+- Hero painting: August von Ramberg, "Die k. u. k. Kriegsflotte mit ganzer Kraft auf hoher See", 1913, public domain, from Wikimedia Commons. Portrait: Oskar Brüch, 1915, from "Unsere Heerführer im Weltkrieg", public domain. Both are from the admiral's own era, as the restaurant asked.
 
 ## Still to confirm with the owner
 

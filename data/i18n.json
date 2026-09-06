@@ -122,14 +122,15 @@
     "hoursUnconfirmed": "Wednesday hours are being confirmed. Call ahead on Wednesdays.",
     "altLangs": "This page in other languages",
     "reserveOnline": "Reserve online",
-    "heroImgAlt": "Grilled fish platter for two with prawns, scallops and mussels, served on the terrace",
-    "heroCredit": "Ship: Konrad von Grünenberg's pilgrim galley, 1487, Badische Landesbibliothek, public domain.",
-    "storyImgAlt": "Woodcut of a Venetian galley under sail, from a fifteenth-century pilgrim's travel book",
+    "heroImgAlt": "The Austro-Hungarian fleet at full speed on the open sea, the battleships Viribus Unitis and Tegetthoff with torpedo boats alongside, oil painting by August von Ramberg, 1913",
+    "heroCredit": "Painting: August von Ramberg, 1913, public domain. Portrait: Oskar Brüch, 1915, public domain.",
+    "storyImgAlt": "Sanguine portrait of Vice Admiral Maksimilijan Njegovan in naval cap and uniform",
     "topTag": "Fish restaurant, Novigrad",
-    "storyImgCap": "A Venetian galley under sail, from a pilgrim’s travel book of 1487",
+    "storyImgCap": "Vice Admiral Njegovan, drawn by Oskar Brüch in 1915",
     "mapNote": "The map is loaded from Google Maps, which sets its own cookies. It appears only when you ask for it.",
     "mapLoad": "Show the map",
-    "mapOpen": "Open in Google Maps"
+    "mapOpen": "Open in Google Maps",
+    "heroImgCap": "The fleet at sea: Viribus Unitis and Tegetthoff, painted by August von Ramberg, 1913"
   },
   "hr": {
     "_name": "Hrvatski",
@@ -254,14 +255,15 @@
     "hoursUnconfirmed": "Radno vrijeme srijedom još potvrđujemo. Srijedom nazovite unaprijed.",
     "altLangs": "Ova stranica na drugim jezicima",
     "reserveOnline": "Rezervirajte online",
-    "heroImgAlt": "Riblja plata za dvoje s kozicama, kapešantama i dagnjama, poslužena na terasi",
-    "heroCredit": "Brod: hodočasnička galija Konrada von Grünenberga, 1487., Badische Landesbibliothek, javno dobro.",
-    "storyImgAlt": "Drvorez venecijanske galije pod jedrima, iz hodočasničkog putopisa iz 15. stoljeća",
+    "heroImgAlt": "Austrougarska flota punom snagom na otvorenom moru, bojni brodovi Viribus Unitis i Tegetthoff s torpiljarkama u pratnji, ulje na platnu Augusta von Ramberga, 1913.",
+    "heroCredit": "Slika: August von Ramberg, 1913., javno dobro. Portret: Oskar Brüch, 1915., javno dobro.",
+    "storyImgAlt": "Portret viceadmirala Maksimilijana Njegovana u mornaričkoj kapi i odori, crtež sangvinom",
     "topTag": "Riblji restoran, Novigrad",
-    "storyImgCap": "Venecijanska galija pod jedrima, iz hodočasničkog putopisa iz 1487.",
+    "storyImgCap": "Viceadmiral Njegovan, nacrtao Oskar Brüch 1915.",
     "mapNote": "Karta se učitava s Google Mapsa, koji postavlja vlastite kolačiće. Prikazuje se tek kad je zatražite.",
     "mapLoad": "Prikaži kartu",
-    "mapOpen": "Otvori u Google Mapsu"
+    "mapOpen": "Otvori u Google Mapsu",
+    "heroImgCap": "Flota na moru: Viribus Unitis i Tegetthoff, naslikao August von Ramberg 1913."
   },
   "de": {
     "_name": "Deutsch",
@@ -386,14 +388,15 @@
     "hoursUnconfirmed": "Die Mittwochszeiten werden noch bestätigt. Rufen Sie mittwochs vorher an.",
     "altLangs": "Diese Seite in anderen Sprachen",
     "reserveOnline": "Online reservieren",
-    "heroImgAlt": "Gegrillte Fischplatte für zwei mit Garnelen, Jakobsmuscheln und Miesmuscheln, serviert auf der Terrasse",
-    "heroCredit": "Schiff: Pilgergaleere aus Konrad von Grünenbergs Reisebericht, 1487, Badische Landesbibliothek, gemeinfrei.",
-    "storyImgAlt": "Holzschnitt einer venezianischen Galeere unter Segeln, aus einem Pilgerbericht des 15. Jahrhunderts",
+    "heroImgAlt": "Die k. u. k. Kriegsflotte mit ganzer Kraft auf hoher See, die Schlachtschiffe Viribus Unitis und Tegetthoff von Torpedobooten begleitet, Ölgemälde von August von Ramberg, 1913",
+    "heroCredit": "Gemälde: August von Ramberg, 1913, gemeinfrei. Porträt: Oskar Brüch, 1915, gemeinfrei.",
+    "storyImgAlt": "Rötelporträt von Vizeadmiral Maksimilijan Njegovan mit Marinemütze und Uniform",
     "topTag": "Fischrestaurant, Novigrad",
-    "storyImgCap": "Eine venezianische Galeere unter Segeln, aus einem Pilgerbericht von 1487",
+    "storyImgCap": "Vizeadmiral Njegovan, gezeichnet von Oskar Brüch, 1915",
     "mapNote": "Die Karte wird von Google Maps geladen, das eigene Cookies setzt. Sie erscheint erst, wenn Sie es wünschen.",
     "mapLoad": "Karte anzeigen",
-    "mapOpen": "In Google Maps öffnen"
+    "mapOpen": "In Google Maps öffnen",
+    "heroImgCap": "Die Flotte auf See: Viribus Unitis und Tegetthoff, gemalt von August von Ramberg, 1913"
   },
   "it": {
     "_name": "Italiano",
@@ -518,13 +521,14 @@
     "hoursUnconfirmed": "Gli orari del mercoledì sono in conferma. Il mercoledì chiamate prima.",
     "altLangs": "Questa pagina in altre lingue",
     "reserveOnline": "Prenota online",
-    "heroImgAlt": "Grigliata di pesce per due con gamberi, capesante e cozze, servita in terrazza",
-    "heroCredit": "Nave: la galea dei pellegrini di Konrad von Grünenberg, 1487, Badische Landesbibliothek, pubblico dominio.",
-    "storyImgAlt": "Xilografia di una galea veneziana a vele spiegate, da un libro di viaggio di un pellegrino del Quattrocento",
+    "heroImgAlt": "La flotta austro-ungarica a tutta forza in mare aperto, le corazzate Viribus Unitis e Tegetthoff scortate da torpediniere, olio su tela di August von Ramberg, 1913",
+    "heroCredit": "Dipinto: August von Ramberg, 1913, pubblico dominio. Ritratto: Oskar Brüch, 1915, pubblico dominio.",
+    "storyImgAlt": "Ritratto a sanguigna del viceammiraglio Maksimilijan Njegovan con berretto e uniforme della marina",
     "topTag": "Ristorante di pesce, Cittanova",
-    "storyImgCap": "Una galea veneziana a vele spiegate, da un libro di viaggio di un pellegrino del 1487",
+    "storyImgCap": "Il viceammiraglio Njegovan, disegnato da Oskar Brüch nel 1915",
     "mapNote": "La mappa viene caricata da Google Maps, che imposta i propri cookie. Compare solo su richiesta.",
     "mapLoad": "Mostra la mappa",
-    "mapOpen": "Apri in Google Maps"
+    "mapOpen": "Apri in Google Maps",
+    "heroImgCap": "La flotta in mare: Viribus Unitis e Tegetthoff, dipinto di August von Ramberg, 1913"
   }
 }

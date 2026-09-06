@@ -139,8 +139,6 @@ def build_page(lang, tpl, i18n, menu, photos):
     base = "" if lang == "en" else "../"
     nav_html, sections_html = render_menu(menu, lang, t)
     gallery_html = render_gallery(photos, menu, lang, t, base)
-    platter = next(it for sec in menu for it in sec["items"] if it.get("id") == "platter")
-    hero_cap = pick(platter["name"], lang) + ", €" + platter["price"]
 
     lang_links = []
     foot_langs = []
@@ -173,7 +171,6 @@ def build_page(lang, tpl, i18n, menu, photos):
         "{{menuNav}}": nav_html,
         "{{menuSections}}": sections_html,
         "{{gallery}}": gallery_html,
-        "{{heroCap}}": esc(hero_cap),
         "{{strings}}": strings,
     }
     for k, v in repl.items():
