@@ -494,6 +494,9 @@ a:hover { color: var(--navy); }
   color: var(--ink-2);
   margin: .15rem 0 0;
 }
+.dish-group { margin: 1.5rem 0 .5rem; padding-bottom: .3rem; border-bottom: 1px solid var(--stone-2); }
+.dish-group:first-child { margin-top: .4rem; }
+.dish-group h4 { font: 500 var(--t0)/1.2 var(--serif); margin: 0; color: var(--navy); }
 .dish-desc {
   font-size: var(--t-1);
   color: var(--ink-2);

@@ -130,7 +130,8 @@
     "mapNote": "The map is loaded from Google Maps, which sets its own cookies. It appears only when you ask for it.",
     "mapLoad": "Show the map",
     "mapOpen": "Open in Google Maps",
-    "heroImgCap": "The fleet at sea: Viribus Unitis and Tegetthoff, painted by August von Ramberg, 1913"
+    "heroImgCap": "The fleet at sea: Viribus Unitis and Tegetthoff, painted by August von Ramberg, 1913",
+    "unitScoop": "per scoop"
   },
   "hr": {
     "_name": "Hrvatski",
@@ -263,7 +264,8 @@
     "mapNote": "Karta se učitava s Google Mapsa, koji postavlja vlastite kolačiće. Prikazuje se tek kad je zatražite.",
     "mapLoad": "Prikaži kartu",
     "mapOpen": "Otvori u Google Mapsu",
-    "heroImgCap": "Flota na moru: Viribus Unitis i Tegetthoff, naslikao August von Ramberg 1913."
+    "heroImgCap": "Flota na moru: Viribus Unitis i Tegetthoff, naslikao August von Ramberg 1913.",
+    "unitScoop": "kugla"
   },
   "de": {
     "_name": "Deutsch",
@@ -396,7 +398,8 @@
     "mapNote": "Die Karte wird von Google Maps geladen, das eigene Cookies setzt. Sie erscheint erst, wenn Sie es wünschen.",
     "mapLoad": "Karte anzeigen",
     "mapOpen": "In Google Maps öffnen",
-    "heroImgCap": "Die Flotte auf See: Viribus Unitis und Tegetthoff, gemalt von August von Ramberg, 1913"
+    "heroImgCap": "Die Flotte auf See: Viribus Unitis und Tegetthoff, gemalt von August von Ramberg, 1913",
+    "unitScoop": "pro Kugel"
   },
   "it": {
     "_name": "Italiano",
@@ -529,6 +532,7 @@
     "mapNote": "La mappa viene caricata da Google Maps, che imposta i propri cookie. Compare solo su richiesta.",
     "mapLoad": "Mostra la mappa",
     "mapOpen": "Apri in Google Maps",
-    "heroImgCap": "La flotta in mare: Viribus Unitis e Tegetthoff, dipinto di August von Ramberg, 1913"
+    "heroImgCap": "La flotta in mare: Viribus Unitis e Tegetthoff, dipinto di August von Ramberg, 1913",
+    "unitScoop": "pallina"
   }
 }

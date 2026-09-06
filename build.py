@@ -46,7 +46,8 @@ def sub_name(obj, lang):
     """Croatian is shown under each dish, or English when the page is Croatian."""
     if not isinstance(obj, dict):
         return ""
-    return obj.get("en", "") if lang == "hr" else obj.get("hr", "")
+    sub = obj.get("en", "") if lang == "hr" else obj.get("hr", "")
+    return "" if sub == pick(obj, lang) else sub
 
 
 def unit_label(unit, t):
@@ -54,10 +55,13 @@ def unit_label(unit, t):
         return ""
     if re.fullmatch(r"\d+g", unit):
         return unit.replace("g", " g")
-    return {"two": t["unitTwo"], "kg": t["unitKg"], "three": t["unitThree"]}.get(unit, "")
+    return {"two": t["unitTwo"], "kg": t["unitKg"], "three": t["unitThree"], "scoop": t["unitScoop"]}.get(unit, unit)
 
 
 def price_text(item, t):
+    """One price, or several (glass and bottle) joined with a slash."""
+    if item.get("prices"):
+        return " / ".join(price_text(p, t) for p in item["prices"])
     if not item.get("price"):
         return ""
     u = unit_label(item.get("unit"), t)
@@ -75,12 +79,15 @@ def render_menu(menu, lang, t):
         sub = sub_name(sec["title"], lang)
         if sub:
             out.append(f'            <p class="menu-section-hr" lang="{"en" if lang == "hr" else "hr"}">{esc(sub)}</p>')
-        out.append(f'            <span class="menu-section-count">{len(sec["items"])}</span>')
+        out.append(f'            <span class="menu-section-count">{len([i for i in sec["items"] if "heading" not in i])}</span>')
         out.append('          </summary>')
         if sec.get("note"):
             out.append(f'          <p class="menu-section-note">{esc(pick(sec["note"], lang))}</p>')
         out.append('          <ul class="dishes">')
         for item in sec["items"]:
+            if "heading" in item:
+                out.append(f'            <li class="dish-group"><h4>{esc(pick(item["heading"], lang))}</h4></li>')
+                continue
             name = pick(item["name"], lang)
             out.append('            <li class="dish">')
             out.append('              <div class="dish-row">')

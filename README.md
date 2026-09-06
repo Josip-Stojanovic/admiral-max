@@ -36,7 +36,7 @@ The pages work without JavaScript: the menu, prices and all four languages are i
 
 ## Editing
 
-- **Prices or dishes**: `data/menu.json`, then build. Prices are strings; `unit` is `two`, `kg`, `three`, `100g`, `250g` or `300g`.
+- **Prices or dishes**: `data/menu.json`, then build. Prices are strings; `unit` is `two`, `kg`, `three`, `scoop`, a weight like `300g`, or any volume such as `0.1 l`, printed as written. A wine with glass and bottle prices uses `prices: [{unit, price}, ...]` instead of `price`. An entry with only a `heading` key starts a group inside a section (white wines, beer, and so on).
 - **Text**: `data/i18n.json`, all four languages, then build.
 - **Hours**: the `hoursFull` and `hoursWed` strings in `i18n.json`, the `HOURS` table in `js/main.js`, and the `openingHoursSpecification` block in the template.
 - **Photos**: put the JPEG in `assets/photos/` together with `name.webp` and `name-640.webp` (any converter; Pillow's `Image.save(..., "WEBP")` works), add an entry to `data/photos.json`, add caption and alt keys to `i18n.json` unless it is a menu item, then build. The grid packs without gaps when the spans add up to a multiple of four on desktop: a `wide` tile counts 4, `tall` and `long` count 2, a plain tile 1.
@@ -48,7 +48,7 @@ GitHub Pages serves the `main` branch root. Every push deploys within about a mi
 
 ## Where the content came from
 
-- Menu and prices: four photos of the outdoor menu board, sent on 6 September 2026. Desserts are pictured on the board without prices, so they are listed unpriced.
+- Menu and prices: four photos of the outdoor menu board and five photos of the printed drinks, wine, dessert and side-dish pages, all sent on 6 September 2026.
 - Photos: screenshots of the restaurant's Google Maps listing, about 1000 px wide. The terrace photo was posted by the owner; the others by guests. Originals from the restaurant would sharpen the site and settle the image rights.
 - Facts and story: the Google Maps listing, TripAdvisor, Restaurant Guru and the Gallerion museum page. The admiral is Maksimilijan Njegovan.
 - Hero painting: August von Ramberg, "Die k. u. k. Kriegsflotte mit ganzer Kraft auf hoher See", 1913, public domain, from Wikimedia Commons. Portrait: Oskar Brüch, 1915, from "Unsere Heerführer im Weltkrieg", public domain. Both are from the admiral's own era, as the restaurant asked.
