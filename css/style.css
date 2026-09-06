@@ -736,6 +736,150 @@ a:hover { color: var(--navy); }
 .themes h3 { font-size: var(--t2); margin-bottom: .5rem; }
 .themes p { color: #C9D3DE; font-size: var(--t-1); max-width: 40ch; }
 
+
+/* =========================================================
+   Photo gallery and lightbox
+   ========================================================= */
+.gallery {
+  padding: 6rem var(--gutter);
+  background: #fff;
+  border-top: 1px solid var(--stone-2);
+}
+.gallery-head, .thumbs {
+  max-width: var(--wrap);
+  margin-left: auto;
+  margin-right: auto;
+}
+.gallery-head {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+  gap: 1rem var(--gutter);
+  align-items: end;
+  margin-bottom: 2rem;
+}
+.gallery-head h2 { font-size: var(--t4); }
+.gallery-head p { color: var(--ink-2); max-width: 48ch; }
+
+.thumbs {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: .75rem;
+}
+.thumb {
+  appearance: none;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: var(--stone-2);
+  cursor: zoom-in;
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  text-align: left;
+}
+.thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s var(--ease);
+}
+.thumb:hover img { transform: scale(1.03); }
+.thumb:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
+.thumb-cap {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 1.2rem .7rem .55rem;
+  font-size: var(--t-1);
+  line-height: 1.3;
+  color: var(--stone);
+  background: linear-gradient(to top, rgba(11, 26, 48, .8), rgba(11, 26, 48, 0));
+  opacity: 0;
+  transition: opacity .25s var(--ease);
+}
+.thumb:hover .thumb-cap, .thumb:focus-visible .thumb-cap { opacity: 1; }
+
+.lb {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr) 4rem;
+  align-items: center;
+  background: rgba(11, 26, 48, .96);
+  color: var(--stone);
+}
+.lb[hidden] { display: none; }
+body.lb-open { overflow: hidden; }
+.lb-fig {
+  grid-column: 2;
+  margin: 0;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  height: 100vh;
+  height: 100svh;
+  padding: 3.5rem 0 1.5rem;
+  gap: .8rem;
+}
+.lb-fig img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+  justify-self: center;
+  align-self: center;
+}
+.lb-fig figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  font-size: var(--t-1);
+  color: #C9D3DE;
+  max-width: 70ch;
+  margin: 0 auto;
+  width: 100%;
+}
+.lb-count { flex: none; font-variant-numeric: tabular-nums; color: var(--sea-pale); }
+.lb-close, .lb-nav {
+  appearance: none;
+  background: none;
+  border: 0;
+  color: var(--stone);
+  cursor: pointer;
+  padding: .8rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.lb-close:hover, .lb-nav:hover { background: rgba(244, 242, 236, .12); }
+.lb-close:focus-visible, .lb-nav:focus-visible { outline: 2px solid var(--brass); }
+.lb-close { position: absolute; top: .8rem; right: .8rem; }
+.lb-prev { grid-column: 1; justify-self: center; }
+.lb-next { grid-column: 3; justify-self: center; }
+
+@media (max-width: 980px) {
+  .gallery-head { grid-template-columns: 1fr; }
+  .thumbs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .gallery { padding: 4rem var(--gutter); }
+  .thumbs { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; }
+  .thumb-cap { display: none; }
+  .lb { grid-template-columns: 2.6rem minmax(0, 1fr) 2.6rem; }
+  .lb-fig { padding: 3.2rem 0 1rem; }
+  .lb-fig figcaption { flex-direction: column; gap: .2rem; }
+  .lb-nav { padding: .5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .thumb img, .thumb-cap { transition: none; }
+}
+
 /* =========================================================
    Reserve
    ========================================================= */

@@ -16,6 +16,10 @@ python3 -m http.server 8080
 - **Contact and address**: search `index.html` for `433 254` and `Porporela`.
 - **Colours and type**: the `:root` block at the top of `css/style.css`.
 
+## Photo gallery
+
+The "Photos" section lists every image in `assets/photos/` as a thumbnail that opens a lightbox (arrow keys, swipe, Escape, focus stays inside). To add a photo, drop the file in `assets/photos/`, add an `<li>` to the `thumbs` list in `index.html` following the existing pattern, and add its caption key to all four languages in `js/i18n.js`.
+
 ## Reservation form
 
 The form in the "Reserve a table" section posts to [FormSubmit](https://formsubmit.co), a free relay that emails each request to the address in `RESERVATION_EMAIL` at the top of `js/main.js`. No account is needed, but **the first request triggers an activation email to that inbox and the owner must click the link once**; until then nothing is delivered. The address currently set is the one listed for Obrt UNICO on istrabiz.hr and must be confirmed with the owner.

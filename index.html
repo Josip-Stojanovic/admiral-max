@@ -48,6 +48,7 @@
   <nav class="top-nav" aria-label="Sections">
     <a href="#story" data-i18n="navStory">The admiral</a>
     <a href="#menu" data-i18n="navMenu">Menu</a>
+    <a href="#photos" data-i18n="navPhotos">Photos</a>
     <a href="#visit" data-i18n="navVisit">Hours &amp; terrace</a>
     <a href="#guests" data-i18n="navGuests">Guests</a>
   </nav>
@@ -352,6 +353,76 @@
     </div>
   </section>
 
+  <!-- ============ PHOTOS ============ -->
+  <section class="gallery" id="photos" aria-labelledby="gallery-title">
+    <div class="gallery-head">
+      <h2 id="gallery-title" data-i18n="galleryTitle">Photos</h2>
+      <p data-i18n="galleryLede">The terrace, the room and the plates, as guests and the house photographed them. Tap any picture to see it large.</p>
+    </div>
+    <ul class="thumbs" id="thumbs">
+      <li>
+        <button type="button" class="thumb" data-index="0">
+          <img src="assets/photos/terrace.jpg" alt="" data-i18n-alt="bandAlt" width="1306" height="747" loading="lazy">
+          <span class="thumb-cap" data-i18n="gTerrace"></span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="thumb" data-index="1">
+          <img src="assets/photos/fish-platter.jpg" alt="" data-i18n-alt="plate1Alt" width="913" height="760" loading="lazy">
+          <span class="thumb-cap" data-i18n="plate1"></span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="thumb" data-index="2">
+          <img src="assets/photos/scallops.jpg" alt="" data-i18n-alt="plate2Alt" width="1015" height="760" loading="lazy">
+          <span class="thumb-cap" data-i18n="plate2"></span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="thumb" data-index="3">
+          <img src="assets/photos/interior.jpg" alt="" data-i18n-alt="interiorAlt" width="1014" height="760" loading="lazy">
+          <span class="thumb-cap" data-i18n="gInterior"></span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="thumb" data-index="4">
+          <img src="assets/photos/sea-bass.jpg" alt="" data-i18n-alt="plate3Alt" width="597" height="760" loading="lazy">
+          <span class="thumb-cap" data-i18n="plate3"></span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="thumb" data-index="5">
+          <img src="assets/photos/fritto-misto.jpg" alt="" data-i18n-alt="plate4Alt" width="1015" height="760" loading="lazy">
+          <span class="thumb-cap" data-i18n="plate4"></span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="thumb" data-index="6">
+          <img src="assets/photos/tuna-steak.jpg" alt="" data-i18n-alt="plate5Alt" width="1015" height="760" loading="lazy">
+          <span class="thumb-cap" data-i18n="plate5"></span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="thumb" data-index="7">
+          <img src="assets/photos/fish-platter-top.jpg" alt="" data-i18n-alt="plate6Alt" width="569" height="760" loading="lazy">
+          <span class="thumb-cap" data-i18n="plate6"></span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="thumb" data-index="8">
+          <img src="assets/photos/seafood-spaghetti.jpg" alt="" data-i18n-alt="plate7Alt" width="683" height="760" loading="lazy">
+          <span class="thumb-cap" data-i18n="plate7"></span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="thumb" data-index="9">
+          <img src="assets/photos/black-ravioli.jpg" alt="" data-i18n-alt="gRavioli" width="427" height="760" loading="lazy">
+          <span class="thumb-cap" data-i18n="gRavioli"></span>
+        </button>
+      </li>
+    </ul>
+  </section>
+
   <!-- ============ RESERVE ============ -->
   <section class="reserve" id="reserve" aria-labelledby="reserve-title">
     <div class="reserve-grid">
@@ -440,6 +511,23 @@
   </div>
   <p class="foot-legal">© <span id="year"></span> Admiral Max, Novigrad. Obrt za ugostiteljstvo UNICO.</p>
 </footer>
+
+<!-- Lightbox for the photo gallery -->
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-labelledby="lb-cap">
+  <button type="button" class="lb-close" id="lb-close" aria-label="Close" data-i18n-aria="lbClose">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+  </button>
+  <button type="button" class="lb-nav lb-prev" id="lb-prev" aria-label="Previous photo" data-i18n-aria="lbPrev">
+    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M15 4l-8 8 8 8" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+  </button>
+  <figure class="lb-fig">
+    <img id="lb-img" src="" alt="">
+    <figcaption><span id="lb-cap"></span><span class="lb-count" id="lb-count"></span></figcaption>
+  </figure>
+  <button type="button" class="lb-nav lb-next" id="lb-next" aria-label="Next photo" data-i18n-aria="lbNext">
+    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M9 4l8 8-8 8" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+  </button>
+</div>
 
 <script src="js/i18n.js"></script>
 <script src="js/menu.js"></script>
