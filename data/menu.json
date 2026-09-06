@@ -768,16 +768,16 @@
   {
     "id": "m-sweets",
     "title": {
-      "en": "Desserts and drinks",
-      "hr": "Deserti i pića",
-      "de": "Desserts und Getränke",
-      "it": "Dolci e bevande"
+      "en": "Desserts",
+      "hr": "Deserti",
+      "de": "Desserts",
+      "it": "Dolci"
     },
     "note": {
-      "en": "Ask for the day's desserts and the Istrian wine list. Malvazija by the glass or the litre goes with the fish, Teran with the grill.",
-      "hr": "Pitajte za deserte dana i istarsku vinsku kartu. Malvazija na čašu ili litru ide uz ribu, teran uz roštilj.",
-      "de": "Fragen Sie nach den Desserts des Tages und der istrischen Weinkarte. Malvazija im Glas oder Liter passt zum Fisch, Teran zum Grill.",
-      "it": "Chiedete i dolci del giorno e la carta dei vini istriani. La Malvasia al bicchiere o al litro accompagna il pesce, il Terrano la griglia."
+      "en": "Ask what is on the dessert board today.",
+      "hr": "Pitajte što je danas na ploči s desertima.",
+      "de": "Fragen Sie nach den Desserts des Tages.",
+      "it": "Chiedete i dolci del giorno."
     },
     "items": [
       {
@@ -809,7 +809,24 @@
           "de": "Käsekuchen",
           "it": "Cheesecake"
         }
-      },
+      }
+    ]
+  },
+  {
+    "id": "m-drinks",
+    "title": {
+      "en": "Drinks",
+      "hr": "Pića",
+      "de": "Getränke",
+      "it": "Bevande"
+    },
+    "note": {
+      "en": "The full drinks list is on its way. Istrian wines by the glass or the litre, beer, coffee and soft drinks.",
+      "hr": "Cjelovita karta pića stiže uskoro. Istarska vina na čašu ili litru, pivo, kava i sokovi.",
+      "de": "Die vollständige Getränkekarte folgt. Istrische Weine im Glas oder Liter, Bier, Kaffee und Softdrinks.",
+      "it": "La carta completa delle bevande è in arrivo. Vini istriani al bicchiere o al litro, birra, caffè e bibite."
+    },
+    "items": [
       {
         "name": {
           "en": "Istrian Malvazija",
@@ -818,10 +835,10 @@
           "it": "Malvasia istriana"
         },
         "desc": {
-          "en": "By the glass or the litre.",
-          "hr": "Na čašu ili litru.",
-          "de": "Im Glas oder Liter.",
-          "it": "Al bicchiere o al litro."
+          "en": "The white for fish. By the glass or the litre.",
+          "hr": "Bijelo uz ribu. Na čašu ili litru.",
+          "de": "Der Weiße zum Fisch. Im Glas oder Liter.",
+          "it": "Il bianco per il pesce. Al bicchiere o al litro."
         }
       },
       {
@@ -832,24 +849,63 @@
           "it": "Terrano"
         },
         "desc": {
-          "en": "The Istrian red.",
-          "hr": "Istarsko crno.",
-          "de": "Der istrische Rote.",
-          "it": "Il rosso istriano."
+          "en": "The Istrian red, for the grill.",
+          "hr": "Istarsko crno, uz roštilj.",
+          "de": "Der istrische Rote, zum Grill.",
+          "it": "Il rosso istriano, per la griglia."
+        }
+      }
+    ]
+  },
+  {
+    "id": "m-rakija",
+    "title": {
+      "en": "Rakija",
+      "hr": "Rakije",
+      "de": "Rakija",
+      "it": "Grappe"
+    },
+    "items": [
+      {
+        "name": {
+          "en": "Biska",
+          "hr": "Biska",
+          "de": "Biska",
+          "it": "Biska"
+        },
+        "desc": {
+          "en": "Istrian grappa with mistletoe.",
+          "hr": "Istarska rakija s imelom.",
+          "de": "Istrischer Schnaps mit Mistel.",
+          "it": "Grappa istriana al vischio."
         }
       },
       {
         "name": {
-          "en": "Grappa and herbal rakija",
-          "hr": "Rakije",
-          "de": "Grappa und Kräuterschnaps",
-          "it": "Grappa e acquaviti alle erbe"
+          "en": "Medica",
+          "hr": "Medica",
+          "de": "Medica",
+          "it": "Medica"
         },
         "desc": {
-          "en": "Biska, medica, travarica.",
-          "hr": "Biska, medica, travarica.",
-          "de": "Biska, Medica, Travarica.",
-          "it": "Biska, medica, travarica."
+          "en": "Honey rakija.",
+          "hr": "Rakija s medom.",
+          "de": "Honigschnaps.",
+          "it": "Grappa al miele."
+        }
+      },
+      {
+        "name": {
+          "en": "Travarica",
+          "hr": "Travarica",
+          "de": "Travarica",
+          "it": "Travarica"
+        },
+        "desc": {
+          "en": "Herb rakija.",
+          "hr": "Rakija od trava.",
+          "de": "Kräuterschnaps.",
+          "it": "Grappa alle erbe."
         }
       }
     ]
