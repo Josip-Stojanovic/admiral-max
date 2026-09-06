@@ -23,7 +23,8 @@ This reads the data files and the template and writes `index.html` (English), `h
 | `css/style.css` | Colours and type are tokens in the `:root` block at the top. |
 | `js/main.js` | The live parts only: open-now line, reservation form, lightbox, menu nav highlight. Two settings at the top, see below. |
 | `assets/photos/` | Photos as JPEG plus WebP at full size and 640 px wide. |
-| `assets/fonts/`, `css/fonts.css` | Playfair Display and Archivo, self-hosted so no request goes to Google before the visitor asks for anything. |
+| `assets/logo.png`, `logo-light.png`, `mark.png` | The restaurant's own logo from its Facebook page, cut out with a transparent background; the light version is for the navy footer, the mark alone is the favicon. |
+| `assets/fonts/`, `css/fonts.css` | Tinos (a metric twin of Times, which the wordmark uses) and Archivo, self-hosted so no request goes to Google before the visitor asks for anything. |
 
 The Google map is not embedded until the visitor presses "Show the map"; until then the address and a directions link are shown, so no Google cookie is set on a plain visit.
 
@@ -45,6 +46,10 @@ The pages work without JavaScript: the menu, prices and all four languages are i
 ## Deploying
 
 GitHub Pages serves the `main` branch root. Every push deploys within about a minute.
+
+## Brand
+
+Colours and type follow the logo on the restaurant's Facebook page: navy #00284F, yellow #FAB90F, sky blue #02AFEA, red #CC0E43 on white, wordmark in Times. The tokens at the top of `css/style.css` carry these values.
 
 ## Where the content came from
 

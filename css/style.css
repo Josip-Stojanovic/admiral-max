@@ -4,20 +4,22 @@
    ========================================================= */
 :root {
   /* colour */
-  --navy: #10233F;        /* ensign ink, hero and footer ground */
-  --navy-deep: #0B1A30;   /* chart sea */
-  --sea: #2B5F8C;         /* Adriatic mid blue, links, contours */
-  --sea-pale: #8FB3D1;    /* chart lines on navy */
-  --stone: #F4F2EC;       /* Istrian limestone, page ground */
-  --stone-2: #E8E4DA;     /* rules and quiet fills */
-  --brass: #B98B3B;       /* fittings, primary action */
-  --brass-deep: #8F6A2A;
-  --ensign: #B22B33;      /* naval red, used once */
-  --ink: #1B1F26;
-  --ink-2: #4A5058;
+  /* taken from the Admiral Max logo: navy wordmark, anchor with yellow knife, sky-blue fork, red cap */
+  --navy: #00284F;        /* logo navy, headings, guests block, footer */
+  --navy-deep: #001B38;
+  --sea: #0077A8;         /* links: the logo's sky blue, darkened to read on white */
+  --sky: #02AFEA;         /* logo sky blue, decorative only */
+  --sea-pale: #9ED9F4;    /* labels on navy */
+  --stone: #FFFFFF;       /* page ground, white like the logo */
+  --stone-2: #E3EAF1;     /* rules and quiet fills */
+  --brass: #FAB90F;       /* logo yellow, primary action */
+  --brass-deep: #D99C00;
+  --ensign: #CC0E43;      /* logo red, errors only */
+  --ink: #1B2430;
+  --ink-2: #4A5563;
 
   /* type */
-  --serif: "Playfair Display", "Georgia", "Times New Roman", serif;
+  --serif: "Tinos", "Times New Roman", Times, serif;   /* the wordmark is set in Times */
   --sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
 
   /* scale, ratio 1.25 on 17px */
@@ -60,7 +62,7 @@ body {
 
 h1, h2, h3 {
   font-family: var(--serif);
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.08;
   letter-spacing: -0.005em;
   margin: 0;
@@ -100,7 +102,7 @@ a:hover { color: var(--navy); }
   transition: background-color .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease);
 }
 .btn-brass { background: var(--brass); color: var(--navy-deep); border-color: var(--brass); }
-.btn-brass:hover { background: #CBA054; border-color: #CBA054; color: var(--navy-deep); }
+.btn-brass:hover { background: #FFC93A; border-color: #FFC93A; color: var(--navy-deep); }
 .btn-ghost { color: var(--stone); border-color: rgba(244, 242, 236, .45); }
 .btn-ghost:hover { border-color: var(--stone); color: #fff; }
 .btn-navy { background: var(--navy); color: var(--stone); border-color: var(--navy); }
@@ -120,17 +122,17 @@ a:hover { color: var(--navy); }
   align-items: center;
   gap: 1rem;
   padding: 1rem var(--gutter);
-  color: var(--stone);
-  background: transparent;
-  transition: background-color .3s var(--ease), padding .3s var(--ease), color .3s var(--ease), box-shadow .3s var(--ease);
+  color: var(--navy);
+  background: rgba(255, 255, 255, .96);
+  box-shadow: 0 1px 0 var(--stone-2);
+  backdrop-filter: blur(8px);
+  transition: padding .3s var(--ease);
 }
 .top.is-scrolled {
   padding: .6rem var(--gutter);
-  background: rgba(244, 242, 236, .94);
-  color: var(--navy);
-  box-shadow: 0 1px 0 var(--stone-2);
-  backdrop-filter: blur(8px);
 }
+.top-name img { display: block; height: 34px; width: auto; }
+.top.is-scrolled .top-name img { height: 28px; }
 .top-name {
   font-family: var(--serif);
   font-weight: 600;
@@ -183,10 +185,9 @@ a:hover { color: var(--navy); }
    ========================================================= */
 .hero {
   position: relative;
-  min-height: 100svh;
-  margin-top: -4.4rem; /* pull under the sticky header */
-  background: var(--navy);
-  color: var(--stone);
+  min-height: calc(100svh - 4.4rem);
+  background: var(--stone);
+  color: var(--navy);
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: center;
@@ -195,7 +196,7 @@ a:hover { color: var(--navy); }
   order: 2;
   position: relative;
   align-self: stretch;
-  margin: 4.4rem 0 0; /* below the header line */
+  margin: 0;
   min-height: calc(100svh - 4.4rem);
 }
 .hero-art img {
@@ -212,7 +213,7 @@ a:hover { color: var(--navy); }
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(90deg, var(--navy) 0%, rgba(16, 35, 63, .4) 8%, rgba(16, 35, 63, 0) 20%);
+  background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, .45) 8%, rgba(255, 255, 255, 0) 20%);
 }
 .hero-art figcaption {
   position: absolute;
@@ -235,23 +236,18 @@ a:hover { color: var(--navy); }
 
 .hero-place {
   font-size: var(--t-1);
-  color: var(--sea-pale);
+  color: var(--ink-2);
   margin-bottom: 1.6rem;
 }
 
-.hero h1 {
-  font-size: clamp(var(--t6), 7vw, 5.8rem);
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -0.015em;
-  margin-bottom: 1.8rem;
-}
+.hero h1 { margin-bottom: 1.8rem; }
+.hero h1 img { display: block; width: min(100%, 520px); height: auto; }
 
 .hero-lede {
   font-size: var(--t1);
   line-height: 1.45;
   max-width: 30ch;
-  color: #DCE3EA;
+  color: var(--ink);
   margin: 1.8rem 0 1.8rem;
 }
 
@@ -263,12 +259,12 @@ a:hover { color: var(--navy); }
   gap: 1.5rem 2.4rem;
   margin: 0;
   padding-top: 1.4rem;
-  border-top: 1px solid rgba(143, 179, 209, .3);
+  border-top: 1px solid var(--stone-2);
   font-size: var(--t-1);
 }
 .hero-facts div { display: grid; gap: .1rem; }
-.hero-facts dt { color: var(--sea-pale); }
-.hero-facts dd { margin: 0; color: var(--stone); font-variant-numeric: lining-nums tabular-nums; }
+.hero-facts dt { color: var(--ink-2); }
+.hero-facts dd { margin: 0; color: var(--navy); font-variant-numeric: lining-nums tabular-nums; }
 
 
 /* =========================================================
@@ -358,7 +354,7 @@ a:hover { color: var(--navy); }
 .menu {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background: #fff;
+  background: #F3F8FC;
   border-top: 1px solid var(--stone-2);
   border-bottom: 1px solid var(--stone-2);
 }
@@ -496,7 +492,7 @@ a:hover { color: var(--navy); }
 }
 .dish-group { margin: 1.5rem 0 .5rem; padding-bottom: .3rem; border-bottom: 1px solid var(--stone-2); }
 .dish-group:first-child { margin-top: .4rem; }
-.dish-group h4 { font: 500 var(--t0)/1.2 var(--serif); margin: 0; color: var(--navy); }
+.dish-group h4 { font: 700 var(--t0)/1.2 var(--serif); margin: 0; color: var(--navy); }
 .dish-desc {
   font-size: var(--t-1);
   color: var(--ink-2);
@@ -864,7 +860,8 @@ body.lb-open { overflow: hidden; }
   border-bottom: 1px solid rgba(143, 179, 209, .2);
 }
 .foot-grid p { margin-bottom: .3rem; }
-.foot-name { font-family: var(--serif); font-size: var(--t1); color: var(--stone); }
+.foot-name { margin-bottom: .8rem; }
+.foot-name img { display: block; width: 220px; height: auto; }
 .foot-langs { margin-top: .8rem; }
 .foot-langs span { color: #7E8EA0; }
 .foot-legal { padding-top: 1.2rem; color: #7E8EA0; }
@@ -877,12 +874,11 @@ body.lb-open { overflow: hidden; }
   .top-nav { gap: .9rem; }
   .top-nav a { white-space: nowrap; }
   .top-tag { display: none; }
-  .top { background: var(--navy); }
-  .hero { min-height: 0; display: block; margin-top: 0; }
+  .hero { min-height: 0; display: block; }
   .hero-art { margin: 0; min-height: 0; }
   .hero-art img { position: static; width: 100%; height: auto; aspect-ratio: 16 / 10; object-position: 42% 50%; }
   .hero-art::after { display: none; }
-  .hero-art figcaption { position: static; padding: .6rem var(--gutter) 0; color: var(--sea-pale); text-shadow: none; }
+  .hero-art figcaption { position: static; padding: .6rem var(--gutter) 0; color: var(--ink-2); text-shadow: none; }
   .hero-copy { padding-top: 1.6rem; padding-bottom: 3rem; margin-top: 0; max-width: none; }
   .story-art { max-width: 520px; }
   .story-grid, .section-head, .menu-layout, .visit-grid, .guests-grid, .reserve-grid { grid-template-columns: 1fr; }
@@ -919,7 +915,8 @@ body.lb-open { overflow: hidden; }
   .lang { gap: 0; }
   .lang a { padding: .3rem .25rem; font-size: .74rem; }
   .hero-art img { aspect-ratio: 4 / 3; object-position: 38% 50%; }
-  .hero h1 { font-size: clamp(3rem, 15vw, 4.4rem); }
+  .top-name img { height: 26px; }
+  .hero h1 img { width: min(100%, 360px); }
   .hero-facts { grid-template-columns: 1fr; gap: .9rem; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { text-align: center; }

@@ -13,8 +13,9 @@
   <meta property="og:url" content="{{canonical}}">
   <meta property="og:image" content="{{site}}assets/photos/fish-platter.jpg">
   <meta property="og:locale" content="{{locale}}">
-  <link rel="icon" href="{{base}}assets/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="{{base}}assets/fonts/playfair-display-normal-500-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="{{base}}assets/favicon.png" type="image/png" sizes="256x256">
+  <link rel="apple-touch-icon" href="{{base}}assets/apple-touch-icon.png">
+  <link rel="preload" href="{{base}}assets/fonts/tinos-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{base}}assets/fonts/archivo-normal-400-w875-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{base}}css/fonts.css">
   <link rel="stylesheet" href="{{base}}css/style.css">
@@ -28,6 +29,7 @@
     "priceRange": "€15–35",
     "telephone": "+385 52 433 254",
     "image": "{{site}}assets/photos/fish-platter.jpg",
+    "logo": "{{site}}assets/logo.png",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Porporela 3",
@@ -50,7 +52,7 @@
 <a class="skip" href="#menu">{{t:skip}}</a>
 
 <header class="top">
-  <a class="top-name" href="#top">Admiral Max<span class="top-tag">{{t:topTag}}</span></a>
+  <a class="top-name" href="#top"><img src="{{base}}assets/logo.png" alt="Admiral Max" width="1367" height="280"></a>
   <nav class="top-nav" aria-label="Sections">
     <a href="#story">{{t:navStory}}</a>
     <a href="#photos">{{t:navPhotos}}</a>
@@ -78,14 +80,14 @@
     </figure>
     <div class="hero-copy">
       <p class="hero-place">{{t:heroPlace}}</p>
-      <h1 id="hero-title">Admiral<br>Max</h1>
+      <h1 id="hero-title"><img src="{{base}}assets/logo.png" alt="Admiral Max" width="1367" height="280" fetchpriority="high"></h1>
 
       <p class="hero-lede">{{t:heroLede}}</p>
 
       <div class="hero-actions">
         <a class="btn btn-brass" href="tel:+38552433254">{{t:callReserve}}</a>
-        <a class="btn btn-ghost" href="#reserve">{{t:reserveOnline}}</a>
-        <a class="btn btn-ghost" href="#menu">{{t:seeMenu}}</a>
+        <a class="btn btn-ghost-dark" href="#reserve">{{t:reserveOnline}}</a>
+        <a class="btn btn-ghost-dark" href="#menu">{{t:seeMenu}}</a>
       </div>
 
       <dl class="hero-facts">
@@ -300,12 +302,13 @@
 <footer class="foot">
   <div class="foot-grid">
     <div>
-      <p class="foot-name">Admiral Max</p>
+      <p class="foot-name"><img src="{{base}}assets/logo-light.png" alt="Admiral Max" width="1367" height="280" loading="lazy"></p>
       <p>{{t:footAddress}}</p>
     </div>
     <div>
       <p><a href="tel:+38552433254">+385 52 433 254</a></p>
       <p><a href="https://www.facebook.com/admiralmax/" target="_blank" rel="noopener">Facebook</a></p>
+      <p><a href="https://www.instagram.com/admiralmaxnovigrad/" target="_blank" rel="noopener">Instagram</a></p>
     </div>
     <div>
       <p>{{t:footNamed}}</p>
