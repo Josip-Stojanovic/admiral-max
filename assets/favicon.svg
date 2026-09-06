@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="8" fill="#10233F"/>
+  <!-- signal flag A: white hoist, blue fly with swallowtail -->
+  <path d="M12 14h20v36H12z" fill="#F4F2EC"/>
+  <path d="M32 14h20l-8 18 8 18H32z" fill="#2B5F8C"/>
+</svg>
