@@ -1,0 +1,82 @@
+[
+  {
+    "file": "fish-platter",
+    "span": "wide",
+    "item": "platter",
+    "alt": "plate1Alt",
+    "w": 913,
+    "h": 760
+  },
+  {
+    "file": "scallops",
+    "span": "",
+    "item": "kapesante",
+    "alt": "plate2Alt",
+    "w": 1015,
+    "h": 760
+  },
+  {
+    "file": "sea-bass",
+    "span": "tall",
+    "item": "brancin",
+    "alt": "plate3Alt",
+    "w": 597,
+    "h": 760
+  },
+  {
+    "file": "fritto-misto",
+    "span": "",
+    "item": "lignje-przene",
+    "alt": "plate4Alt",
+    "w": 1015,
+    "h": 760
+  },
+  {
+    "file": "terrace",
+    "span": "long",
+    "caption": "gTerrace",
+    "alt": "bandAlt",
+    "w": 1306,
+    "h": 747
+  },
+  {
+    "file": "tuna-steak",
+    "span": "",
+    "item": "tuna",
+    "alt": "plate5Alt",
+    "w": 1015,
+    "h": 760
+  },
+  {
+    "file": "fish-platter-top",
+    "span": "tall",
+    "caption": "plate6",
+    "alt": "plate6Alt",
+    "w": 569,
+    "h": 760
+  },
+  {
+    "file": "interior",
+    "span": "",
+    "caption": "gInterior",
+    "alt": "interiorAlt",
+    "w": 1014,
+    "h": 760
+  },
+  {
+    "file": "seafood-spaghetti",
+    "span": "",
+    "item": "spageti-mora",
+    "alt": "plate7Alt",
+    "w": 683,
+    "h": 760
+  },
+  {
+    "file": "black-ravioli",
+    "span": "",
+    "item": "ravioli",
+    "alt": "gRavioli",
+    "w": 427,
+    "h": 760
+  }
+]
