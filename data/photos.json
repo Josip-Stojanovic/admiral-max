@@ -8,6 +8,14 @@
     "h": 760
   },
   {
+    "file": "room",
+    "span": "wide",
+    "caption": "roomCap",
+    "alt": "roomAlt",
+    "w": 1120,
+    "h": 1126
+  },
+  {
     "file": "scallops",
     "span": "",
     "item": "kapesante",

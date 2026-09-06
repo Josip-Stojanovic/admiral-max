@@ -54,7 +54,7 @@ Colours and type follow the logo on the restaurant's Facebook page: navy #00284F
 ## Where the content came from
 
 - Menu and prices: four photos of the outdoor menu board and five photos of the printed drinks, wine, dessert and side-dish pages, all sent on 6 September 2026.
-- Photos: screenshots of the restaurant's Google Maps listing, about 1000 px wide. The terrace photo was posted by the owner; the others by guests. Originals from the restaurant would sharpen the site and settle the image rights.
+- Photos: the room is the restaurant's own photo from its Facebook page; the dishes are screenshots of guest photos on the Google Maps listing, about 1000 px wide. Originals from the restaurant would sharpen the site and settle the image rights.
 - Facts and story: the Google Maps listing, TripAdvisor, Restaurant Guru and the Gallerion museum page. The admiral is Maksimilijan Njegovan.
 - Hero painting: August von Ramberg, "Die k. u. k. Kriegsflotte mit ganzer Kraft auf hoher See", 1913, public domain, from Wikimedia Commons. Portrait: Oskar Brüch, 1915, from "Unsere Heerführer im Weltkrieg", public domain. Both are from the admiral's own era, as the restaurant asked.
 

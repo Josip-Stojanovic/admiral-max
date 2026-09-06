@@ -131,7 +131,9 @@
     "mapLoad": "Show the map",
     "mapOpen": "Open in Google Maps",
     "heroImgCap": "The fleet at sea: Viribus Unitis and Tegetthoff, painted by August von Ramberg, 1913",
-    "unitScoop": "per scoop"
+    "unitScoop": "per scoop",
+    "roomCap": "The room",
+    "roomAlt": "Stone wall, wooden tables and benches, and old photographs of the Austro-Hungarian fleet on the walls"
   },
   "hr": {
     "_name": "Hrvatski",
@@ -265,7 +267,9 @@
     "mapLoad": "Prikaži kartu",
     "mapOpen": "Otvori u Google Mapsu",
     "heroImgCap": "Flota na moru: Viribus Unitis i Tegetthoff, naslikao August von Ramberg 1913.",
-    "unitScoop": "kugla"
+    "unitScoop": "kugla",
+    "roomCap": "Unutrašnjost",
+    "roomAlt": "Kameni zid, drveni stolovi i klupe te stare fotografije austrougarske flote na zidovima"
   },
   "de": {
     "_name": "Deutsch",
@@ -399,7 +403,9 @@
     "mapLoad": "Karte anzeigen",
     "mapOpen": "In Google Maps öffnen",
     "heroImgCap": "Die Flotte auf See: Viribus Unitis und Tegetthoff, gemalt von August von Ramberg, 1913",
-    "unitScoop": "pro Kugel"
+    "unitScoop": "pro Kugel",
+    "roomCap": "Der Gastraum",
+    "roomAlt": "Steinwand, Holztische und Bänke, an den Wänden alte Fotografien der k. u. k. Flotte"
   },
   "it": {
     "_name": "Italiano",
@@ -533,6 +539,8 @@
     "mapLoad": "Mostra la mappa",
     "mapOpen": "Apri in Google Maps",
     "heroImgCap": "La flotta in mare: Viribus Unitis e Tegetthoff, dipinto di August von Ramberg, 1913",
-    "unitScoop": "pallina"
+    "unitScoop": "pallina",
+    "roomCap": "La sala",
+    "roomAlt": "Muro in pietra, tavoli e panche di legno e vecchie fotografie della flotta austro-ungarica alle pareti"
   }
 }
