@@ -23,6 +23,9 @@ This reads the data files and the template and writes `index.html` (English), `h
 | `css/style.css` | Colours and type are tokens in the `:root` block at the top. |
 | `js/main.js` | The live parts only: open-now line, reservation form, lightbox, menu nav highlight. Two settings at the top, see below. |
 | `assets/photos/` | Photos as JPEG plus WebP at full size and 640 px wide. |
+| `assets/fonts/`, `css/fonts.css` | Playfair Display and Archivo, self-hosted so no request goes to Google before the visitor asks for anything. |
+
+The Google map is not embedded until the visitor presses "Show the map"; until then the address and a directions link are shown, so no Google cookie is set on a plain visit.
 
 The pages work without JavaScript: the menu, prices and all four languages are in the HTML, and each page declares its alternates with hreflang so search engines index every language.
 

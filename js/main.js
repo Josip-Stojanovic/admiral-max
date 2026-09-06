@@ -286,6 +286,22 @@
     });
   }
 
+  /* ---------- Map: Google's iframe only after the guest asks ---------- */
+  function mapGate() {
+    var box = document.getElementById("visit-map");
+    var btn = document.getElementById("map-load");
+    if (!box || !btn) return;
+    btn.addEventListener("click", function () {
+      var f = document.createElement("iframe");
+      f.src = box.getAttribute("data-src");
+      f.title = box.getAttribute("data-title");
+      f.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
+      f.setAttribute("allowfullscreen", "");
+      box.innerHTML = "";
+      box.appendChild(f);
+    });
+  }
+
   /* ---------- Header: shrink once past the hero ---------- */
   function header() {
     var top = document.querySelector(".top");
@@ -305,6 +321,7 @@
     hoursStatus();
     reservationForm();
     gallery();
+    mapGate();
     header();
     document.documentElement.classList.add("is-ready");
   });

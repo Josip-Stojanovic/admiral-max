@@ -18,7 +18,6 @@
     "factRatedValue": "4.8 on Google, 559 reviews",
     "factPrice": "Price",
     "factPriceValue": "€15–35 a person",
-    "storyKicker": "The name over the door",
     "admiralDates": "1858 to 1930",
     "admiralRole": "Admiral of the Austro-Hungarian Navy, Croatian by birth, commander of the fleet during the First World War.",
     "storyTitle": "A konoba that remembers the sailors of the old fleet",
@@ -127,7 +126,10 @@
     "heroCredit": "Ship: Konrad von Grünenberg's pilgrim galley, 1487, Badische Landesbibliothek, public domain.",
     "storyImgAlt": "Woodcut of a Venetian galley under sail, from a fifteenth-century pilgrim's travel book",
     "topTag": "Fish restaurant, Novigrad",
-    "storyImgCap": "A Venetian galley under sail, from a pilgrim’s travel book of 1487"
+    "storyImgCap": "A Venetian galley under sail, from a pilgrim’s travel book of 1487",
+    "mapNote": "The map is loaded from Google Maps, which sets its own cookies. It appears only when you ask for it.",
+    "mapLoad": "Show the map",
+    "mapOpen": "Open in Google Maps"
   },
   "hr": {
     "_name": "Hrvatski",
@@ -148,7 +150,6 @@
     "factRatedValue": "4,8 na Googleu, 559 recenzija",
     "factPrice": "Cijena",
     "factPriceValue": "15–35 € po osobi",
-    "storyKicker": "Ime iznad vrata",
     "admiralDates": "1858. do 1930.",
     "admiralRole": "Admiral austrougarske mornarice, rođeni Hrvat, zapovjednik flote u Prvom svjetskom ratu.",
     "storyTitle": "Konoba koja pamti mornare stare flote",
@@ -257,7 +258,10 @@
     "heroCredit": "Brod: hodočasnička galija Konrada von Grünenberga, 1487., Badische Landesbibliothek, javno dobro.",
     "storyImgAlt": "Drvorez venecijanske galije pod jedrima, iz hodočasničkog putopisa iz 15. stoljeća",
     "topTag": "Riblji restoran, Novigrad",
-    "storyImgCap": "Venecijanska galija pod jedrima, iz hodočasničkog putopisa iz 1487."
+    "storyImgCap": "Venecijanska galija pod jedrima, iz hodočasničkog putopisa iz 1487.",
+    "mapNote": "Karta se učitava s Google Mapsa, koji postavlja vlastite kolačiće. Prikazuje se tek kad je zatražite.",
+    "mapLoad": "Prikaži kartu",
+    "mapOpen": "Otvori u Google Mapsu"
   },
   "de": {
     "_name": "Deutsch",
@@ -278,7 +282,6 @@
     "factRatedValue": "4,8 bei Google, 559 Rezensionen",
     "factPrice": "Preis",
     "factPriceValue": "15–35 € pro Person",
-    "storyKicker": "Der Name über der Tür",
     "admiralDates": "1858 bis 1930",
     "admiralRole": "Admiral der k.u.k. Kriegsmarine, gebürtiger Kroate, Flottenkommandant im Ersten Weltkrieg.",
     "storyTitle": "Eine Konoba, die sich an die Matrosen der alten Flotte erinnert",
@@ -387,7 +390,10 @@
     "heroCredit": "Schiff: Pilgergaleere aus Konrad von Grünenbergs Reisebericht, 1487, Badische Landesbibliothek, gemeinfrei.",
     "storyImgAlt": "Holzschnitt einer venezianischen Galeere unter Segeln, aus einem Pilgerbericht des 15. Jahrhunderts",
     "topTag": "Fischrestaurant, Novigrad",
-    "storyImgCap": "Eine venezianische Galeere unter Segeln, aus einem Pilgerbericht von 1487"
+    "storyImgCap": "Eine venezianische Galeere unter Segeln, aus einem Pilgerbericht von 1487",
+    "mapNote": "Die Karte wird von Google Maps geladen, das eigene Cookies setzt. Sie erscheint erst, wenn Sie es wünschen.",
+    "mapLoad": "Karte anzeigen",
+    "mapOpen": "In Google Maps öffnen"
   },
   "it": {
     "_name": "Italiano",
@@ -408,7 +414,6 @@
     "factRatedValue": "4,8 su Google, 559 recensioni",
     "factPrice": "Prezzo",
     "factPriceValue": "15–35 € a persona",
-    "storyKicker": "Il nome sopra la porta",
     "admiralDates": "1858–1930",
     "admiralRole": "Ammiraglio della Marina austro-ungarica, croato di nascita, comandante della flotta nella Prima guerra mondiale.",
     "storyTitle": "Una konoba che ricorda i marinai della vecchia flotta",
@@ -517,6 +522,9 @@
     "heroCredit": "Nave: la galea dei pellegrini di Konrad von Grünenberg, 1487, Badische Landesbibliothek, pubblico dominio.",
     "storyImgAlt": "Xilografia di una galea veneziana a vele spiegate, da un libro di viaggio di un pellegrino del Quattrocento",
     "topTag": "Ristorante di pesce, Cittanova",
-    "storyImgCap": "Una galea veneziana a vele spiegate, da un libro di viaggio di un pellegrino del 1487"
+    "storyImgCap": "Una galea veneziana a vele spiegate, da un libro di viaggio di un pellegrino del 1487",
+    "mapNote": "La mappa viene caricata da Google Maps, che imposta i propri cookie. Compare solo su richiesta.",
+    "mapLoad": "Mostra la mappa",
+    "mapOpen": "Apri in Google Maps"
   }
 }

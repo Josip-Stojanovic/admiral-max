@@ -18,9 +18,9 @@
   <meta property="og:image" content="https://josip-stojanovic.github.io/admiral-max/assets/photos/fish-platter.jpg">
   <meta property="og:locale" content="en_GB">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@87.5,400;87.5,500;100,400;100,500;100,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/playfair-display-normal-500-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/archivo-normal-400-w875-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
   <script type="application/ld+json">
   {
@@ -69,7 +69,7 @@
       <a href="de/" lang="de" hreflang="de">DE</a>
       <a href="it/" lang="it" hreflang="it">IT</a>
     </nav>
-    <a class="top-call" href="tel:+38552433254">052 433 254</a>
+    <a class="top-call" href="tel:+38552433254" aria-label="Call 052 433 254"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6.6 3h3l1.6 4.2-2 1.3a12 12 0 0 0 6.3 6.3l1.3-2 4.2 1.6v3a2 2 0 0 1-2.1 2A16.6 16.6 0 0 1 4.6 5.1 2 2 0 0 1 6.6 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span>052 433 254</span></a>
   </div>
 </header>
 
@@ -106,7 +106,6 @@
   <section class="story" id="story" aria-labelledby="story-title">
     <div class="story-grid">
       <div class="story-side">
-        <p class="story-kicker">The name over the door</p>
         <div class="admiral-card">
           <p class="admiral-name">Maksimilijan Njegovan</p>
           <p class="admiral-dates">1858 to 1930</p>
@@ -874,13 +873,13 @@
         </div>
       </div>
 
-      <div class="visit-map">
-        <iframe
-          title="Map showing Admiral Max on the Porporela in Novigrad"
-          src="https://www.google.com/maps?q=Admiral+Max,+Porporela+3,+Novigrad,+Croatia&z=17&output=embed&hl=en"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen></iframe>
+      <div class="visit-map" id="visit-map" data-src="https://www.google.com/maps?q=Admiral+Max,+Porporela+3,+Novigrad,+Croatia&amp;z=17&amp;output=embed&amp;hl=en" data-title="Map showing Admiral Max on the Porporela in Novigrad">
+        <div class="map-gate">
+          <p class="map-gate-place">Porporela 3, Novigrad</p>
+          <p class="map-gate-note">The map is loaded from Google Maps, which sets its own cookies. It appears only when you ask for it.</p>
+          <button type="button" class="btn btn-navy" id="map-load">Show the map</button>
+          <a class="map-gate-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=Admiral+Max,+Porporela+3,+Novigrad" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
       </div>
     </div>
   </section>
