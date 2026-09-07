@@ -501,7 +501,7 @@ a:hover { color: var(--navy); }
 /* =========================================================
    Visit
    ========================================================= */
-.visit { padding-top: 6rem; padding-bottom: 6rem; }
+.visit { padding-top: 6rem; padding-bottom: 6rem; border-top: 1px solid var(--stone-2); }
 .visit-grid {
   display: grid;
   grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
@@ -605,7 +605,7 @@ a:hover { color: var(--navy); }
 /* =========================================================
    Photo gallery and lightbox
    ========================================================= */
-.gallery { padding: 0 var(--gutter) 6rem; }
+.gallery { padding: 6rem var(--gutter); }
 
 .plates {
   list-style: none;
@@ -726,7 +726,7 @@ body.lb-open { overflow: hidden; }
   .plate:last-child { grid-column: span 2; }
 }
 @media (max-width: 640px) {
-  .gallery { padding-bottom: 4rem; }
+  .gallery { padding-top: 4rem; padding-bottom: 4rem; }
   .plates { grid-auto-rows: 10rem; gap: .5rem; }
   .plate-cap { padding: 1.2rem .6rem .5rem; }
   .plate-cap .cap, .plate-wide .plate-cap .cap, .plate-long .plate-cap .cap { font-size: var(--t0); }

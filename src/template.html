@@ -54,9 +54,9 @@
 <header class="top">
   <a class="top-name" href="#top"><img src="{{base}}assets/logo-light.png" alt="Admiral Max" width="1367" height="280"></a>
   <nav class="top-nav" aria-label="Sections">
-    <a href="#story">{{t:navStory}}</a>
     <a href="#photos">{{t:navPhotos}}</a>
     <a href="#menu">{{t:navMenu}}</a>
+    <a href="#story">{{t:navStory}}</a>
     <a href="#visit">{{t:navVisit}}</a>
     <a href="#guests">{{t:navGuests}}</a>
   </nav>
@@ -98,31 +98,6 @@
     </div>
   </section>
 
-  <!-- ============ STORY ============ -->
-  <section class="story" id="story" aria-labelledby="story-title">
-    <div class="story-grid">
-      <div class="story-side">
-        <div class="admiral-card">
-          <p class="admiral-name">Maksimilijan Njegovan</p>
-          <p class="admiral-dates">{{t:admiralDates}}</p>
-          <p class="admiral-role">{{t:admiralRole}}</p>
-        </div>
-        <figure class="story-art">
-          <img src="{{base}}assets/njegovan.jpg"
-               srcset="{{base}}assets/njegovan.webp 747w"
-               sizes="(max-width: 980px) 60vw, 320px" alt="{{t:storyImgAlt}}" width="747" height="1068" loading="lazy">
-          <figcaption>{{t:storyImgCap}}</figcaption>
-        </figure>
-      </div>
-      <div class="story-body">
-        <h2 id="story-title">{{t:storyTitle}}</h2>
-        <p>{{t:storyP1}}</p>
-        <p>{{t:storyP2}}</p>
-        <p>{{t:storyP3}}</p>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ PHOTOS ============ -->
   <section class="gallery" id="photos" aria-labelledby="gallery-title">
     <div class="section-head">
@@ -152,6 +127,31 @@
     </div>
 
     <p class="menu-foot">{{t:menuFoot}}</p>
+  </section>
+
+  <!-- ============ STORY ============ -->
+  <section class="story" id="story" aria-labelledby="story-title">
+    <div class="story-grid">
+      <div class="story-side">
+        <div class="admiral-card">
+          <p class="admiral-name">Maksimilijan Njegovan</p>
+          <p class="admiral-dates">{{t:admiralDates}}</p>
+          <p class="admiral-role">{{t:admiralRole}}</p>
+        </div>
+        <figure class="story-art">
+          <img src="{{base}}assets/njegovan.jpg"
+               srcset="{{base}}assets/njegovan.webp 747w"
+               sizes="(max-width: 980px) 60vw, 320px" alt="{{t:storyImgAlt}}" width="747" height="1068" loading="lazy">
+          <figcaption>{{t:storyImgCap}}</figcaption>
+        </figure>
+      </div>
+      <div class="story-body">
+        <h2 id="story-title">{{t:storyTitle}}</h2>
+        <p>{{t:storyP1}}</p>
+        <p>{{t:storyP2}}</p>
+        <p>{{t:storyP3}}</p>
+      </div>
+    </div>
   </section>
 
   <!-- ============ VISIT: hours, terrace, map ============ -->
