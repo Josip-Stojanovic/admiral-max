@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{t:pageTitle}}</title>
+  <meta name="description" content="{{t:metaDescription}}">
+  <link rel="canonical" href="{{canonical}}">
+{{alternates}}
+  <meta property="og:title" content="{{t:pageTitle}}">
+  <meta property="og:description" content="{{t:metaDescription}}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{canonical}}">
+  <meta property="og:image" content="{{site}}assets/photos/fish-platter.jpg">
+  <meta property="og:locale" content="{{locale}}">
+  <link rel="icon" href="{{base}}assets/favicon.png" type="image/png" sizes="256x256">
+  <link rel="apple-touch-icon" href="{{base}}assets/apple-touch-icon.png">
+  <link rel="preload" href="{{base}}assets/fonts/tinos-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{base}}assets/fonts/archivo-normal-400-w875-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{base}}css/fonts.css">
+  <link rel="stylesheet" href="{{base}}css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Admiral Max",
+    "url": "{{canonical}}",
+    "servesCuisine": ["Seafood", "Istrian", "Mediterranean"],
+    "priceRange": "€15–35",
+    "telephone": "+385 52 433 254",
+    "image": "{{site}}assets/photos/fish-platter.jpg",
+    "logo": "{{site}}assets/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Porporela 3",
+      "addressLocality": "Novigrad",
+      "postalCode": "52466",
+      "addressCountry": "HR"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 45.31766, "longitude": 13.5599426 },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Thursday","Friday","Saturday","Sunday"], "opens": "13:00", "closes": "22:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "18:00", "closes": "22:00" }
+    ],
+    "acceptsReservations": "True"
+  }
+  </script>
+  <script>window.ADMIRAL_STRINGS = {{strings}};</script>
+</head>
+<body>
+
+<a class="skip" href="#menu">{{t:skip}}</a>
+
+<header class="top">
+  <a class="top-name" href="#top"><img src="{{base}}assets/logo-light.png?v=2" alt="Admiral Max" width="1367" height="280"></a>
+  <nav class="top-nav" aria-label="Sections">
+    <a href="#photos">{{t:navPhotos}}</a>
+    <a href="#menu">{{t:navMenu}}</a>
+    <a href="#story">{{t:navStory}}</a>
+    <a href="#visit">{{t:navVisit}}</a>
+    <a href="#guests">{{t:navGuests}}</a>
+  </nav>
+  <div class="top-right">
+    <nav class="lang" aria-label="{{t:langLabel}}">
+{{langLinks}}
+    </nav>
+    <a class="top-call" href="tel:+38552433254" aria-label="{{t:callShort}}"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6.6 3h3l1.6 4.2-2 1.3a12 12 0 0 0 6.3 6.3l1.3-2 4.2 1.6v3a2 2 0 0 1-2.1 2A16.6 16.6 0 0 1 4.6 5.1 2 2 0 0 1 6.6 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span>052 433 254</span></a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-labelledby="hero-title">
+    <figure class="hero-art">
+      <img src="{{base}}assets/hero-fleet.jpg"
+           srcset="{{base}}assets/hero-fleet-1100.webp 1100w, {{base}}assets/hero-fleet.webp 2000w"
+           sizes="(max-width: 980px) 100vw, 55vw" alt="{{t:heroImgAlt}}" width="2000" height="1255" fetchpriority="high">
+      <figcaption>{{t:heroImgCap}}</figcaption>
+    </figure>
+    <div class="hero-copy">
+      <p class="hero-place">{{t:heroPlace}}</p>
+      <h1 id="hero-title"><img src="{{base}}assets/logo-light.png?v=2" alt="Admiral Max" width="1367" height="280" fetchpriority="high"></h1>
+
+      <p class="hero-lede">{{t:heroLede}}</p>
+
+      <div class="hero-actions">
+        <a class="btn btn-brass" href="tel:+38552433254">{{t:callReserve}}</a>
+        <a class="btn btn-ghost" href="#reserve">{{t:reserveOnline}}</a>
+        <a class="btn btn-ghost" href="#menu">{{t:seeMenu}}</a>
+      </div>
+
+      <dl class="hero-facts">
+        <div><dt>{{t:factOpen}}</dt><dd>{{t:factOpenValue}}</dd></div>
+        <div><dt>{{t:factRated}}</dt><dd>{{t:factRatedValue}}</dd></div>
+        <div><dt>{{t:factPrice}}</dt><dd>{{t:factPriceValue}}</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============ PHOTOS ============ -->
+  <section class="gallery" id="photos" aria-labelledby="gallery-title">
+    <div class="section-head">
+      <h2 id="gallery-title">{{t:galleryTitle}}</h2>
+      <p>{{t:galleryLede}}</p>
+    </div>
+    <ul class="plates" id="thumbs">
+{{gallery}}
+    </ul>
+  </section>
+
+  <!-- ============ MENU ============ -->
+  <section class="menu" id="menu" aria-labelledby="menu-title">
+    <div class="section-head menu-head">
+      <h2 id="menu-title">{{t:menuTitle}}</h2>
+      <p>{{t:menuNote}}</p>
+    </div>
+
+    <div class="menu-layout">
+      <nav class="menu-nav" id="menu-nav" aria-label="{{t:menuNavLabel}}">
+{{menuNav}}
+      </nav>
+
+      <div class="menu-sections" id="menu-sections">
+{{menuSections}}
+      </div>
+    </div>
+
+    <p class="menu-foot">{{t:menuFoot}}</p>
+  </section>
+
+  <!-- ============ STORY ============ -->
+  <section class="story" id="story" aria-labelledby="story-title">
+    <div class="story-grid">
+      <div class="story-side">
+        <div class="admiral-card">
+          <p class="admiral-name">Maksimilijan Njegovan</p>
+          <p class="admiral-dates">{{t:admiralDates}}</p>
+          <p class="admiral-role">{{t:admiralRole}}</p>
+        </div>
+        <figure class="story-art">
+          <img src="{{base}}assets/njegovan.jpg"
+               srcset="{{base}}assets/njegovan.webp 747w"
+               sizes="(max-width: 980px) 60vw, 320px" alt="{{t:storyImgAlt}}" width="747" height="1068" loading="lazy">
+          <figcaption>{{t:storyImgCap}}</figcaption>
+        </figure>
+      </div>
+      <div class="story-body">
+        <h2 id="story-title">{{t:storyTitle}}</h2>
+        <p>{{t:storyP1}}</p>
+        <p>{{t:storyP2}}</p>
+        <p>{{t:storyP3}}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VISIT: hours, terrace, map ============ -->
+  <section class="visit" id="visit" aria-labelledby="visit-title">
+    <div class="visit-grid">
+      <div class="visit-info">
+        <h2 id="visit-title">{{t:visitTitle}}</h2>
+
+        <table class="hours">
+          <caption>{{t:hoursCaption}}</caption>
+          <tbody>
+            <tr><th scope="row">{{t:dayMon}}</th><td>{{t:hoursFull}}</td></tr>
+            <tr><th scope="row">{{t:dayTue}}</th><td>{{t:hoursFull}}</td></tr>
+            <tr><th scope="row">{{t:dayWed}}</th><td>{{t:hoursWed}}</td></tr>
+            <tr><th scope="row">{{t:dayThu}}</th><td>{{t:hoursFull}}</td></tr>
+            <tr><th scope="row">{{t:dayFri}}</th><td>{{t:hoursFull}}</td></tr>
+            <tr><th scope="row">{{t:daySat}}</th><td>{{t:hoursFull}}</td></tr>
+            <tr><th scope="row">{{t:daySun}}</th><td>{{t:hoursFull}}</td></tr>
+          </tbody>
+        </table>
+        <p class="hours-status" id="hours-status" aria-live="polite"></p>
+
+        <address class="address">
+          <strong>Admiral Max</strong><br>
+          Porporela 3<br>
+          {{t:addressLine2}}<br>
+          <a href="tel:+38552433254">+385 52 433 254</a>
+        </address>
+
+        <ul class="amenities">
+          <li>{{t:amenity1}}</li>
+          <li>{{t:amenity2}}</li>
+          <li>{{t:amenity3}}</li>
+          <li>{{t:amenity4}}</li>
+          <li>{{t:amenity5}}</li>
+        </ul>
+
+        <p class="visit-tip">{{t:visitTip}}</p>
+
+        <div class="visit-actions">
+          <a class="btn btn-navy" href="https://www.google.com/maps/dir/?api=1&destination=Admiral+Max,+Porporela+3,+Novigrad" target="_blank" rel="noopener">{{t:directions}}</a>
+          <a class="btn btn-ghost-dark" href="tel:+38552433254">{{t:callShort}}</a>
+        </div>
+      </div>
+
+      <div class="visit-map" id="visit-map" data-src="https://www.google.com/maps?q=Admiral+Max,+Porporela+3,+Novigrad,+Croatia&amp;z=17&amp;output=embed&amp;hl={{lang}}" data-title="{{t:mapTitle}}">
+        <div class="map-gate">
+          <p class="map-gate-place">Porporela 3, Novigrad</p>
+          <p class="map-gate-note">{{t:mapNote}}</p>
+          <button type="button" class="btn btn-navy" id="map-load">{{t:mapLoad}}</button>
+          <a class="map-gate-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=Admiral+Max,+Porporela+3,+Novigrad" target="_blank" rel="noopener">{{t:mapOpen}}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GUESTS ============ -->
+  <section class="guests" id="guests" aria-labelledby="guests-title">
+    <div class="guests-grid">
+      <div class="guests-score">
+        <p class="score">4.8</p>
+        <p class="score-sub">{{t:scoreSub}}</p>
+        <a class="score-link" href="https://www.google.com/maps/place/Admiral+Max/@45.31766,13.5599426,17z/data=!4m6!3m5!1s0x477c9b8c6de1d2fd:0xe847933561a37b0f!8m2!3d45.31766!4d13.5599426!16s%2Fg%2F11c524yf07" target="_blank" rel="noopener">{{t:scoreLink}}</a>
+      </div>
+      <div class="guests-themes">
+        <h2 id="guests-title">{{t:guestsTitle}}</h2>
+        <ul class="themes">
+          <li><h3>{{t:theme1}}</h3><p>{{t:theme1P}}</p></li>
+          <li><h3>{{t:theme2}}</h3><p>{{t:theme2P}}</p></li>
+          <li><h3>{{t:theme3}}</h3><p>{{t:theme3P}}</p></li>
+          <li><h3>{{t:theme4}}</h3><p>{{t:theme4P}}</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESERVE ============ -->
+  <section class="reserve" id="reserve" aria-labelledby="reserve-title">
+    <div class="reserve-grid">
+      <div class="reserve-phone-col">
+        <h2 id="reserve-title">{{t:reserveTitle}}</h2>
+        <p>{{t:reserveP}}</p>
+        <a class="reserve-phone" href="tel:+38552433254">052 433 254</a>
+        <p class="reserve-langs">{{t:reserveLangs}}</p>
+      </div>
+
+      <div class="reserve-form-col" id="reserve-form-col">
+        <h3 id="form-title">{{t:formTitle}}</h3>
+        <p class="form-lede">{{t:formLede}}</p>
+
+        <form class="rform" id="rform" novalidate aria-labelledby="form-title">
+          <div class="rform-grid">
+            <label class="f f-wide">
+              <span>{{t:fName}}</span>
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+            <label class="f">
+              <span>{{t:fPhone}}</span>
+              <input type="tel" name="phone" autocomplete="tel" inputmode="tel" required>
+            </label>
+            <label class="f">
+              <span>{{t:fEmail}} <em>{{t:fOptional}}</em></span>
+              <input type="email" name="email" autocomplete="email" inputmode="email">
+            </label>
+            <label class="f">
+              <span>{{t:fDate}}</span>
+              <input type="date" name="date" required>
+            </label>
+            <label class="f">
+              <span>{{t:fTime}}</span>
+              <select name="time" required id="f-time"></select>
+            </label>
+            <label class="f">
+              <span>{{t:fGuests}}</span>
+              <input type="number" name="guests" id="f-guests" inputmode="numeric" min="1" max="200" step="1" required>
+            </label>
+            <label class="f">
+              <span>{{t:fSeating}}</span>
+              <select name="seating" id="f-seating">
+                <option value="any">{{t:seatAny}}</option>
+                <option value="terrace">{{t:seatTerrace}}</option>
+                <option value="inside">{{t:seatInside}}</option>
+              </select>
+            </label>
+            <label class="f f-wide">
+              <span>{{t:fMessage}} <em>{{t:fMessageHint}}</em></span>
+              <textarea name="message" rows="3"></textarea>
+            </label>
+          </div>
+
+          <label class="f-honey" aria-hidden="true">Leave this empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
+
+          <p class="rform-error" id="rform-error" role="alert" hidden></p>
+
+          <div class="rform-foot">
+            <button type="submit" class="btn btn-brass" id="rform-send">{{t:fSend}}</button>
+            <p class="rform-privacy">{{t:fPrivacy}}</p>
+          </div>
+        </form>
+
+        <p class="rform-success" id="rform-success" role="status" hidden>{{t:fSuccess}}</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-grid">
+    <div>
+      <p class="foot-name"><img src="{{base}}assets/logo-light.png?v=2" alt="Admiral Max" width="1367" height="280" loading="lazy"></p>
+      <p>{{t:footAddress}}</p>
+    </div>
+    <div>
+      <p><a href="tel:+38552433254">+385 52 433 254</a></p>
+      <p><a href="https://www.facebook.com/admiralmax/" target="_blank" rel="noopener">Facebook</a></p>
+      <p><a href="https://www.instagram.com/admiralmaxnovigrad/" target="_blank" rel="noopener">Instagram</a></p>
+    </div>
+    <div>
+      <p>{{t:footNamed}}</p>
+      <p class="foot-langs"><span>{{t:altLangs}}:</span> {{footLangs}}</p>
+    </div>
+  </div>
+  <p class="foot-legal">© <span id="year"></span> Admiral Max, Novigrad. Obrt za ugostiteljstvo UNICO, vl. Josip Jelačić, OIB 53440364047. {{t:heroCredit}}</p>
+</footer>
+
+<!-- Lightbox for the photo gallery -->
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-labelledby="lb-cap">
+  <button type="button" class="lb-close" id="lb-close" aria-label="{{t:lbClose}}">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+  </button>
+  <button type="button" class="lb-nav lb-prev" id="lb-prev" aria-label="{{t:lbPrev}}">
+    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M15 4l-8 8 8 8" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+  </button>
+  <figure class="lb-fig">
+    <img id="lb-img" src="" alt="">
+    <figcaption><span id="lb-cap"></span><span class="lb-count" id="lb-count"></span></figcaption>
+  </figure>
+  <button type="button" class="lb-nav lb-next" id="lb-next" aria-label="{{t:lbNext}}">
+    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M9 4l8 8-8 8" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+  </button>
+</div>
+
+<script src="{{base}}js/main.js"></script>
+</body>
+</html>

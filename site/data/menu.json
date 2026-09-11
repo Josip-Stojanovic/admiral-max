@@ -1,0 +1,2111 @@
+[
+ {
+  "id": "m-cold",
+  "title": {
+   "en": "Cold starters",
+   "hr": "Hladna predjela",
+   "de": "Kalte Vorspeisen",
+   "it": "Antipasti freddi"
+  },
+  "items": [
+   {
+    "name": {
+     "en": "Cold fish plate for two",
+     "hr": "Hladna riblja plata",
+     "de": "Kalte Fischplatte",
+     "it": "Piatto freddo di pesce"
+    },
+    "desc": {
+     "en": "Salted and marinated anchovies, octopus salad, fish pâté.",
+     "hr": "Sardoni slani i marinirani, salata od hobotnice, riblja pašteta.",
+     "de": "Gesalzene und marinierte Sardellen, Oktopussalat, Fischpastete.",
+     "it": "Sardoni salati e marinati, insalata di polpo, paté di pesce."
+    },
+    "price": "26",
+    "unit": "two"
+   },
+   {
+    "name": {
+     "en": "Octopus salad",
+     "hr": "Salata od hobotnice",
+     "de": "Oktopussalat",
+     "it": "Insalata di polpo"
+    },
+    "price": "14.50"
+   },
+   {
+    "name": {
+     "en": "Salted or marinated anchovies",
+     "hr": "Slani ili marinirani sardoni",
+     "de": "Gesalzene oder marinierte Sardellen",
+     "it": "Sardoni sotto sale o marinati"
+    },
+    "price": "9"
+   },
+   {
+    "name": {
+     "en": "Fish pâté",
+     "hr": "Riblja pašteta",
+     "de": "Fischpastete",
+     "it": "Paté di pesce"
+    },
+    "price": "9"
+   },
+   {
+    "name": {
+     "en": "Istrian prosciutto",
+     "hr": "Pršut istarski",
+     "de": "Istrischer Schinken",
+     "it": "Prosciutto istriano"
+    },
+    "price": "12.50",
+    "unit": "100g"
+   },
+   {
+    "name": {
+     "en": "Sheep's cheese",
+     "hr": "Ovčji sir",
+     "de": "Schafskäse",
+     "it": "Formaggio pecorino"
+    },
+    "price": "12",
+    "unit": "100g"
+   },
+   {
+    "name": {
+     "en": "Cheese with truffles",
+     "hr": "Sir s tartufima",
+     "de": "Käse mit Trüffeln",
+     "it": "Formaggio al tartufo"
+    },
+    "price": "14.50",
+    "unit": "100g"
+   },
+   {
+    "name": {
+     "en": "Beef carpaccio",
+     "hr": "Carpaccio od bifteka",
+     "de": "Carpaccio vom Rindsteak",
+     "it": "Carpaccio di manzo"
+    },
+    "price": "16",
+    "unit": "100g"
+   },
+   {
+    "name": {
+     "en": "Octopus carpaccio",
+     "hr": "Carpaccio od hobotnice",
+     "de": "Carpaccio vom Oktopus",
+     "it": "Carpaccio di polpo"
+    },
+    "price": "14.50"
+   },
+   {
+    "name": {
+     "en": "Octopus carpaccio with truffles",
+     "hr": "Carpaccio od hobotnice sa tartufima",
+     "de": "Oktopus-Carpaccio mit Trüffeln",
+     "it": "Carpaccio di polpo al tartufo"
+    },
+    "price": "18"
+   }
+  ]
+ },
+ {
+  "id": "m-hot",
+  "title": {
+   "en": "Hot starters and risotto",
+   "hr": "Topla predjela i rižoti",
+   "de": "Warme Vorspeisen und Risotto",
+   "it": "Antipasti caldi e risotti"
+  },
+  "note": {
+   "en": "Kapešante and kanaštrele are the two scallops of the Novigrad bay, grilled in the shell.",
+   "hr": "Kapešante i kanaštrele dvije su školjke novigradskog zaljeva, pečene u ljušturi.",
+   "de": "Kapešante und Kanaštrele sind die beiden Kammmuscheln der Bucht von Novigrad, in der Schale gegrillt.",
+   "it": "Capesante e canestrelli sono le due conchiglie della baia di Cittanova, grigliate nel guscio."
+  },
+  "items": [
+   {
+    "name": {
+     "en": "Mussels in buzara",
+     "hr": "Dagnje na buzaru",
+     "de": "Miesmuscheln in Buzara-Sauce",
+     "it": "Cozze alla busara"
+    },
+    "desc": {
+     "en": "White wine, garlic, parsley, breadcrumbs.",
+     "hr": "Bijelo vino, češnjak, peršin, krušne mrvice.",
+     "de": "Weißwein, Knoblauch, Petersilie, Semmelbrösel.",
+     "it": "Vino bianco, aglio, prezzemolo, pangrattato."
+    },
+    "price": "13.50"
+   },
+   {
+    "name": {
+     "en": "Grilled queen scallops",
+     "hr": "Kapešante na žaru",
+     "de": "Jakobsmuscheln vom Grill",
+     "it": "Capesante alla griglia"
+    },
+    "price": "15",
+    "unit": "three",
+    "id": "kapesante"
+   },
+   {
+    "name": {
+     "en": "Grilled canestrelli",
+     "hr": "Kanaštrele na žaru",
+     "de": "Kanaštrele vom Grill",
+     "it": "Canestrelli alla griglia"
+    },
+    "desc": {
+     "en": "The small Novigrad scallops.",
+     "hr": "Male novigradske školjke.",
+     "de": "Die kleinen Kammmuscheln aus Novigrad.",
+     "it": "Le piccole conchiglie di Cittanova."
+    },
+    "price": "14.50"
+   },
+   {
+    "name": {
+     "en": "Scampi risotto",
+     "hr": "Rižoto škampi",
+     "de": "Risotto mit Scampi",
+     "it": "Risotto con scampi"
+    },
+    "price": "18.50"
+   },
+   {
+    "name": {
+     "en": "Black risotto with seafood",
+     "hr": "Crni rižoto s plodovima mora",
+     "de": "Schwarzes Risotto mit Meeresfrüchten",
+     "it": "Risotto nero ai frutti di mare"
+    },
+    "desc": {
+     "en": "Cuttlefish ink.",
+     "hr": "Na crnilu sipe.",
+     "de": "Mit Sepiatinte.",
+     "it": "Al nero di seppia."
+    },
+    "price": "17.50"
+   }
+  ]
+ },
+ {
+  "id": "m-soups",
+  "title": {
+   "en": "Soups and salads",
+   "hr": "Juhe i salate",
+   "de": "Suppen und Salate",
+   "it": "Zuppe e insalate"
+  },
+  "items": [
+   {
+    "name": {
+     "en": "Fish soup",
+     "hr": "Riblja juha",
+     "de": "Fischsuppe",
+     "it": "Brodo di pesce"
+    },
+    "price": "7.80"
+   },
+   {
+    "name": {
+     "en": "Beef soup",
+     "hr": "Goveđa juha",
+     "de": "Rindsuppe",
+     "it": "Brodo di manzo"
+    },
+    "price": "5.80"
+   },
+   {
+    "name": {
+     "en": "Tomato soup",
+     "hr": "Juha od rajčice",
+     "de": "Tomatensuppe",
+     "it": "Zuppa di pomodoro"
+    },
+    "price": "5.80"
+   },
+   {
+    "name": {
+     "en": "Mixed salad",
+     "hr": "Miješana salata",
+     "de": "Gemischter Salat",
+     "it": "Insalata mista"
+    },
+    "price": "5.20"
+   },
+   {
+    "name": {
+     "en": "Šopska salad",
+     "hr": "Šopska salata",
+     "de": "Schopska-Salat",
+     "it": "Insalata šopska"
+    },
+    "desc": {
+     "en": "Mixed salad with cheese.",
+     "hr": "Miješana salata sa sirom.",
+     "de": "Gemischter Salat mit Käse.",
+     "it": "Insalata mista con formaggio."
+    },
+    "price": "7.80"
+   },
+   {
+    "name": {
+     "en": "Tuna salad",
+     "hr": "Salata sa tunjevinom",
+     "de": "Salat mit Thunfisch",
+     "it": "Insalata con tonno"
+    },
+    "price": "8.80"
+   },
+   {
+    "name": {
+     "en": "Caprese",
+     "hr": "Caprese salata",
+     "de": "Caprese",
+     "it": "Caprese"
+    },
+    "price": "8"
+   },
+   {
+    "name": {
+     "en": "Chicken salad with dressing",
+     "hr": "Salata sa piletinom i dresingom",
+     "de": "Salat mit Hähnchen und Dressing",
+     "it": "Insalata con pollo e condimento"
+    },
+    "price": "11"
+   }
+  ]
+ },
+ {
+  "id": "m-pasta",
+  "title": {
+   "en": "Pasta",
+   "hr": "Tjestenina",
+   "de": "Teigwaren",
+   "it": "Pasta"
+  },
+  "items": [
+   {
+    "name": {
+     "en": "Tagliatelle with scampi",
+     "hr": "Tagliatelle sa škampima",
+     "de": "Tagliatelle mit Scampi",
+     "it": "Tagliatelle con scampi"
+    },
+    "price": "18.50"
+   },
+   {
+    "name": {
+     "en": "Tagliatelle with truffles",
+     "hr": "Tagliatelle sa tartufima",
+     "de": "Tagliatelle mit Trüffeln",
+     "it": "Tagliatelle al tartufo"
+    },
+    "price": "18.50"
+   },
+   {
+    "name": {
+     "en": "Black ravioli filled with Adriatic shrimp",
+     "hr": "Crni ravioli punjeni jadranskim kozicama",
+     "de": "Schwarze Ravioli mit Adria-Garnelen gefüllt",
+     "it": "Ravioli neri ripieni di gamberi dell'Adriatico"
+    },
+    "price": "17.50",
+    "id": "ravioli"
+   },
+   {
+    "name": {
+     "en": "Seafood spaghetti",
+     "hr": "Špageti plodovi mora",
+     "de": "Spaghetti mit Meeresfrüchten",
+     "it": "Spaghetti ai frutti di mare"
+    },
+    "price": "16.50",
+    "id": "spageti-mora"
+   },
+   {
+    "name": {
+     "en": "Spaghetti bolognese",
+     "hr": "Špageti bolognese",
+     "de": "Spaghetti Bolognese",
+     "it": "Spaghetti alla bolognese"
+    },
+    "price": "12.50"
+   }
+  ]
+ },
+ {
+  "id": "m-sea",
+  "title": {
+   "en": "From the sea",
+   "hr": "Riblja jela",
+   "de": "Fischgerichte",
+   "it": "Piatti di pesce"
+  },
+  "note": {
+   "en": "Whole fish is brought to the table before cooking and priced by weight.",
+   "hr": "Cijela riba donosi se na stol prije pripreme i naplaćuje po težini.",
+   "de": "Ganzer Fisch wird vor der Zubereitung am Tisch gezeigt und nach Gewicht berechnet.",
+   "it": "Il pesce intero si mostra al tavolo prima della cottura e si paga a peso."
+  },
+  "items": [
+   {
+    "name": {
+     "en": "Fish platter for two",
+     "hr": "Riblja plata za dvoje",
+     "de": "Fischplatte für zwei",
+     "it": "Grigliata di pesce per due"
+    },
+    "desc": {
+     "en": "Sea bream, sea bass, scampi, shellfish, squid, with chard and potatoes. The house dish.",
+     "hr": "Orada, brancin, škampi, školjke, lignje, blitva i krumpir. Jelo kuće.",
+     "de": "Dorade, Wolfsbarsch, Scampi, Muscheln, Tintenfisch, Mangold und Kartoffeln. Das Gericht des Hauses.",
+     "it": "Orata, branzino, scampi, conchiglie, calamari, bietole e patate. Il piatto della casa."
+    },
+    "price": "56",
+    "unit": "two",
+    "id": "platter"
+   },
+   {
+    "name": {
+     "en": "Fish platter \"Cittanova\" for two",
+     "hr": "Riblja plata \"Cittanova\"",
+     "de": "Fischplatte \"Cittanova\" für zwei",
+     "it": "Piatto di pesce \"Cittanova\" per due"
+    },
+    "desc": {
+     "en": "First-class fish baked in the oven with scallops, scampi, octopus and potatoes.",
+     "hr": "Riba prve klase iz pećnice s kapešantama, škampima, hobotnicom i krumpirom.",
+     "de": "Erstklassiger Fisch aus dem Ofen mit Jakobsmuscheln, Scampi, Oktopus und Kartoffeln.",
+     "it": "Pesce di prima qualità al forno con capesante, scampi, polpo e patate."
+    },
+    "price": "64",
+    "unit": "two"
+   },
+   {
+    "name": {
+     "en": "First-class fish with garnish, grilled or oven-baked",
+     "hr": "Riba I. klase s prilogom, žar ili pećnica",
+     "de": "Fisch erster Klasse mit Beilage, Grill oder Ofen",
+     "it": "Pesce di prima qualità con contorno, alla griglia o al forno"
+    },
+    "desc": {
+     "en": "Whole fish of the day, priced by the kilogram.",
+     "hr": "Cijela riba dana, po kilogramu.",
+     "de": "Ganzer Fisch des Tages, nach Kilogramm.",
+     "it": "Pesce intero del giorno, al chilo."
+    },
+    "price": "68",
+    "unit": "kg"
+   },
+   {
+    "name": {
+     "en": "Grilled sea bass or sea bream",
+     "hr": "Brancin ili orada sa žara",
+     "de": "Wolfsbarsch oder Dorade vom Grill",
+     "it": "Branzino o orata alla griglia"
+    },
+    "desc": {
+     "en": "300 to 400 g, with chard and potatoes.",
+     "hr": "300 do 400 g, blitva i krumpir.",
+     "de": "300 bis 400 g, mit Mangold und Kartoffeln.",
+     "it": "300–400 g, con bietole e patate."
+    },
+    "price": "21.50",
+    "id": "brancin"
+   },
+   {
+    "name": {
+     "en": "Sea bass fillet",
+     "hr": "File brancina",
+     "de": "Wolfsbarschfilet",
+     "it": "Filetto di branzino"
+    },
+    "desc": {
+     "en": "With chard and potatoes.",
+     "hr": "Blitva i krumpir.",
+     "de": "Mit Mangold und Kartoffeln.",
+     "it": "Con bietole e patate."
+    },
+    "price": "21.50"
+   },
+   {
+    "name": {
+     "en": "Scampi, grilled or in buzara",
+     "hr": "Škampi na žaru ili buzara",
+     "de": "Scampi gegrillt oder in Buzara-Sauce",
+     "it": "Scampi alla griglia o alla busara"
+    },
+    "price": "30"
+   },
+   {
+    "name": {
+     "en": "Grilled squid",
+     "hr": "Lignje na žaru",
+     "de": "Calamari vom Grill",
+     "it": "Calamari alla griglia"
+    },
+    "desc": {
+     "en": "With chard and potatoes.",
+     "hr": "Blitva i krumpir.",
+     "de": "Mit Mangold und Kartoffeln.",
+     "it": "Con bietole e patate."
+    },
+    "price": "16.80"
+   },
+   {
+    "name": {
+     "en": "Fried squid",
+     "hr": "Lignje pržene",
+     "de": "Frittierte Calamari",
+     "it": "Calamari fritti"
+    },
+    "desc": {
+     "en": "With fries.",
+     "hr": "S pomfritom.",
+     "de": "Mit Pommes.",
+     "it": "Con patatine."
+    },
+    "price": "16.80",
+    "id": "lignje-przene"
+   },
+   {
+    "name": {
+     "en": "Tuna steak",
+     "hr": "Tuna steak",
+     "de": "Thunfischsteak",
+     "it": "Bistecca di tonno"
+    },
+    "desc": {
+     "en": "With grilled vegetables.",
+     "hr": "S povrćem sa žara.",
+     "de": "Mit gegrilltem Gemüse.",
+     "it": "Con verdure alla griglia."
+    },
+    "price": "22.50",
+    "id": "tuna"
+   }
+  ]
+ },
+ {
+  "id": "m-grill",
+  "title": {
+   "en": "From the grill",
+   "hr": "Mesna jela",
+   "de": "Fleischgerichte",
+   "it": "Piatti di carne"
+  },
+  "items": [
+   {
+    "name": {
+     "en": "Rib-eye steak",
+     "hr": "Rib-eye steak",
+     "de": "Rib-Eye-Steak",
+     "it": "Rib-eye steak"
+    },
+    "desc": {
+     "en": "With baked potatoes and vegetables.",
+     "hr": "Pečeni krumpir s povrćem.",
+     "de": "Mit gebackenen Kartoffeln und Gemüse.",
+     "it": "Con patate al forno e verdure."
+    },
+    "price": "27",
+    "unit": "300g"
+   },
+   {
+    "name": {
+     "en": "Grilled beef fillet",
+     "hr": "Biftek na žaru",
+     "de": "Rinderfilet vom Grill",
+     "it": "Filetto alla griglia"
+    },
+    "desc": {
+     "en": "With fried potatoes.",
+     "hr": "S prženim krumpirom.",
+     "de": "Mit Bratkartoffeln.",
+     "it": "Con patate fritte."
+    },
+    "price": "27",
+    "unit": "250g"
+   },
+   {
+    "name": {
+     "en": "Beef fillet in green pepper sauce",
+     "hr": "Biftek u umaku od zelenog papra",
+     "de": "Rinderfilet in grüner Pfeffersauce",
+     "it": "Filetto in salsa al pepe verde"
+    },
+    "desc": {
+     "en": "With croquettes.",
+     "hr": "S kroketima.",
+     "de": "Mit Kroketten.",
+     "it": "Con crocchette."
+    },
+    "price": "30",
+    "unit": "250g"
+   },
+   {
+    "name": {
+     "en": "Beef fillet in truffle sauce",
+     "hr": "Biftek u umaku od tartufa",
+     "de": "Rinderfilet in Trüffelsauce",
+     "it": "Filetto in salsa al tartufo"
+    },
+    "desc": {
+     "en": "With croquettes.",
+     "hr": "S kroketima.",
+     "de": "Mit Kroketten.",
+     "it": "Con crocchette."
+    },
+    "price": "34",
+    "unit": "250g"
+   },
+   {
+    "name": {
+     "en": "Rump steak in mushroom sauce",
+     "hr": "Ramstek u umaku od gljiva",
+     "de": "Rumpsteak in Pilzsauce",
+     "it": "Bistecca di groppa in salsa ai funghi"
+    },
+    "desc": {
+     "en": "With croquettes.",
+     "hr": "S kroketima.",
+     "de": "Mit Kroketten.",
+     "it": "Con crocchette."
+    },
+    "price": "24",
+    "unit": "250g"
+   },
+   {
+    "name": {
+     "en": "Rump steak in green pepper sauce",
+     "hr": "Ramstek u umaku od zelenog papra",
+     "de": "Rumpsteak in grüner Pfeffersauce",
+     "it": "Bistecca di groppa al pepe verde"
+    },
+    "desc": {
+     "en": "With croquettes.",
+     "hr": "S kroketima.",
+     "de": "Mit Kroketten.",
+     "it": "Con crocchette."
+    },
+    "price": "24",
+    "unit": "250g"
+   },
+   {
+    "name": {
+     "en": "Grilled pork medallions",
+     "hr": "Svinjski medaljoni na žaru",
+     "de": "Schweinemedaillons vom Grill",
+     "it": "Medaglioni di maiale alla griglia"
+    },
+    "desc": {
+     "en": "With fried potatoes.",
+     "hr": "S prženim krumpirom.",
+     "de": "Mit Bratkartoffeln.",
+     "it": "Con patate fritte."
+    },
+    "price": "14.50"
+   },
+   {
+    "name": {
+     "en": "Pork medallions in truffle sauce",
+     "hr": "Svinjski medaljoni u umaku od tartufa",
+     "de": "Schweinemedaillons in Trüffelsauce",
+     "it": "Medaglioni in salsa al tartufo"
+    },
+    "desc": {
+     "en": "With croquettes.",
+     "hr": "S kroketima.",
+     "de": "Mit Kroketten.",
+     "it": "Con crocchette."
+    },
+    "price": "19.50"
+   },
+   {
+    "name": {
+     "en": "Meat platter for two",
+     "hr": "Mesna plata za dvoje",
+     "de": "Fleischplatte für zwei",
+     "it": "Piatto di carne per due"
+    },
+    "desc": {
+     "en": "With fried potatoes.",
+     "hr": "S prženim krumpirom.",
+     "de": "Mit Bratkartoffeln.",
+     "it": "Con patate fritte."
+    },
+    "price": "38",
+    "unit": "two"
+   },
+   {
+    "name": {
+     "en": "Mixed grill",
+     "hr": "Miješano meso",
+     "de": "Gemischtes Fleisch vom Grill",
+     "it": "Carne mista"
+    },
+    "desc": {
+     "en": "With fries.",
+     "hr": "S pomfritom.",
+     "de": "Mit Pommes.",
+     "it": "Con patatine."
+    },
+    "price": "16.50"
+   },
+   {
+    "name": {
+     "en": "Gourmet pljeskavica",
+     "hr": "Gurmanska pljeskavica",
+     "de": "Gourmet-Pljeskavica",
+     "it": "Pljeskavica gourmet"
+    },
+    "desc": {
+     "en": "Beef patty with bacon and cheese, fried potatoes.",
+     "hr": "S pancetom i sirom, prženi krumpir.",
+     "de": "Mit Speck und Käse, Bratkartoffeln.",
+     "it": "Con pancetta e formaggio, patate fritte."
+    },
+    "price": "15.50"
+   },
+   {
+    "name": {
+     "en": "Boneless chicken thigh, barbecue",
+     "hr": "Pileći batak bez kosti BBQ",
+     "de": "Hähnchenschenkel ohne Knochen, BBQ",
+     "it": "Coscia di pollo disossata BBQ"
+    },
+    "desc": {
+     "en": "With fried potatoes.",
+     "hr": "S prženim krumpirom.",
+     "de": "Mit Bratkartoffeln.",
+     "it": "Con patate fritte."
+    },
+    "price": "14.50"
+   },
+   {
+    "name": {
+     "en": "Chicken schnitzel",
+     "hr": "Bečki odrezak pileći",
+     "de": "Wiener Schnitzel vom Hähnchen",
+     "it": "Scaloppina viennese di pollo"
+    },
+    "desc": {
+     "en": "With fries.",
+     "hr": "S pomfritom.",
+     "de": "Mit Pommes.",
+     "it": "Con patatine."
+    },
+    "price": "13.50"
+   },
+   {
+    "name": {
+     "en": "Ćevapčići",
+     "hr": "Ćevapčići",
+     "de": "Ćevapčići",
+     "it": "Ćevapčići"
+    },
+    "desc": {
+     "en": "With fries.",
+     "hr": "S pomfritom.",
+     "de": "Mit Pommes.",
+     "it": "Con patatine."
+    },
+    "price": "13.50"
+   },
+   {
+    "name": {
+     "en": "Chicken in orange and curry sauce",
+     "hr": "Piletina u umaku od naranče i curryja",
+     "de": "Hähnchen in Orangen-Curry-Sauce",
+     "it": "Pollo in salsa di arancia e curry"
+    },
+    "desc": {
+     "en": "With croquettes.",
+     "hr": "S kroketima.",
+     "de": "Mit Kroketten.",
+     "it": "Con crocchette."
+    },
+    "price": "17.50"
+   }
+  ]
+ },
+ {
+  "id": "m-sides",
+  "title": {
+   "en": "Side dishes",
+   "hr": "Prilozi",
+   "de": "Beilagen",
+   "it": "Contorni"
+  },
+  "note": {
+   "en": "A different side with a dish is charged extra.",
+   "hr": "Promjena priloga uz jelo dodatno se naplaćuje.",
+   "de": "Der Wechsel der Beilage zu einem Gericht wird zusätzlich berechnet.",
+   "it": "Il cambio di contorno con un piatto viene addebitato a parte."
+  },
+  "items": [
+   {
+    "name": {
+     "en": "French fries",
+     "hr": "Pomfrit",
+     "de": "Pommes frites",
+     "it": "Patatine fritte"
+    },
+    "price": "5"
+   },
+   {
+    "name": {
+     "en": "Cooked chard with potatoes",
+     "hr": "Kuhana blitva s krumpirom",
+     "de": "Gekochter Mangold mit Kartoffeln",
+     "it": "Bietole con patate"
+    },
+    "price": "5.50"
+   },
+   {
+    "name": {
+     "en": "Slices of fried potatoes",
+     "hr": "Pržene ploške krumpira",
+     "de": "Bratkartoffelscheiben",
+     "it": "Fette di patate fritte"
+    },
+    "price": "5"
+   },
+   {
+    "name": {
+     "en": "Cooked potatoes",
+     "hr": "Kuhani krumpir",
+     "de": "Gekochte Kartoffeln",
+     "it": "Patate lesse"
+    },
+    "price": "5"
+   },
+   {
+    "name": {
+     "en": "Bread",
+     "hr": "Kruh",
+     "de": "Brot",
+     "it": "Pane"
+    },
+    "price": "1.50"
+   },
+   {
+    "heading": {
+     "en": "Meal-size sides",
+     "hr": "Obrok prilozi",
+     "de": "Beilagen als Mahlzeit",
+     "it": "Contorni pasto"
+    }
+   },
+   {
+    "name": {
+     "en": "Grilled vegetables",
+     "hr": "Povrće na žaru",
+     "de": "Gegrilltes Gemüse",
+     "it": "Verdure alla griglia"
+    },
+    "price": "7.80"
+   },
+   {
+    "name": {
+     "en": "Đuveč",
+     "hr": "Đuveč",
+     "de": "Đuveč",
+     "it": "Đuveč"
+    },
+    "desc": {
+     "en": "Roasted vegetables with rice.",
+     "hr": "Pečeno povrće s rižom.",
+     "de": "Gebratenes Gemüse mit Reis.",
+     "it": "Verdure arrosto con riso."
+    },
+    "price": "6.80"
+   },
+   {
+    "name": {
+     "en": "Baked potatoes with vegetables",
+     "hr": "Pečeni krumpir s povrćem",
+     "de": "Gebackene Kartoffeln mit Gemüse",
+     "it": "Patate al forno con verdure"
+    },
+    "price": "6.80"
+   }
+  ]
+ },
+ {
+  "id": "m-kids",
+  "title": {
+   "en": "For children",
+   "hr": "Dječji meni",
+   "de": "Kindermenü",
+   "it": "Menù bambini"
+  },
+  "items": [
+   {
+    "name": {
+     "en": "Chicken schnitzel with fries",
+     "hr": "Bečki odrezak pileći, pomfrit",
+     "de": "Hähnchenschnitzel mit Pommes",
+     "it": "Scaloppina di pollo con patatine"
+    },
+    "price": "8"
+   },
+   {
+    "name": {
+     "en": "Spaghetti with tomato sauce",
+     "hr": "Špageti od rajčice",
+     "de": "Spaghetti mit Tomatensauce",
+     "it": "Spaghetti al pomodoro"
+    },
+    "price": "7"
+   }
+  ]
+ },
+ {
+  "id": "m-sweets",
+  "title": {
+   "en": "Desserts",
+   "hr": "Deserti",
+   "de": "Desserts",
+   "it": "Dolci"
+  },
+  "items": [
+   {
+    "name": {
+     "en": "Cheesecake",
+     "hr": "Cheesecake",
+     "de": "Käsekuchen",
+     "it": "Cheesecake"
+    },
+    "price": "6"
+   },
+   {
+    "name": {
+     "en": "Tiramisu",
+     "hr": "Tiramisu",
+     "de": "Tiramisu",
+     "it": "Tiramisù"
+    },
+    "price": "6"
+   },
+   {
+    "name": {
+     "en": "Cake of the day",
+     "hr": "Dnevni kolač",
+     "de": "Kuchen des Tages",
+     "it": "Torta del giorno"
+    },
+    "price": "6"
+   },
+   {
+    "name": {
+     "en": "Pancakes with Nutella or jam",
+     "hr": "Palačinke s Nutellom ili marmeladom",
+     "de": "Palatschinken mit Nutella oder Marmelade",
+     "it": "Crêpes con Nutella o marmellata"
+    },
+    "price": "6"
+   },
+   {
+    "name": {
+     "en": "Ice cream",
+     "hr": "Sladoled",
+     "de": "Eis",
+     "it": "Gelato"
+    },
+    "price": "1.80",
+    "unit": "scoop"
+   }
+  ]
+ },
+ {
+  "id": "m-drinks",
+  "title": {
+   "en": "Drinks",
+   "hr": "Pića",
+   "de": "Getränke",
+   "it": "Bevande"
+  },
+  "items": [
+   {
+    "heading": {
+     "en": "Hot drinks",
+     "hr": "Topli napitci",
+     "de": "Warme Getränke",
+     "it": "Bevande calde"
+    }
+   },
+   {
+    "name": {
+     "en": "Espresso",
+     "hr": "Kava",
+     "de": "Espresso",
+     "it": "Caffè"
+    },
+    "price": "1.80"
+   },
+   {
+    "name": {
+     "en": "Coffee with milk, small",
+     "hr": "Kava s mlijekom, mala",
+     "de": "Kaffee mit Milch, klein",
+     "it": "Caffè macchiato"
+    },
+    "price": "2.20"
+   },
+   {
+    "name": {
+     "en": "Coffee with milk, large",
+     "hr": "Kava s mlijekom, velika",
+     "de": "Kaffee mit Milch, groß",
+     "it": "Caffè con latte"
+    },
+    "price": "2.50"
+   },
+   {
+    "name": {
+     "en": "Cappuccino",
+     "hr": "Cappuccino",
+     "de": "Cappuccino",
+     "it": "Cappuccino"
+    },
+    "price": "2.50"
+   },
+   {
+    "name": {
+     "en": "Latte macchiato",
+     "hr": "Latte macchiato",
+     "de": "Latte macchiato",
+     "it": "Latte macchiato"
+    },
+    "price": "3.50"
+   },
+   {
+    "name": {
+     "en": "Corretto",
+     "hr": "Coretto",
+     "de": "Corretto",
+     "it": "Caffè corretto"
+    },
+    "desc": {
+     "en": "Espresso with a shot of spirit.",
+     "hr": "Kava s rakijom.",
+     "de": "Espresso mit einem Schuss Schnaps.",
+     "it": "Espresso con un goccio di liquore."
+    },
+    "price": "3"
+   },
+   {
+    "name": {
+     "en": "Tea",
+     "hr": "Čaj",
+     "de": "Tee",
+     "it": "Tè"
+    },
+    "price": "2.50"
+   },
+   {
+    "name": {
+     "en": "Cocoa",
+     "hr": "Kakao",
+     "de": "Kakao",
+     "it": "Cioccolata"
+    },
+    "price": "2.50"
+   },
+   {
+    "name": {
+     "en": "Decaffeinated coffee",
+     "hr": "Kava bez kofeina",
+     "de": "Koffeinfreier Kaffee",
+     "it": "Caffè decaffeinato"
+    },
+    "price": "2.50"
+   },
+   {
+    "heading": {
+     "en": "Soft drinks",
+     "hr": "Bezalkoholna pića",
+     "de": "Alkoholfreie Getränke",
+     "it": "Bevande analcoliche"
+    }
+   },
+   {
+    "name": {
+     "en": "Coca-Cola, Fanta, Sprite, iced tea, lemonade, tonic, bitter lemon",
+     "hr": "Coca-Cola, Fanta, Sprite, ledeni čaj, limunada, tonik, bitter lemon",
+     "de": "Coca-Cola, Fanta, Sprite, Eistee, Limonade, Tonic, Bitter Lemon",
+     "it": "Coca-Cola, Fanta, Sprite, tè freddo, limonata, tonica, bitter lemon"
+    },
+    "prices": [
+     {
+      "unit": "0.25 l",
+      "price": "3.50"
+     },
+     {
+      "unit": "0.5 l",
+      "price": "4.90"
+     }
+    ]
+   },
+   {
+    "name": {
+     "en": "Natural juices",
+     "hr": "Prirodni sokovi",
+     "de": "Natursäfte",
+     "it": "Succhi naturali"
+    },
+    "price": "3.50",
+    "unit": "0.2 l"
+   },
+   {
+    "name": {
+     "en": "Cedevita",
+     "hr": "Cedevita",
+     "de": "Cedevita",
+     "it": "Cedevita"
+    },
+    "price": "3",
+    "unit": "0.25 l"
+   },
+   {
+    "name": {
+     "en": "Sparkling water",
+     "hr": "Gazirana voda",
+     "de": "Mineralwasser mit Kohlensäure",
+     "it": "Acqua frizzante"
+    },
+    "prices": [
+     {
+      "unit": "0.5 l",
+      "price": "3"
+     },
+     {
+      "unit": "1 l",
+      "price": "5.50"
+     }
+    ]
+   },
+   {
+    "name": {
+     "en": "Still water",
+     "hr": "Negazirana voda",
+     "de": "Stilles Wasser",
+     "it": "Acqua naturale"
+    },
+    "prices": [
+     {
+      "unit": "0.5 l",
+      "price": "3"
+     },
+     {
+      "unit": "1 l",
+      "price": "5.50"
+     }
+    ]
+   },
+   {
+    "heading": {
+     "en": "Beer",
+     "hr": "Pivo",
+     "de": "Bier",
+     "it": "Birra"
+    }
+   },
+   {
+    "name": {
+     "en": "Draught beer",
+     "hr": "Točeno pivo",
+     "de": "Bier vom Fass",
+     "it": "Birra alla spina"
+    },
+    "prices": [
+     {
+      "unit": "0.3 l",
+      "price": "3.20"
+     },
+     {
+      "unit": "0.5 l",
+      "price": "4.50"
+     }
+    ]
+   },
+   {
+    "name": {
+     "en": "Pan",
+     "hr": "Pan",
+     "de": "Pan",
+     "it": "Pan"
+    },
+    "prices": [
+     {
+      "unit": "0.35 l",
+      "price": "3.20"
+     },
+     {
+      "unit": "0.5 l",
+      "price": "4"
+     }
+    ]
+   },
+   {
+    "name": {
+     "en": "Carlsberg",
+     "hr": "Carlsberg",
+     "de": "Carlsberg",
+     "it": "Carlsberg"
+    },
+    "price": "4",
+    "unit": "0.33 l"
+   },
+   {
+    "name": {
+     "en": "Budweiser",
+     "hr": "Budweiser",
+     "de": "Budweiser",
+     "it": "Budweiser"
+    },
+    "price": "4",
+    "unit": "0.5 l"
+   },
+   {
+    "name": {
+     "en": "Tuborg",
+     "hr": "Tuborg",
+     "de": "Tuborg",
+     "it": "Tuborg"
+    },
+    "price": "4",
+    "unit": "0.33 l"
+   },
+   {
+    "name": {
+     "en": "Radler",
+     "hr": "Radler",
+     "de": "Radler",
+     "it": "Radler"
+    },
+    "price": "4",
+    "unit": "0.5 l"
+   },
+   {
+    "name": {
+     "en": "Dark beer",
+     "hr": "Tamno pivo",
+     "de": "Dunkles Bier",
+     "it": "Birra scura"
+    },
+    "price": "4",
+    "unit": "0.5 l"
+   },
+   {
+    "name": {
+     "en": "Erdinger or Paulaner",
+     "hr": "Erdinger ili Paulaner",
+     "de": "Erdinger oder Paulaner",
+     "it": "Erdinger o Paulaner"
+    },
+    "price": "5.50",
+    "unit": "0.5 l"
+   },
+   {
+    "name": {
+     "en": "Non-alcoholic beer",
+     "hr": "Bezalkoholno pivo",
+     "de": "Alkoholfreies Bier",
+     "it": "Birra analcolica"
+    },
+    "price": "4",
+    "unit": "0.5 l"
+   },
+   {
+    "heading": {
+     "en": "Mixed drinks",
+     "hr": "Miješana pića",
+     "de": "Mixgetränke",
+     "it": "Bevande miste"
+    }
+   },
+   {
+    "name": {
+     "en": "Gemišt",
+     "hr": "Gemišt",
+     "de": "Gemišt",
+     "it": "Gemišt"
+    },
+    "desc": {
+     "en": "White wine with sparkling water.",
+     "hr": "Bijelo vino s gaziranom vodom.",
+     "de": "Weißwein mit Mineralwasser.",
+     "it": "Vino bianco con acqua frizzante."
+    },
+    "prices": [
+     {
+      "unit": "0.3 l",
+      "price": "3.50"
+     },
+     {
+      "unit": "0.5 l",
+      "price": "5.50"
+     }
+    ]
+   },
+   {
+    "name": {
+     "en": "Bambus",
+     "hr": "Bambus",
+     "de": "Bambus",
+     "it": "Bambus"
+    },
+    "desc": {
+     "en": "Red wine with cola.",
+     "hr": "Crno vino s kolom.",
+     "de": "Rotwein mit Cola.",
+     "it": "Vino rosso con cola."
+    },
+    "prices": [
+     {
+      "unit": "0.3 l",
+      "price": "3.50"
+     },
+     {
+      "unit": "0.5 l",
+      "price": "5.50"
+     }
+    ]
+   },
+   {
+    "name": {
+     "en": "Miš-maš",
+     "hr": "Miš-maš",
+     "de": "Miš-maš",
+     "it": "Miš-maš"
+    },
+    "desc": {
+     "en": "White wine with cola.",
+     "hr": "Bijelo vino s kolom.",
+     "de": "Weißwein mit Cola.",
+     "it": "Vino bianco con cola."
+    },
+    "prices": [
+     {
+      "unit": "0.3 l",
+      "price": "3.50"
+     },
+     {
+      "unit": "0.5 l",
+      "price": "5.50"
+     }
+    ]
+   },
+   {
+    "name": {
+     "en": "Radla",
+     "hr": "Radla",
+     "de": "Radla",
+     "it": "Radla"
+    },
+    "prices": [
+     {
+      "unit": "0.3 l",
+      "price": "3.50"
+     },
+     {
+      "unit": "0.5 l",
+      "price": "4.50"
+     }
+    ]
+   },
+   {
+    "name": {
+     "en": "Špeci",
+     "hr": "Špeci",
+     "de": "Špeci",
+     "it": "Špeci"
+    },
+    "prices": [
+     {
+      "unit": "0.3 l",
+      "price": "3.50"
+     },
+     {
+      "unit": "0.5 l",
+      "price": "5.50"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "m-wine",
+  "title": {
+   "en": "Wine list",
+   "hr": "Vinska karta",
+   "de": "Weinkarte",
+   "it": "Lista dei vini"
+  },
+  "note": {
+   "en": "Istrian wines, by the glass of 0.1 l or the bottle of 0.75 l.",
+   "hr": "Istarska vina, na čašu od 0,1 l ili bocu od 0,75 l.",
+   "de": "Istrische Weine, im Glas zu 0,1 l oder in der Flasche zu 0,75 l.",
+   "it": "Vini istriani, al bicchiere da 0,1 l o alla bottiglia da 0,75 l."
+  },
+  "items": [
+   {
+    "heading": {
+     "en": "Sparkling",
+     "hr": "Pjenušava vina",
+     "de": "Sekt",
+     "it": "Spumanti"
+    }
+   },
+   {
+    "name": {
+     "en": "Cattunar Senator",
+     "hr": "Cattunar Senator",
+     "de": "Cattunar Senator",
+     "it": "Cattunar Senator"
+    },
+    "price": "38",
+    "unit": "0.75 l"
+   },
+   {
+    "name": {
+     "en": "Prosecco",
+     "hr": "Prosecco",
+     "de": "Prosecco",
+     "it": "Prosecco"
+    },
+    "prices": [
+     {
+      "unit": "0.1 l",
+      "price": "3.90"
+     },
+     {
+      "unit": "0.75 l",
+      "price": "29"
+     }
+    ]
+   },
+   {
+    "name": {
+     "en": "Agrolaguna Perla Rosé",
+     "hr": "Agrolaguna Perla Rosé",
+     "de": "Agrolaguna Perla Rosé",
+     "it": "Agrolaguna Perla Rosé"
+    },
+    "price": "32",
+    "unit": "0.75 l"
+   },
+   {
+    "heading": {
+     "en": "White",
+     "hr": "Bijela vina",
+     "de": "Weißweine",
+     "it": "Vini bianchi"
+    }
+   },
+   {
+    "name": {
+     "en": "Malvazija Festigia, Agrolaguna",
+     "hr": "Malvazija Festigia, Agrolaguna",
+     "de": "Malvazija Festigia, Agrolaguna",
+     "it": "Malvasia Festigia, Agrolaguna"
+    },
+    "prices": [
+     {
+      "unit": "0.1 l",
+      "price": "4.60"
+     },
+     {
+      "unit": "0.75 l",
+      "price": "32"
+     }
+    ]
+   },
+   {
+    "name": {
+     "en": "Malvazija Benvenuti",
+     "hr": "Malvazija Benvenuti",
+     "de": "Malvazija Benvenuti",
+     "it": "Malvasia Benvenuti"
+    },
+    "prices": [
+     {
+      "unit": "0.1 l",
+      "price": "4.60"
+     },
+     {
+      "unit": "0.75 l",
+      "price": "32"
+     }
+    ]
+   },
+   {
+    "name": {
+     "en": "Malvazija Coronica",
+     "hr": "Malvazija Coronica",
+     "de": "Malvazija Coronica",
+     "it": "Malvasia Coronica"
+    },
+    "prices": [
+     {
+      "unit": "0.1 l",
+      "price": "4.60"
+     },
+     {
+      "unit": "0.75 l",
+      "price": "32"
+     }
+    ]
+   },
+   {
+    "name": {
+     "en": "Malvazija Kozlović",
+     "hr": "Malvazija Kozlović",
+     "de": "Malvazija Kozlović",
+     "it": "Malvasia Kozlović"
+    },
+    "prices": [
+     {
+      "unit": "0.1 l",
+      "price": "4.60"
+     },
+     {
+      "unit": "0.75 l",
+      "price": "34"
+     }
+    ]
+   },
+   {
+    "name": {
+     "en": "Malvazija Cattunar",
+     "hr": "Malvazija Cattunar",
+     "de": "Malvazija Cattunar",
+     "it": "Malvasia Cattunar"
+    },
+    "prices": [
+     {
+      "unit": "0.1 l",
+      "price": "4.60"
+     },
+     {
+      "unit": "0.75 l",
+      "price": "32"
+     }
+    ]
+   },
+   {
+    "name": {
+     "en": "Chardonnay",
+     "hr": "Chardonnay",
+     "de": "Chardonnay",
+     "it": "Chardonnay"
+    },
+    "prices": [
+     {
+      "unit": "0.1 l",
+      "price": "4.60"
+     },
+     {
+      "unit": "0.75 l",
+      "price": "32"
+     }
+    ]
+   },
+   {
+    "name": {
+     "en": "Sauvignon blanc Novacco",
+     "hr": "Sauvignon blanc Novacco",
+     "de": "Sauvignon blanc Novacco",
+     "it": "Sauvignon blanc Novacco"
+    },
+    "prices": [
+     {
+      "unit": "0.1 l",
+      "price": "4.60"
+     },
+     {
+      "unit": "0.75 l",
+      "price": "32"
+     }
+    ]
+   },
+   {
+    "name": {
+     "en": "Malvazija Livio Benvenuti",
+     "hr": "Malvazija Livio Benvenuti",
+     "de": "Malvazija Livio Benvenuti",
+     "it": "Malvasia Livio Benvenuti"
+    },
+    "price": "55",
+    "unit": "0.75 l"
+   },
+   {
+    "heading": {
+     "en": "Red",
+     "hr": "Crna vina",
+     "de": "Rotweine",
+     "it": "Vini rossi"
+    }
+   },
+   {
+    "name": {
+     "en": "Cabernet Sauvignon Degrassi",
+     "hr": "Cabernet Sauvignon Degrassi",
+     "de": "Cabernet Sauvignon Degrassi",
+     "it": "Cabernet Sauvignon Degrassi"
+    },
+    "price": "45",
+    "unit": "0.75 l"
+   },
+   {
+    "name": {
+     "en": "Cabernet Sauvignon Cattunar",
+     "hr": "Cabernet Sauvignon Cattunar",
+     "de": "Cabernet Sauvignon Cattunar",
+     "it": "Cabernet Sauvignon Cattunar"
+    },
+    "prices": [
+     {
+      "unit": "0.1 l",
+      "price": "4.60"
+     },
+     {
+      "unit": "0.75 l",
+      "price": "32"
+     }
+    ]
+   },
+   {
+    "name": {
+     "en": "Merlot Tomaz",
+     "hr": "Merlot Tomaz",
+     "de": "Merlot Tomaz",
+     "it": "Merlot Tomaz"
+    },
+    "price": "45",
+    "unit": "0.75 l"
+   },
+   {
+    "name": {
+     "en": "Teran Tomaz",
+     "hr": "Teran Tomaz",
+     "de": "Teran Tomaz",
+     "it": "Terrano Tomaz"
+    },
+    "price": "45",
+    "unit": "0.75 l"
+   },
+   {
+    "name": {
+     "en": "Castello Agrolaguna",
+     "hr": "Castello Agrolaguna",
+     "de": "Castello Agrolaguna",
+     "it": "Castello Agrolaguna"
+    },
+    "desc": {
+     "en": "Merlot and Cabernet Sauvignon.",
+     "hr": "Merlot i Cabernet Sauvignon.",
+     "de": "Merlot und Cabernet Sauvignon.",
+     "it": "Merlot e Cabernet Sauvignon."
+    },
+    "prices": [
+     {
+      "unit": "0.1 l",
+      "price": "4.60"
+     },
+     {
+      "unit": "0.75 l",
+      "price": "32"
+     }
+    ]
+   },
+   {
+    "heading": {
+     "en": "Semi-sweet",
+     "hr": "Poluslatka vina",
+     "de": "Süßweine",
+     "it": "Vini semidolci"
+    }
+   },
+   {
+    "name": {
+     "en": "Muškat Novacco",
+     "hr": "Muškat Novacco",
+     "de": "Muskat Novacco",
+     "it": "Moscato Novacco"
+    },
+    "prices": [
+     {
+      "unit": "0.1 l",
+      "price": "6"
+     },
+     {
+      "unit": "0.5 l",
+      "price": "30"
+     }
+    ]
+   },
+   {
+    "name": {
+     "en": "Muškat Kozlović",
+     "hr": "Muškat Kozlović",
+     "de": "Muskat Kozlović",
+     "it": "Moscato Kozlović"
+    },
+    "price": "34",
+    "unit": "0.5 l"
+   },
+   {
+    "name": {
+     "en": "Rosé Cattunar",
+     "hr": "Rosé Cattunar",
+     "de": "Rosé Cattunar",
+     "it": "Rosé Cattunar"
+    },
+    "prices": [
+     {
+      "unit": "0.1 l",
+      "price": "4.60"
+     },
+     {
+      "unit": "0.75 l",
+      "price": "32"
+     }
+    ]
+   },
+   {
+    "heading": {
+     "en": "House wine",
+     "hr": "Kućno vino",
+     "de": "Hauswein",
+     "it": "Vino della casa"
+    }
+   },
+   {
+    "name": {
+     "en": "Malvazija or Merlot",
+     "hr": "Malvazija ili Merlot",
+     "de": "Malvazija oder Merlot",
+     "it": "Malvasia o Merlot"
+    },
+    "prices": [
+     {
+      "unit": "0.1 l",
+      "price": "2"
+     },
+     {
+      "unit": "0.25 l",
+      "price": "4.50"
+     },
+     {
+      "unit": "0.5 l",
+      "price": "9"
+     },
+     {
+      "unit": "1 l",
+      "price": "18"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "m-cocktails",
+  "title": {
+   "en": "Cocktails",
+   "hr": "Kokteli",
+   "de": "Cocktails",
+   "it": "Cocktail"
+  },
+  "items": [
+   {
+    "name": {
+     "en": "Aperol Spritz",
+     "hr": "Aperol Spritz",
+     "de": "Aperol Spritz",
+     "it": "Aperol Spritz"
+    },
+    "desc": {
+     "en": "Aperol, prosecco, mineral water.",
+     "hr": "Aperol, prosecco, mineralna voda.",
+     "de": "Aperol, Prosecco, Mineralwasser.",
+     "it": "Aperol, prosecco, acqua minerale."
+    },
+    "price": "7.50"
+   },
+   {
+    "name": {
+     "en": "Hugo",
+     "hr": "Hugo",
+     "de": "Hugo",
+     "it": "Hugo"
+    },
+    "desc": {
+     "en": "Lime, elderflower syrup, mint, prosecco, mineral water.",
+     "hr": "Limeta, sirup od bazge, metvica, prosecco, mineralna voda.",
+     "de": "Limette, Holunderblütensirup, Minze, Prosecco, Mineralwasser.",
+     "it": "Lime, sciroppo di sambuco, menta, prosecco, acqua minerale."
+    },
+    "price": "7.50"
+   },
+   {
+    "name": {
+     "en": "Campari Spritz",
+     "hr": "Campari Spritz",
+     "de": "Campari Spritz",
+     "it": "Campari Spritz"
+    },
+    "desc": {
+     "en": "Campari, prosecco, mineral water.",
+     "hr": "Campari, prosecco, mineralna voda.",
+     "de": "Campari, Prosecco, Mineralwasser.",
+     "it": "Campari, prosecco, acqua minerale."
+    },
+    "price": "7.50"
+   },
+   {
+    "name": {
+     "en": "Limoncello Spritz",
+     "hr": "Limoncello Spritz",
+     "de": "Limoncello Spritz",
+     "it": "Limoncello Spritz"
+    },
+    "desc": {
+     "en": "Limoncello, prosecco, mineral water.",
+     "hr": "Limoncello, prosecco, mineralna voda.",
+     "de": "Limoncello, Prosecco, Mineralwasser.",
+     "it": "Limoncello, prosecco, acqua minerale."
+    },
+    "price": "7.50"
+   },
+   {
+    "name": {
+     "en": "Gin tonic",
+     "hr": "Gin tonik",
+     "de": "Gin Tonic",
+     "it": "Gin tonic"
+    },
+    "price": "9.50"
+   },
+   {
+    "name": {
+     "en": "Moscow Mule",
+     "hr": "Moscow Mule",
+     "de": "Moscow Mule",
+     "it": "Moscow Mule"
+    },
+    "desc": {
+     "en": "Vodka, lime juice, ginger beer.",
+     "hr": "Votka, sok limete, ginger beer.",
+     "de": "Wodka, Limettensaft, Ginger Beer.",
+     "it": "Vodka, succo di lime, ginger beer."
+    },
+    "price": "11"
+   },
+   {
+    "name": {
+     "en": "Mojito",
+     "hr": "Mojito",
+     "de": "Mojito",
+     "it": "Mojito"
+    },
+    "desc": {
+     "en": "Rum, mint, lime juice, mineral water.",
+     "hr": "Rum, metvica, sok limete, mineralna voda.",
+     "de": "Rum, Minze, Limettensaft, Mineralwasser.",
+     "it": "Rum, menta, succo di lime, acqua minerale."
+    },
+    "price": "11"
+   }
+  ]
+ },
+ {
+  "id": "m-spirits",
+  "title": {
+   "en": "Spirits and liqueurs",
+   "hr": "Žestoka pića i likeri",
+   "de": "Spirituosen und Liköre",
+   "it": "Superalcolici e liquori"
+  },
+  "items": [
+   {
+    "heading": {
+     "en": "Aperitifs and liqueurs",
+     "hr": "Likeri i aperitivi",
+     "de": "Aperitifs und Liköre",
+     "it": "Aperitivi e liquori"
+    }
+   },
+   {
+    "name": {
+     "en": "Pelinkovac",
+     "hr": "Pelinkovac",
+     "de": "Pelinkovac",
+     "it": "Pelinkovac"
+    },
+    "price": "2.70",
+    "unit": "0.03 l"
+   },
+   {
+    "name": {
+     "en": "Amaro Montenegro",
+     "hr": "Amaro Montenegro",
+     "de": "Amaro Montenegro",
+     "it": "Amaro Montenegro"
+    },
+    "price": "3.50",
+    "unit": "0.03 l"
+   },
+   {
+    "name": {
+     "en": "Campari",
+     "hr": "Campari",
+     "de": "Campari",
+     "it": "Campari"
+    },
+    "price": "3.50",
+    "unit": "0.03 l"
+   },
+   {
+    "name": {
+     "en": "Aperol",
+     "hr": "Aperol",
+     "de": "Aperol",
+     "it": "Aperol"
+    },
+    "price": "3.50",
+    "unit": "0.03 l"
+   },
+   {
+    "name": {
+     "en": "Jägermeister",
+     "hr": "Jägermeister",
+     "de": "Jägermeister",
+     "it": "Jägermeister"
+    },
+    "price": "4",
+    "unit": "0.03 l"
+   },
+   {
+    "name": {
+     "en": "Baileys",
+     "hr": "Baileys",
+     "de": "Baileys",
+     "it": "Baileys"
+    },
+    "price": "4",
+    "unit": "0.03 l"
+   },
+   {
+    "heading": {
+     "en": "Spirits",
+     "hr": "Žestoka pića",
+     "de": "Spirituosen",
+     "it": "Superalcolici"
+    }
+   },
+   {
+    "name": {
+     "en": "Jack Daniel's",
+     "hr": "Jack Daniel's",
+     "de": "Jack Daniel's",
+     "it": "Jack Daniel's"
+    },
+    "price": "5",
+    "unit": "0.03 l"
+   },
+   {
+    "name": {
+     "en": "Ballantine's",
+     "hr": "Ballantine's",
+     "de": "Ballantine's",
+     "it": "Ballantine's"
+    },
+    "price": "3.50",
+    "unit": "0.03 l"
+   },
+   {
+    "name": {
+     "en": "Chivas Regal",
+     "hr": "Chivas Regal",
+     "de": "Chivas Regal",
+     "it": "Chivas Regal"
+    },
+    "price": "6",
+    "unit": "0.03 l"
+   },
+   {
+    "name": {
+     "en": "Jameson",
+     "hr": "Jameson",
+     "de": "Jameson",
+     "it": "Jameson"
+    },
+    "price": "5",
+    "unit": "0.03 l"
+   },
+   {
+    "name": {
+     "en": "Vodka",
+     "hr": "Votka",
+     "de": "Wodka",
+     "it": "Vodka"
+    },
+    "price": "3.50",
+    "unit": "0.03 l"
+   },
+   {
+    "name": {
+     "en": "Hennessy",
+     "hr": "Hennessy",
+     "de": "Hennessy",
+     "it": "Hennessy"
+    },
+    "price": "6",
+    "unit": "0.03 l"
+   },
+   {
+    "name": {
+     "en": "Zacapa",
+     "hr": "Zacapa",
+     "de": "Zacapa",
+     "it": "Zacapa"
+    },
+    "price": "9",
+    "unit": "0.03 l"
+   }
+  ]
+ },
+ {
+  "id": "m-rakija",
+  "title": {
+   "en": "Rakija",
+   "hr": "Rakije",
+   "de": "Rakija",
+   "it": "Grappe"
+  },
+  "items": [
+   {
+    "name": {
+     "en": "Medica",
+     "hr": "Medica",
+     "de": "Medica",
+     "it": "Medica"
+    },
+    "desc": {
+     "en": "Honey rakija.",
+     "hr": "Rakija s medom.",
+     "de": "Honigschnaps.",
+     "it": "Grappa al miele."
+    },
+    "price": "2.70",
+    "unit": "0.03 l"
+   },
+   {
+    "name": {
+     "en": "Biska",
+     "hr": "Biska",
+     "de": "Biska",
+     "it": "Biska"
+    },
+    "desc": {
+     "en": "Istrian rakija with mistletoe.",
+     "hr": "Istarska rakija s imelom.",
+     "de": "Istrischer Schnaps mit Mistel.",
+     "it": "Grappa istriana al vischio."
+    },
+    "price": "2.70",
+    "unit": "0.03 l"
+   },
+   {
+    "name": {
+     "en": "Loza",
+     "hr": "Loza",
+     "de": "Loza",
+     "it": "Loza"
+    },
+    "desc": {
+     "en": "Grape brandy.",
+     "hr": "Lozovača.",
+     "de": "Tresterbrand.",
+     "it": "Grappa di vinaccia."
+    },
+    "price": "2.70",
+    "unit": "0.03 l"
+   },
+   {
+    "name": {
+     "en": "Travarica",
+     "hr": "Travarica",
+     "de": "Travarica",
+     "it": "Travarica"
+    },
+    "desc": {
+     "en": "Herb rakija.",
+     "hr": "Rakija od trava.",
+     "de": "Kräuterschnaps.",
+     "it": "Grappa alle erbe."
+    },
+    "price": "2.70",
+    "unit": "0.03 l"
+   },
+   {
+    "name": {
+     "en": "Teranino",
+     "hr": "Teranino",
+     "de": "Teranino",
+     "it": "Teranino"
+    },
+    "desc": {
+     "en": "Liqueur made from Teran wine.",
+     "hr": "Liker od terana.",
+     "de": "Likör aus Teran-Wein.",
+     "it": "Liquore di Terrano."
+    },
+    "price": "2.70",
+    "unit": "0.03 l"
+   },
+   {
+    "name": {
+     "en": "Šljivovica",
+     "hr": "Šljivovica",
+     "de": "Šljivovica",
+     "it": "Šljivovica"
+    },
+    "desc": {
+     "en": "Plum brandy.",
+     "hr": "Rakija od šljive.",
+     "de": "Pflaumenschnaps.",
+     "it": "Grappa di prugne."
+    },
+    "price": "2.70",
+    "unit": "0.03 l"
+   },
+   {
+    "name": {
+     "en": "Viljamovka",
+     "hr": "Viljamovka",
+     "de": "Williams-Christ",
+     "it": "Viljamovka"
+    },
+    "desc": {
+     "en": "Williams pear brandy.",
+     "hr": "Rakija od viljamovke.",
+     "de": "Williamsbirnenbrand.",
+     "it": "Grappa di pere Williams."
+    },
+    "price": "3.70",
+    "unit": "0.03 l"
+   }
+  ]
+ }
+]
