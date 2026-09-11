@@ -1,0 +1,24 @@
+#!/bin/bash
+# Deploy = pull this repo on the box and converge the Compose stack. Idempotent; safe to run any time.
+# Runs from box/deploy.timer daily and by hand after a push:   ssh root@<box> deploy
+set -euo pipefail
+
+REPO_DIR=/srv/admiral-max
+cd "$REPO_DIR"
+
+[ -f .env ] || { echo "no $REPO_DIR/.env — copy .env.example and fill it in" >&2; exit 1; }
+
+before=$(git rev-parse HEAD)
+git pull --ff-only -q
+after=$(git rev-parse HEAD)
+
+docker compose up -d --remove-orphans --quiet-pull 2>&1 | grep -v '^$' || true
+docker image prune -f >/dev/null
+
+if [ "$before" != "$after" ]; then
+  msg="🚀 $(hostname) deployed $(git log --oneline -1 "$after")"
+else
+  msg="deploy: no change ($(git rev-parse --short HEAD))"
+fi
+echo "$msg"
+[ "$before" != "$after" ] && command -v tg-send >/dev/null && tg-send "$msg" || true

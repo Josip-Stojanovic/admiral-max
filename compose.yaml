@@ -1,0 +1,48 @@
+# The whole runtime of the box. Deployed by box/deploy (git pull + docker compose up -d).
+# Caddy is the only service that publishes ports. Everything else stays on the internal network.
+
+services:
+  caddy:
+    image: caddy:2-alpine
+    container_name: caddy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    env_file: .env
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./site:/srv/site:ro
+      - caddy_data:/data
+      - caddy_config:/config
+      - caddy_logs:/var/log/caddy
+
+  # ---- reservation backend + Telegram bot: uncomment when app/ has a Dockerfile ----
+  # app:
+  #   build: ./app
+  #   container_name: app
+  #   restart: unless-stopped
+  #   env_file: .env
+  #   depends_on:
+  #     db:
+  #       condition: service_healthy
+  #
+  # db:
+  #   image: postgres:17-alpine
+  #   container_name: db
+  #   restart: unless-stopped
+  #   env_file: .env
+  #   volumes:
+  #     - pgdata:/var/lib/postgresql/data
+  #   healthcheck:
+  #     test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER:-postgres}"]
+  #     interval: 10s
+  #     timeout: 5s
+  #     retries: 5
+
+volumes:
+  caddy_data:
+  caddy_config:
+  caddy_logs:
+  # pgdata:

@@ -1,0 +1,275 @@
+#cloud-config
+# admiral-max — the machine. Hetzner Cloud, Debian 13, x86 (CX) or ARM (CAX), labels customer=admiral-max role=app env=prod.
+#
+# This file is only what is true of the machine: SSH, firewall, Docker, swap, upgrades, alerts, and a clone of the
+# project repo at /srv/admiral-max. Everything the box *runs* comes from that repo (compose.yaml, Caddyfile, site/, app/)
+# and is converged by `deploy` (box/deploy). Nothing else is ever done by hand.
+#
+# Before pasting: set REPO below if the GitHub repo is named differently.
+# After first boot, one SSH session:
+#   1. scp the cluster's /etc/telegram.env to the box (0600) — alerts and boot hellos use the cluster bot.
+#   2. `systemctl start box-hello` — the hello message carries the box's deploy public key; add it to the GitHub repo
+#      as a read-only deploy key.
+#   3. `deploy-bootstrap` — clones the repo and hands over to the repo's own deploy script (it stops at the missing .env).
+#   4. cp /srv/admiral-max/.env.example /srv/admiral-max/.env, fill it in, `deploy`. Done.
+#      From then on: push to main, `ssh root@box deploy` (or wait for the 05:00 timer).
+
+hostname: admiral-max
+timezone: Europe/Zagreb
+locale: C.UTF-8
+
+ssh_authorized_keys:
+  - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDmhydhH8ltHpqTLxT+k/TaZaxejj3U1OHSG7ETjT1nH j@j
+
+ssh_pwauth: false
+disable_root: false
+
+package_update: true
+package_upgrade: true
+packages:
+  - ca-certificates
+  - curl
+  - git
+  - gnupg
+  - nftables
+  - unattended-upgrades
+  - jq
+  - vim-tiny
+
+swap:
+  filename: /swapfile
+  size: 2G
+  maxsize: 2G
+
+write_files:
+  - path: /etc/box.env
+    permissions: "0644"
+    content: |
+      REPO=git@github.com:Josip-Stojanovic/admiral-max.git
+      REPO_DIR=/srv/admiral-max
+
+  # ---- SSH: key-only root, nothing else --------------------------------------------------------------
+  - path: /etc/ssh/sshd_config.d/10-box.conf
+    permissions: "0644"
+    content: |
+      PermitRootLogin prohibit-password
+      PasswordAuthentication no
+      KbdInteractiveAuthentication no
+      X11Forwarding no
+
+  - path: /root/.ssh/config
+    permissions: "0600"
+    content: |
+      Host github.com
+        IdentityFile /root/.ssh/deploy_key
+        IdentitiesOnly yes
+        StrictHostKeyChecking accept-new
+
+  # ---- firewall: default-drop for the host; Docker publishes 80/443 through its own forward chain -------
+  - path: /etc/nftables.conf
+    permissions: "0755"
+    content: |
+      #!/usr/sbin/nft -f
+      add table inet filter
+      delete table inet filter
+      table inet filter {
+        chain input {
+          type filter hook input priority 0; policy drop;
+          iifname "lo" accept
+          ct state established,related accept
+          ct state invalid drop
+          ip protocol icmp accept
+          ip6 nexthdr icmpv6 accept
+          tcp dport 22 accept
+        }
+        chain forward {
+          type filter hook forward priority 0; policy accept;
+        }
+        chain output {
+          type filter hook output priority 0; policy accept;
+        }
+      }
+
+  # ---- security upgrades on their own, reboot in the closed hours only if needed -----------------------
+  - path: /etc/apt/apt.conf.d/52box-unattended
+    permissions: "0644"
+    content: |
+      Unattended-Upgrade::Origins-Pattern { "origin=Debian,codename=${distro_codename},label=Debian-Security"; "origin=Debian,codename=${distro_codename}-security,label=Debian-Security"; "origin=Docker"; };
+      Unattended-Upgrade::Remove-Unused-Dependencies "true";
+      Unattended-Upgrade::Automatic-Reboot "true";
+      Unattended-Upgrade::Automatic-Reboot-Time "04:30";
+      APT::Periodic::Update-Package-Lists "1";
+      APT::Periodic::Unattended-Upgrade "1";
+      APT::Periodic::AutocleanInterval "7";
+
+  - path: /etc/docker/daemon.json
+    permissions: "0644"
+    content: |
+      { "log-driver": "json-file", "log-opts": { "max-size": "10m", "max-file": "3" } }
+
+  - path: /etc/sysctl.d/90-box.conf
+    permissions: "0644"
+    content: |
+      vm.swappiness=10
+
+  # ---- deploy: first time clones the repo, afterwards `deploy` is the repo's own box/deploy ------------
+  - path: /usr/local/sbin/deploy-bootstrap
+    permissions: "0755"
+    content: |
+      #!/bin/bash
+      set -euo pipefail
+      . /etc/box.env
+      [ -d "$REPO_DIR/.git" ] || git clone "$REPO" "$REPO_DIR"
+      ln -sf "$REPO_DIR/box/deploy" /usr/local/sbin/deploy
+      exec "$REPO_DIR/box/deploy"
+
+  - path: /etc/systemd/system/deploy.service
+    permissions: "0644"
+    content: |
+      [Unit]
+      Description=Pull the project repo and converge the Compose stack
+      After=docker.service network-online.target
+      Wants=network-online.target
+      ConditionPathExists=/srv/admiral-max/.env
+      [Service]
+      Type=oneshot
+      ExecStart=/usr/local/sbin/deploy
+
+  - path: /etc/systemd/system/deploy.timer
+    permissions: "0644"
+    content: |
+      [Unit]
+      Description=Daily deploy 05:00
+      [Timer]
+      OnCalendar=*-*-* 05:00:00 Europe/Zagreb
+      RandomizedDelaySec=10m
+      Persistent=true
+      [Install]
+      WantedBy=timers.target
+
+  # ---- Telegram: cluster bot, creds arrive later as /etc/telegram.env (0600); silent until then --------
+  - path: /usr/local/sbin/tg-send
+    permissions: "0755"
+    content: |
+      #!/bin/bash
+      [ -r /etc/telegram.env ] || exit 0
+      . /etc/telegram.env
+      curl -fsS -m 10 -o /dev/null "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+        --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" --data-urlencode "text=$1" || true
+
+  - path: /usr/local/sbin/box-alert
+    permissions: "0755"
+    content: |
+      #!/bin/bash
+      # Transition-based alerts every 15 min; --daily posts a summary. Same idiom as the VPS.
+      set -u
+      . /etc/box.env
+      DOMAIN=$(sed -n 's/^DOMAIN=//p' "$REPO_DIR/.env" 2>/dev/null)
+      STATE=/var/lib/box-alert; mkdir -p "$STATE"
+      H=$(hostname)
+      mem_avail=$(awk '/MemAvailable/{print int($2/1024)}' /proc/meminfo)
+      disk=$(df --output=pcent / | tail -1 | tr -dc 0-9)
+      load=$(cut -d' ' -f2 /proc/loadavg)
+      cores=$(nproc)
+      cert_days=""
+      if [ -n "$DOMAIN" ]; then
+        exp=$(echo | timeout 10 openssl s_client -servername "$DOMAIN" -connect 127.0.0.1:443 2>/dev/null | openssl x509 -noout -enddate 2>/dev/null | cut -d= -f2)
+        [ -n "$exp" ] && cert_days=$(( ( $(date -d "$exp" +%s) - $(date +%s) ) / 86400 ))
+      fi
+      caddy_up=$(docker inspect -f '{{.State.Running}}' caddy 2>/dev/null || echo false)
+      rev=$(git -C "$REPO_DIR" rev-parse --short HEAD 2>/dev/null || echo none)
+      if [ "${1:-}" = "--daily" ]; then
+        tg-send "📦 $H daily · up $(uptime -p | sed 's/up //') · load $load/$cores · mem free ${mem_avail}M · disk ${disk}% · cert ${cert_days:-?}d · containers $(docker ps -q 2>/dev/null | wc -l) up · $rev"
+        exit 0
+      fi
+      check() { # name condition message
+        local f="$STATE/$1"
+        if [ "$2" = 1 ]; then [ -e "$f" ] || { touch "$f"; tg-send "🚨 $H: $3"; }
+        else [ -e "$f" ] && { rm -f "$f"; tg-send "✅ $H: $1 recovered"; }; fi
+      }
+      check mem   $([ "$mem_avail" -lt 300 ] && echo 1 || echo 0) "RAM low: ${mem_avail}M available"
+      check disk  $([ "$disk" -ge 85 ] && echo 1 || echo 0)        "disk ${disk}% full"
+      check load  $(awk -v l="$load" -v c="$cores" 'BEGIN{print (l>=0.9*c)?1:0}') "load $load on $cores cores"
+      check cert  $([ -n "$cert_days" ] && [ "$cert_days" -lt 14 ] && echo 1 || echo 0) "TLS cert for $DOMAIN expires in ${cert_days}d"
+      check caddy $([ "$caddy_up" = true ] && echo 0 || echo 1)    "caddy container is not running"
+
+  - path: /etc/systemd/system/box-alert.service
+    permissions: "0644"
+    content: |
+      [Unit]
+      Description=Box alerts to Telegram
+      [Service]
+      Type=oneshot
+      ExecStart=/usr/local/sbin/box-alert
+
+  - path: /etc/systemd/system/box-alert.timer
+    permissions: "0644"
+    content: |
+      [Unit]
+      Description=Box alerts every 15 min
+      [Timer]
+      OnBootSec=5m
+      OnUnitActiveSec=15m
+      Persistent=true
+      [Install]
+      WantedBy=timers.target
+
+  - path: /etc/systemd/system/box-daily.service
+    permissions: "0644"
+    content: |
+      [Unit]
+      Description=Daily box summary to Telegram
+      [Service]
+      Type=oneshot
+      ExecStart=/usr/local/sbin/box-alert --daily
+
+  - path: /etc/systemd/system/box-daily.timer
+    permissions: "0644"
+    content: |
+      [Unit]
+      Description=Daily box summary 18:00
+      [Timer]
+      OnCalendar=*-*-* 18:00:00 Europe/Zagreb
+      Persistent=true
+      [Install]
+      WantedBy=timers.target
+
+  - path: /usr/local/sbin/box-hello
+    permissions: "0755"
+    content: |
+      #!/bin/bash
+      /usr/local/sbin/tg-send "🟢 $(hostname) up · $(hostname -I | cut -d' ' -f1) · $(uname -m) · kernel $(uname -r)
+      deploy key: $(cat /root/.ssh/deploy_key.pub)"
+
+  - path: /etc/systemd/system/box-hello.service
+    permissions: "0644"
+    content: |
+      [Unit]
+      Description=Announce boot to Telegram, with the deploy public key
+      After=network-online.target
+      Wants=network-online.target
+      [Service]
+      Type=oneshot
+      ExecStart=/usr/local/sbin/box-hello
+      [Install]
+      WantedBy=multi-user.target
+
+runcmd:
+  # Docker CE from Docker's repo (amd64 and arm64 alike)
+  - install -m 0755 -d /etc/apt/keyrings
+  - curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+  - bash -c '. /etc/os-release; echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian $VERSION_CODENAME stable" > /etc/apt/sources.list.d/docker.list'
+  - apt-get update -q
+  - apt-get install -y -q docker-ce docker-ce-cli containerd.io docker-compose-plugin
+  - systemctl enable --now docker
+  # firewall
+  - systemctl enable --now nftables
+  - nft -f /etc/nftables.conf
+  # deploy key for the private repo, registered on GitHub as read-only
+  - ssh-keygen -t ed25519 -N "" -C "deploy@admiral-max" -f /root/.ssh/deploy_key
+  - ln -sf /usr/local/sbin/deploy-bootstrap /usr/local/sbin/deploy
+  - systemctl enable --now deploy.timer box-alert.timer box-daily.timer box-hello.service
+  - systemctl restart ssh
+  - sysctl -q -p /etc/sysctl.d/90-box.conf
+
+final_message: "admiral-max box ready after $UPTIME s. Now: scp /etc/telegram.env · systemctl start box-hello · add the deploy key on GitHub · deploy-bootstrap · .env · deploy"
